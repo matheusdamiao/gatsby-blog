@@ -6,11 +6,11 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: 'blog'
+  - name: "blog"
     label: 'Blog'
     folder: 'content/blog'
     create: true
-    slug: {{slug}}
+    slug: "{{slug}}"
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
