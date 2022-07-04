@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        
+        <GatsbyImage image={post.frontmatter.imagem} alt="imagem via gatsby image plugin" />
         <footer>
           <Bio />
         </footer>
@@ -80,7 +80,6 @@ export const pageQuery = graphql`
       }
     }
 
-  
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
