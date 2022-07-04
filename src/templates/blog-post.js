@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <GatsbyImage image={post.frontmatter.imagem} alt="imagem"/>
+        
         <footer>
           <Bio />
         </footer>
