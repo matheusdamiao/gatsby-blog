@@ -80,10 +80,7 @@ export const pageQuery = graphql`
       }
     }
 
-    imageSharp {
-      gatsbyImageData
-    }
-
+  
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
