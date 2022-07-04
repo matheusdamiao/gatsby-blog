@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <GatsbyImage image={data.gatsbyImagedata} alt="imagem"/>
+        <GatsbyImage image={post.frontmatter.imagem} alt="imagem"/>
         <footer>
           <Bio />
         </footer>
@@ -92,6 +92,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description 
+        imagem
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
