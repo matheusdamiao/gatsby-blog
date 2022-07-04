@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <GatsbyImage image={post.frontmatter.image} alt="imagem"/>
+        <GatsbyImage image={data.gatsbyImagedata} alt="imagem"/>
         <footer>
           <Bio />
         </footer>
@@ -79,6 +79,11 @@ export const pageQuery = graphql`
         title
       }
     }
+
+    imageSharp {
+      gatsbyImageData
+    }
+
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
@@ -87,11 +92,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description 
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
