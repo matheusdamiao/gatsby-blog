@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -30,6 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
+        <GatsbyImage image={post.frontmatter.image} alt="imagem"/>
         <footer>
           <Bio />
         </footer>
@@ -84,7 +86,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
+        description 
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
