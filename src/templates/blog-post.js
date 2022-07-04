@@ -4,13 +4,13 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-
+  const imagem = getImage(post.frontmatter.imagem)
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <GatsbyImage image={post.frontmatter.imagem} alt="imagem via gatsby image plugin" />
+        <GatsbyImage image={imagem} alt="imagem via gatsby image plugin" />
         <footer>
           <Bio />
         </footer>
