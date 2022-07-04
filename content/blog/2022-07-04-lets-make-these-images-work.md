@@ -5,4 +5,6 @@ description: This is just a random description
 thumbnail: /assets/whatsapp-image-2022-06-01-at-13.51.13.jpeg
 imagem: https://spaces-wp.imgix.net/2016/06/coding-in-the-classroom.png?auto=compress,format&q=50
 ---
+![](/assets/whatsapp-image-2022-06-01-at-13.51.13.jpeg)
+
 lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
