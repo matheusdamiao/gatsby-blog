@@ -8,7 +8,7 @@ const MenuDesktop = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
-    marginTop: '50px'
+    marginTop : '50px'
   }
 
   const ulStyle = {
