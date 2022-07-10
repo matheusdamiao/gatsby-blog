@@ -28,7 +28,7 @@ export default teste
 
 export const pageQuery = graphql`
 
-query  {
+  query  {
     allMarkdownRemark(filter: {id: {eq: "51609dd1-85f6-50bb-981d-d27a9e6fd7e3"}}) {
       nodes {
         frontmatter {
