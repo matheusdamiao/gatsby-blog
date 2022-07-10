@@ -1,8 +1,8 @@
-import React from 'react'
+import * as React from "react"
 import AreasDeAtuacao from '../components/AreaDeAtuacao'
 import HeroSection from '../components/HeroSection'
 
-const main = () => {
+const PaginaBlog = () => {
   return (
     <div>
       <HeroSection />
@@ -11,4 +11,4 @@ const main = () => {
   )
 }
 
-export default main
+export default PaginaBlog
