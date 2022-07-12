@@ -1,5 +1,4 @@
 import React from 'react'
-import { GatsbyImage} from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import Bio from './../components/bio'
 import Botao from './../components/Botao'

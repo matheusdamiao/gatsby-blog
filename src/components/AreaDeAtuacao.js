@@ -2,7 +2,7 @@ import React from 'react'
 import { useState} from 'react'
 import Card from './Card'
 import Botao from './Botao'
-import { StaticImage } from 'gatsby-plugin-image'
+
 
 
 const AreasDeAtuacao = () => {
