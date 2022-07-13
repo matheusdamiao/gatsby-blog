@@ -4,13 +4,16 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
-
+  const { previous, next} = data
+  
+  const imagem = data.allImageSharp.nodes.gatsbyImageData
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -32,7 +35,10 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
+        <GatsbyImage
+        image={imagem}
         
+        />
         <footer>
           <Bio />
         </footer>
@@ -92,6 +98,17 @@ export const pageQuery = graphql`
         imagem
       }
     }
+
+    
+    allImageSharp(filter: {id: {eq: $id}}) {
+      nodes {
+        gatsbyImageData
+        id
+      }
+    }
+    
+    
+
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
         slug
