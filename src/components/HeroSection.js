@@ -28,6 +28,7 @@ const HeroSection = () => {
     const heroSectionPartTwo = {
         display: 'flex',
         maxwidth: '700px',
+        minWidth: '300px',
         alignItems: 'center',
         justifyContent: 'center'
     }

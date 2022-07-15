@@ -29,12 +29,12 @@ const MenuDesktop = () => {
 
   return (
     <div style={menuStyle}>
-      <StaticImage 
-      src="../images/logo.png"
-      alt='logo'
-      minWidth='150px'   
-      />
-
+      <div style={{minWidth: '150px', marginLeft: '20px'}}>
+        <StaticImage 
+        src="../images/logo.png"
+        alt='logo'
+        />
+      </div>  
       <ul style={ulStyle}>
         <li style={liStyle}>Serviços</li>
         <li style={liStyle}>Blog</li>

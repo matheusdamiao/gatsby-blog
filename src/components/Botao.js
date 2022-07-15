@@ -9,9 +9,10 @@ const Botao = ({size, color, children, height, border}) => {
         fontSize: '15px',
         borderRadius: '25px',
         width: `${size}`,
-        backgroundColor: `${color}`,
+        background: `${color}`,
         height: `${height}`,
         cursor: 'pointer', 
+       
       }
       
   return (

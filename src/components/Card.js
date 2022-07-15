@@ -13,11 +13,14 @@ const Card = ({icon, title, children}) => {
         width: '300px',
         height: '350px',
         borderRadius: '46px',
-        textAlign: 'center'
+        textAlign: 'center',
+        border: '1px solid black',
+        margin: '10px',
+        padding: '10px'
    } 
 
    const styleH1 = {
-    fontSize: '25px',
+    fontSize: '20px',
     margin: '0'
    }
 
