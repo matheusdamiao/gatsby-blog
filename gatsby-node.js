@@ -75,6 +75,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 
 
+
+
+
+
+
+
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
 
@@ -110,7 +117,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       thumbnail: String
-      imagem: String
+      
     }
 
     type Fields {

@@ -27,13 +27,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `icons`,
-        path: `${__dirname}/src/icons`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `icons`,
+    //     path: `${__dirname}/src/images/icons`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next} = data
   
-  const imagem = data.allImageSharp.nodes.gatsbyImageData
+  const imagem = post.frontmatter.imagem
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -37,7 +37,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <hr />
         <GatsbyImage
         image={imagem}
-        
+        alt='algo aqui'
         />
         <footer>
           <Bio />
