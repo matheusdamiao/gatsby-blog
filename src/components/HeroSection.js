@@ -12,6 +12,8 @@ const HeroSection = () => {
         flexWrap: 'nowrap',
         justifyContent: 'space-evenly',
         margin: '50px auto'
+
+        
     }
 
     const heroSectionPartOne = {
@@ -25,7 +27,7 @@ const HeroSection = () => {
 
     const heroSectionPartTwo = {
         display: 'flex',
-        maxWidth: '700px',
+        maxwidth: '700px',
         alignItems: 'center',
         justifyContent: 'center'
     }

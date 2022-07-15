@@ -3,7 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 const Card = ({icon, title, children}) => {
-
+  
    const style= {
         display: 'flex',
         flexDirection: 'column',
@@ -16,15 +16,26 @@ const Card = ({icon, title, children}) => {
         textAlign: 'center'
    } 
 
+   const styleH1 = {
+    fontSize: '25px',
+    margin: '0'
+   }
+
+   const styleP = {
+    fontSize: '15px',
+    padding: '10px'
+   }
 
   return (
     <div style={style}>
       <GatsbyImage 
       image={icon}
       alt='icon'
+      loading='eager'
       />
-      <h1>{title}</h1>
-      <p>{children}</p>
+
+      <h1 style={styleH1}>{title}</h1>
+      <p style={styleP}>{children}</p>
     </div>
   )
 }

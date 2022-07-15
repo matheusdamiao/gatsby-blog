@@ -2,60 +2,61 @@ import React from 'react'
 import { useState} from 'react'
 import Card from './Card'
 import Botao from './Botao'
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
-
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const AreasDeAtuacao = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    
+   icone1: file(relativePath: {eq: "icon-1.png"}) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  
 
+   
+   icone2: file(relativePath: {eq: "icon-2.png"}) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  
 
-    // const [cards, setCards] = useState([
-    //     {
-    //         icon: require('./../icons/icon-1.png'),
-    //         title: 'Guarda' ,
-    //         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue' ,
-    //         }, 
-    //         {
-    //         icon: require('./../icons/icon-2.png'),
-    //         title: 'Divórcio',
-    //         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue'   
-    //         },
-    //         {
-    //         icon: require('./../icons/icon-3.png'),
-    //         title: 'Pensão Alimentícia',
-    //         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue' 
-    //         },
-    // ])
+   
+   icone3: file(relativePath: {eq: "icon-3.png"}) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  
+  } 
+  `
+ )
 
-
-
+ const { icone1, icone2, icone3 } = data
+       
     const cardData = [
         {
-        icon: <GatsbyImage
-                image={"../images/gatsby-icon.png"}
-                alt='icon'
-                />,
+        icone: getImage(icone1),
         title: 'Guarda' ,
-        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue' ,
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue',
         }, 
-        {
-        icon: <GatsbyImage
-                image={"../images/logo.png"}
-                alt='icon'
-                />,                
+        {         
+        icone: getImage(icone2),    
         title: 'Divórcio',
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue'   
         },
         {
-        icon: <GatsbyImage
-                image={"../images/logo.png"}
-                alt='icon'
-                />,                
+        icone: getImage(icone3),             
         title: 'Pensão Alimentícia',
         body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue' 
         },
         
     ] 
      
+
     const cardsStyle = {
             display: 'flex',
             flexWrap: 'wrap',
@@ -69,9 +70,15 @@ const AreasDeAtuacao = () => {
       <h2 style={{textAlign: 'center', fontWeight: 'light'}}>Áreas de Atuação</h2>
       <div style={cardsStyle}>
         {cardData.map( (card)=> {
-            return <Card icon={card.icon} title={card.title}> {card.body}</Card>
-        })}
+          return  <Card icon={card.icone} title={card.title}> {card.body}</Card>
+                    
+                  
+        })
+      }
       </div>
+       
+    
+      
       <Botao size={'250px'} color={'F7EFAE'} height={'50px'} border={'none'} >
         Agende uma reunião
       </Botao>

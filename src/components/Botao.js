@@ -11,11 +11,9 @@ const Botao = ({size, color, children, height, border}) => {
         width: `${size}`,
         backgroundColor: `${color}`,
         height: `${height}`,
-        cursor: 'pointer',
-        
-        
-    
-    }
+        cursor: 'pointer', 
+      }
+      
   return (
     <button style={style}>
     {children}
