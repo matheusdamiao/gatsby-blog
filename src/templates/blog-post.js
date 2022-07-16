@@ -35,10 +35,10 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <GatsbyImage
+        {/* <GatsbyImage
         image={imagem}
         alt='algo aqui'
-        />
+        /> */}
         <footer>
           <Bio />
         </footer>
