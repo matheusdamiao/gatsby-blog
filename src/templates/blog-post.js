@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 
 
@@ -13,7 +13,8 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next} = data
   
-  const imagem = post.frontmatter.imagem
+  const imagem = getImage(data.allImageSharp.nodes.gatsbyImageData)
+  // const imagem = post.frontmatter.imagem
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -39,6 +40,10 @@ const BlogPostTemplate = ({ data, location }) => {
         image={imagem}
         alt='algo aqui'
         /> */}
+       <img 
+       src={post.frontmatter.imagem}
+       alt="imagen"
+       />
         <footer>
           <Bio />
         </footer>
