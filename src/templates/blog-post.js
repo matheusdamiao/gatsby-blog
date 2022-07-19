@@ -28,6 +28,12 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <img 
+          src={post.frontmatter.imagem}
+          alt="imagen"
+          style={{maxWidth: '800px'}}
+          />
+         
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
@@ -40,10 +46,7 @@ const BlogPostTemplate = ({ data, location }) => {
         image={imagem}
         alt='algo aqui'
         /> */}
-       <img 
-       src={post.frontmatter.imagem}
-       alt="imagen"
-       />
+       
         <footer>
           <Bio />
         </footer>
