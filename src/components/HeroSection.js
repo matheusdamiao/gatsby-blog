@@ -2,6 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import Botao from './Botao'
 import MenuDesktop from './MenuDesktop'
+import whatsapp from '../images/whatsapp.svg'
 
 
 const HeroSection = () => {
@@ -62,6 +63,9 @@ const HeroSection = () => {
 
         </div>
     </div>
+    <button style={{position: 'absolute', bottom: '20%', left: '40px', width: '150px', border: 'none' }}>
+      
+            </button>
     </>
   )
 }
