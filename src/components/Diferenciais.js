@@ -67,12 +67,10 @@ const Diferenciais = () => {
         <h2 style={{width: '100%', textAlign: 'center', lineHeight: '40px'}} >Por que contratar especialistas <br/> em Direito Familiarista?</h2>
 
         {cardInfo.map( (card) =>{
-            return <div style={{width: '250px', height: '250px', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', padding: '40px'}}> 
+            return <div style={{width: '300px', height: '250px', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', padding: '40px'}}> 
                         <GatsbyImage
                         image={card.icone}
-                        alt='icone'
-                        width={'300px'}
-                        
+                        alt='icone'                      
                         />
                         <p>{card.body}</p>
                     </div>

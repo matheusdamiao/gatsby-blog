@@ -12,7 +12,7 @@ const Botao = ({size, color, children, height, border}) => {
         background: `${color}`,
         height: `${height}`,
         cursor: 'pointer', 
-       
+        
       }
       
   return (

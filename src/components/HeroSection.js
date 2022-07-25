@@ -10,7 +10,7 @@ const HeroSection = () => {
     const heroSectionStyle = {
         display: 'flex',
         width: '90%',
-        flexWrap: 'nowrap',
+        flexWrap: 'wrap',
         justifyContent: 'space-evenly',
         margin: '50px auto'
 
@@ -31,7 +31,8 @@ const HeroSection = () => {
         maxwidth: '700px',
         minWidth: '300px',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        
     }
   return (
     <>
@@ -63,9 +64,7 @@ const HeroSection = () => {
 
         </div>
     </div>
-    <button style={{position: 'absolute', bottom: '20%', left: '40px', width: '150px', border: 'none' }}>
-      
-            </button>
+    
     </>
   )
 }

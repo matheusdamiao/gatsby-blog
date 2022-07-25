@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Depoimento from './Depoimento'
 import { useStaticQuery, graphql } from 'gatsby'
 import Botao from './Botao'
+import Icone from './../images/icone-depo.png'
 
 const Depoimentos = () => {
 
@@ -79,15 +80,14 @@ const Depoimentos = () => {
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    maxWidth: '100%',
+    width: '100%',
+
     // position: 'absolute'
    }
 
-   
-
-
     const sliderDepoimento = (direcao)=> {
-    
+      
+
       if (direcao === 1) {
         let removido = depoimentoState.shift();
         depoimentoState.push(removido);
@@ -111,16 +111,27 @@ const Depoimentos = () => {
 
 
   return (
-    <div style={{position: 'absolute', width: '100%'}}>
-      <h1 style={{textAlign: 'center', marginTop: '200px', marginBottom: '100px'}}> Depoimentos</h1>
+    <>
+    <div style={{position: 'relative', width: '100%'}}>
+      <div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center'}}>
+      <img src={Icone} />
+      <h1 style={{textAlign: 'center', marginTop: '100px', marginBottom: '100px'}}> Depoimentos</h1>
+      </div>
       <div style={style}>
           {depoimentoState.filter((value, index)=> index < 3).map( (card)=> {
-              return <Depoimento nome={card.nome} avatar={card.foto} text={card.texto}   />
+              return <Depoimento nome={card.nome} avatar={card.foto} text={card.texto} key={card.index}  />
         })}
       </div>
-      <button onClick={()=> sliderDepoimento(2)} style={{backgroundColor: 'white', position:'absolute', right: '95%', top: '70%', border: 'none', cursor: 'pointer' }}><StaticImage src="./../images/arrow-alt-circle-right-solid-2.png" /> </button>
-      <button onClick={()=> sliderDepoimento(1)} style={{backgroundColor: 'white', position:'absolute', left: '95%', top: '70%', border: 'none', cursor: 'pointer' }}><StaticImage src="./../images/arrow-alt-circle-right-solid.png" /> </button>
+      <div style={{display: 'flex', width: '100%', justifyContent: 'space-between', position: 'absolute', top: '60%'}}>
+      <button onClick={()=> sliderDepoimento(2)} style={{backgroundColor: 'white', border: 'none', cursor: 'pointer' }}><StaticImage src="./../images/arrow-alt-circle-right-solid-2.png" /> </button>
+      <button onClick={()=> sliderDepoimento(1)} style={{backgroundColor: 'white', border: 'none', cursor: 'pointer' }}><StaticImage src="./../images/arrow-alt-circle-right-solid.png" /> </button>
+      </div>
     </div>
+
+    <div style={{display: 'flex', justifyContent: 'center', marginTop: '100px', marginBottom: '80px'}}>
+      <Botao size={'250px'} color={'rgb(247, 239, 174)'} height={'50px'} border={'none'}> Agende uma reunião</Botao>
+     </div>   
+      </>
   )
 }
 
