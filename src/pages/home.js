@@ -9,7 +9,7 @@ import { getImage } from "gatsby-plugin-image"
 
 const Home = ({data}) => {
 
-const { imagem1 } = data
+const { imagem1, imagem2 } = data
 
   const aboutData = 
     {
@@ -18,8 +18,16 @@ const { imagem1 } = data
       body: 'Especialistas em direito da famiília, as advogadas Vanessa Cupullile e Thays Medeiros possuem em comum a atenção e o cuidado para lidar com casos',
       imagem: getImage(imagem1)
     }
+    
+  const direitoData = 
+    {
+      titulo: 'Direito Familiarista',
+      subtitulo: 'Conheça mais sobre os direitos que sua família tem',
+      body: 'Especialistas em direito da famiília, as advogadas Vanessa Cupullile e Thays Medeiros possuem em comum a atenção e o cuidado para lidar com casos',
+      imagem: getImage(imagem2)
+    }
   
-
+  
 
 
 
@@ -31,9 +39,12 @@ const { imagem1 } = data
       <AreasDeAtuacao />
       <Diferenciais />
       <Depoimentos />
-      <PageTemplate imagem={aboutData.imagem} subtitulo={aboutData.subtitulo} titulo={aboutData.titulo}> 
+      <PageTemplate inverted={true} imagem={aboutData.imagem} subtitulo={aboutData.subtitulo} titulo={aboutData.titulo}> 
          {aboutData.body}
       </PageTemplate>
+      <PageTemplate inverted={false} imagem={direitoData.imagem} subtitulo={direitoData.subtitulo} titulo={direitoData.titulo}> 
+         {direitoData.body}
+      </PageTemplate> 
     </div>
   )
 }
@@ -48,7 +59,11 @@ export const pageQuery = graphql`
                    }
                 }
 
-    
+     imagem2: file(relativePath: {eq: "imagem-familia.png"}) {
+                childImageSharp {
+                   gatsbyImageData
+                   }
+                }
     
    }
 `

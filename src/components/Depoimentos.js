@@ -115,7 +115,7 @@ const Depoimentos = () => {
     <div style={{position: 'relative', width: '100%'}}>
       <div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center'}}>
       <img src={Icone} />
-      <h1 style={{textAlign: 'center', marginTop: '100px', marginBottom: '100px'}}> Depoimentos</h1>
+      <h1 style={{fontSize: '40px' ,textAlign: 'center', marginTop: '100px', marginBottom: '100px', fontFamily: 'Caudex'}}> Depoimentos</h1>
       </div>
       <div style={style}>
           {depoimentoState.filter((value, index)=> index < 3).map( (card)=> {
