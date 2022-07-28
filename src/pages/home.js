@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection'
 import Diferenciais from '../components/Diferenciais'
 import Depoimentos from "../components/Depoimentos"
 import PageTemplate from "../components/PageTemplate"
+import FormSection from "../components/FormSection"
 import { getImage } from "gatsby-plugin-image"
 
 const Home = ({data}) => {
@@ -44,7 +45,8 @@ const { imagem1, imagem2 } = data
       </PageTemplate>
       <PageTemplate inverted={false} imagem={direitoData.imagem} subtitulo={direitoData.subtitulo} titulo={direitoData.titulo}> 
          {direitoData.body}
-      </PageTemplate> 
+      </PageTemplate>
+      <FormSection /> 
     </div>
   )
 }

@@ -13,7 +13,7 @@ const PageTemplate = ({titulo, subtitulo, children, imagem, inverted}) => {
     alignItems: 'center',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginTop: '100px'
+    marginTop: '250px'
   }
 
   const stylePart1 = {
