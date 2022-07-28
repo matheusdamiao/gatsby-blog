@@ -28,7 +28,7 @@ const Form = () => {
   
 
   return (
-    <div>
+    <div className='form'>
       <h1> Fale Conosco</h1>
       <p>Estamos aqui para lhe ajudar. 
         Preencha o o formulário abaixo para entrarmos em contato o mais rápido possível.
@@ -37,7 +37,7 @@ const Form = () => {
         <input type='text' placeholder='Nome' name='nome' value={inputs.nome || ''} onChange={handleInput}/>
         <input type='text' placeholder='Telefone' name='telefone' value={inputs.telefone || ''} onChange={handleInput}/>
         <input type='email' placeholder='e-mail' name='email' value={inputs.email || ''} onChange={handleInput}/>
-        <Botao type='submit'> Enviar</Botao>
+        <Botao type='submit' size={'250px'} color={'rgb(247, 239, 174)'} height={'50px'} border={'none'}> Enviar</Botao>
       </form>
     </div>
   )
