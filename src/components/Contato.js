@@ -7,7 +7,6 @@ const Contato = () => {
   const style = {
     marginTop: '200px',
     maxWidth: '400px',
-    margin: '200px auto',
     width: '100%'
     
   }
@@ -16,14 +15,19 @@ const Contato = () => {
 
   return (
     <div style={style}>
+      
       <StaticImage 
         src="../images/logo.png"
         alt='logo'
-        />
-
-      <h3> Contato </h3> 
-      <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
         
+       
+        
+        />
+      
+
+      <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: '100px'}}>
+      <h3 style={{fontSize: '16px'}} > Contato </h3> 
+
         
         <span className='span'>
           <StaticImage 

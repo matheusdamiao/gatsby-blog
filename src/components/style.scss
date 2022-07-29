@@ -3,22 +3,23 @@
 .form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    // width: 100%;
     max-width: 600px;
-    margin: 200px auto;
-    // margin-top: 200px;
+    width: 100%;
+    margin: 200px 0px 0px 0px;
+    padding-left: 25px;
 
     h1 {
         text-align:  left;
-        padding-left: 30px;
-        
+        padding-left: 15px;
+        font-family: Caudex;
+        font-size: 45px;
     }
 
 
     p {
-       margin: 0px 0px 20px 20px;
-       max-width: 400px;
+       margin: 60px 0px 35px 20px;
+       max-width: 400px;    
+       text-align: justify;
     }
 
     .formContato {
@@ -28,7 +29,31 @@
         justify-content: center;
         max-width: 400px;
         width: 100%;
+
+
+        // input:last-of-type {
+        //     height: 200px;
+        //     text-align: top;
+        //     margin-bottom: 20px;
+            
+        // }
        
+            textarea {
+                height: 100px;
+                max-width: 400px;
+                padding: 20px 20px;
+                width: 100%;
+                margin: 10px 0px 20px 20px;
+                font-size: 14px;
+                color: rgb(80, 80, 80);
+                border-radius: 25px 25px;
+                border: none;
+                background-color: rgb(243, 240, 240);
+                outline: none;
+
+            }
+
+
     }
 
     input {
@@ -42,18 +67,26 @@
         border: none;
         background-color: rgb(243, 240, 240);
         outline: none;
+        
+
+
+
+        
     }
+
+
+    
 }
 
 
 
 
-// contato
+// contato component
 
 
 .span {
     display: flex;
-    // width: 100%;
+    width: 100%;
     align-items: center;
     justify-items: flex-start;
     
@@ -62,6 +95,9 @@
     p {
         align-self: center;
         margin: auto;
-        margin-left: 20px;
+        margin-left: 5px;
+        padding: 10px;
+        white-space: nowrap;
+        font-size: 14px;
     }
 }

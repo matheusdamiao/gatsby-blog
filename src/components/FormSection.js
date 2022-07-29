@@ -8,10 +8,10 @@ const FormSection = () => {
   const style = {
     display: 'flex',
     justifyContent: 'center',
-    maxWidth: '1000px',
+    maxWidth: '1400px',
     width: '100%',
-    margin: '0px auto',
-    flexWrap: 'wrap-reverse'
+    flexWrap: 'wrap-reverse',
+    
     
   }
 
