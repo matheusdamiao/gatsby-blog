@@ -12,13 +12,15 @@ const HeroSection = () => {
         width: '90%',
         flexWrap: 'wrap',
         justifyContent: 'space-evenly',
-        margin: '50px auto'
+        margin: '50px auto',
+        flexDirection: 'row-reverse'
+        
 
         
     }
 
     const heroSectionPartOne = {
-        marginTop: '50px',
+        
         width: '100%',
         minWidth: '400px',
         maxWidth: '600px'
@@ -41,6 +43,20 @@ const HeroSection = () => {
         
        
 
+                 
+
+
+        <div style={heroSectionPartTwo}>
+            <StaticImage 
+            src="../images/hero-picture.png"
+            alt="hero-picture"     
+               
+            />
+
+        </div>
+
+
+
         <div style={heroSectionPartOne}>
             <h1 style={{fontSize:'50px', fontFamily:'Caudex', fontWeight: '500', maxWidth: '100%'}}>  O direito da sua família em primeiro lugar </h1>
             <h3 style={{fontSize: '20px', fontWeight: '300', marginTop: '0', width:'90%', lineHeight:'30px'}}> Precisando de advogados para te orientar  no que é o melhor a ser feito? </h3>
@@ -52,17 +68,9 @@ const HeroSection = () => {
                     Conheça seus direitos
                 </Botao>
             </div>
-        </div>           
+        </div> 
 
 
-        <div style={heroSectionPartTwo}>
-            <StaticImage 
-            src="../images/hero-picture.png"
-            alt="hero-picture"     
-               
-            />
-
-        </div>
     </div>
     
     </>

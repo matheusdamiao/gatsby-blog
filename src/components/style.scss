@@ -4,14 +4,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    // width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 200px auto;
+    // margin-top: 200px;
 
     h1 {
         text-align:  left;
-        
+        padding-left: 30px;
         
     }
 
@@ -26,7 +26,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        max-width: 600px;
+        max-width: 400px;
         width: 100%;
        
     }
@@ -36,12 +36,32 @@
         width: 100%;
         max-width: 400px;
         margin: 10px 0px 10px 20px;
-        font-size: 18px;
+        font-size: 14px;
         color: rgb(80, 80, 80);
         border-radius: 25px 25px;
         border: none;
         background-color: rgb(243, 240, 240);
+        outline: none;
     }
 }
 
 
+
+
+// contato
+
+
+.span {
+    display: flex;
+    // width: 100%;
+    align-items: center;
+    justify-items: flex-start;
+    
+
+
+    p {
+        align-self: center;
+        margin: auto;
+        margin-left: 20px;
+    }
+}

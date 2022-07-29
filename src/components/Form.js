@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
 import Botao from './Botao'
 import './style.scss'
@@ -29,15 +30,23 @@ const Form = () => {
 
   return (
     <div className='form'>
-      <h1> Fale Conosco</h1>
+      <div style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
+        <StaticImage
+        src='./../images/icone-contato.png'
+        alt='icone'
+        />
+        <h1> Fale Conosco</h1>
+      </div>
       <p>Estamos aqui para lhe ajudar. 
         Preencha o o formulário abaixo para entrarmos em contato o mais rápido possível.
       </p>
       <form className='formContato' name='form-contato' onSubmit={handleSubmit} netlify>
         <input type='text' placeholder='Nome' name='nome' value={inputs.nome || ''} onChange={handleInput}/>
         <input type='text' placeholder='Telefone' name='telefone' value={inputs.telefone || ''} onChange={handleInput}/>
-        <input type='email' placeholder='e-mail' name='email' value={inputs.email || ''} onChange={handleInput}/>
-        <Botao type='submit' size={'250px'} color={'rgb(247, 239, 174)'} height={'50px'} border={'none'}> Enviar</Botao>
+        <input type='email' placeholder='E-mail' name='email' value={inputs.email || ''} onChange={handleInput}/>
+        <div style={{marginLeft: '20px', width: '100%'}}>
+        <Botao type='submit' size={'100%'} color={'rgb(247, 239, 174)'} height={'50px'} border={'none'}> Enviar</Botao>
+        </div>
       </form>
     </div>
   )
