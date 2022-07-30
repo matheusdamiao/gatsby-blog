@@ -18,11 +18,8 @@ const Contato = () => {
       
       <StaticImage 
         src="../images/logo.png"
-        alt='logo'
-        
-       
-        
-        />
+        alt='logo'      
+      />
       
 
       <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: '100px'}}>

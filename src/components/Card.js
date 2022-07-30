@@ -16,7 +16,12 @@ const Card = ({icon, title, children}) => {
         textAlign: 'center',
         border: '1px solid black',
         margin: '10px',
-        padding: '10px'
+        marginBottom: '50px',
+        padding: '10px',
+        border: 'none',
+        backgroundColor: 'rgb(243, 240, 240, 0.85)',
+        outline: 'none',
+        boxShadow: '-4px -4px 4px rgba(255, 255, 255, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.15)'
    } 
 
    const styleH1 = {

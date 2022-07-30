@@ -7,12 +7,13 @@ import whatsapp from '../images/whatsapp.svg'
 
 const HeroSection = () => {
 
+
     const heroSectionStyle = {
         display: 'flex',
         width: '90%',
         flexWrap: 'wrap',
         justifyContent: 'space-evenly',
-        margin: '50px auto',
+        margin: '0px auto',
         flexDirection: 'row-reverse'
         
 
@@ -22,58 +23,54 @@ const HeroSection = () => {
     const heroSectionPartOne = {
         
         width: '100%',
-        minWidth: '400px',
-        maxWidth: '600px'
-           
+        minWidth: '300px',
+        maxWidth: '600px',
+        marginTop: '100px',
+        marginLeft: '20px'
         
     }
 
     const heroSectionPartTwo = {
         display: 'flex',
         maxwidth: '700px',
+        // width: '100%',
         minWidth: '300px',
         alignItems: 'center',
         justifyContent: 'center',
         
     }
   return (
-    <>
-    <MenuDesktop />
-    <div style={heroSectionStyle}>
+    <div className='heroSection'>
+        <MenuDesktop />
+        <div style={heroSectionStyle}>
         
-       
+                
+            <div style={heroSectionPartOne}>
+                <h1 style={{fontSize:'50px', fontFamily:'Caudex', fontWeight: '500', width: '100%'}}>  O direito da sua família em primeiro lugar </h1>
+                <h3 style={{fontSize: '20px', fontWeight: '300', marginTop: '0', width:'90%', lineHeight:'30px'}}> Precisando de advogados para te orientar  no que é o melhor a ser feito? </h3>
+                <div style={{display: 'flex',  justifyContent: 'space-between', maxWidth:'550px', height:'120px', flexWrap: 'wrap', alignItems: 'space-between', margin: '5px 5px'}}>
+                    <Botao color={'#AE8FAF'} size={'250px'} height={'50px'} border={'none'}>
+                        Agende uma reunião
+                        </Botao>
+                    <Botao color={'#FFFFFF'} size={'250px'} height={'50px'} border={'0.2px solid gray'}>
+                        Conheça seus direitos
+                    </Botao>
+                </div>
+            </div> 
 
-                 
 
+            <div style={heroSectionPartTwo}>
+                <StaticImage 
+                src="../images/hero-picture.png"
+                alt="hero-picture"     
+                
+                />
 
-        <div style={heroSectionPartTwo}>
-            <StaticImage 
-            src="../images/hero-picture.png"
-            alt="hero-picture"     
-               
-            />
+            </div>
 
         </div>
-
-
-
-        <div style={heroSectionPartOne}>
-            <h1 style={{fontSize:'50px', fontFamily:'Caudex', fontWeight: '500', maxWidth: '100%'}}>  O direito da sua família em primeiro lugar </h1>
-            <h3 style={{fontSize: '20px', fontWeight: '300', marginTop: '0', width:'90%', lineHeight:'30px'}}> Precisando de advogados para te orientar  no que é o melhor a ser feito? </h3>
-            <div style={{display: 'flex',  justifyContent: 'space-between', maxWidth:'550px', height:'120px', flexWrap: 'wrap', alignItems: 'space-between', margin: '5px 5px'}}>
-                <Botao color={'#AE8FAF'} size={'250px'} height={'50px'} border={'none'}>
-                    Agende uma reunião
-                    </Botao>
-                <Botao color={'#FFFFFF'} size={'250px'} height={'50px'} border={'0.2px solid gray'}>
-                    Conheça seus direitos
-                </Botao>
-            </div>
-        </div> 
-
-
-    </div>
     
-    </>
+    </div>
   )
 }
 

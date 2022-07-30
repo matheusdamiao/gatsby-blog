@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
+import Bars from './../images/bars-solid.svg'
 
 const MenuDesktop = () => {
   const menuStyle = {
@@ -28,20 +29,31 @@ const MenuDesktop = () => {
   }
 
   return (
-    <div style={menuStyle}>
-      <div style={{minWidth: '150px', marginLeft: '20px'}}>
-        <StaticImage 
-        src="../images/logo.png"
-        alt='logo'
-        />
-      </div>  
-      <ul style={ulStyle}>
-        <li style={liStyle}>Serviços</li>
-        <li style={liStyle}>Blog</li>
-        <li style={liStyle}>Sobre</li>
-        <li style={{fontSize: '20px', fontFamily: 'Caudex', listStyle: 'none', background: '#F7EFAE', padding: '10px 35px', borderRadius: '25px 25px', cursor: 'pointer'}}>Contato</li>
-      </ul>
-    </div>
+    <>
+      <div className='divMenu'>
+        <div style={{minWidth: '150px', marginLeft: '20px'}}>
+          <StaticImage 
+          src="../images/logo.png"
+          alt='logo'
+          />
+        </div>  
+        <ul style={ulStyle}>
+          <li style={liStyle}>Serviços</li>
+          <li style={liStyle}>Blog</li>
+          <li style={liStyle}>Sobre</li>
+          <li style={{fontSize: '20px', fontFamily: 'Caudex', listStyle: 'none', background: '#F7EFAE', padding: '10px 35px', borderRadius: '25px 25px', cursor: 'pointer'}}>Contato</li>
+        </ul>
+      </div>
+      <div className='div-menu-mobile'>
+        <div style={{height:'80px', marginLeft: '80px', marginTop: '20px'}}>
+            <StaticImage 
+            src="../images/logo-mobile.png"
+            alt='logo'
+              />
+          </div>  
+        <img src={Bars} className='menuBars'/>
+      </div>
+    </>
   )
 }
 

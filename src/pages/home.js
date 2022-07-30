@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import  { graphql }  from "gatsby"
 import AreasDeAtuacao from '../components/AreaDeAtuacao'
 import HeroSection from '../components/HeroSection'
@@ -7,6 +7,7 @@ import Depoimentos from "../components/Depoimentos"
 import PageTemplate from "../components/PageTemplate"
 import FormSection from "../components/FormSection"
 import { getImage } from "gatsby-plugin-image"
+import Footer from "../components/Footer"
 
 const Home = ({data}) => {
 
@@ -31,8 +32,6 @@ const { imagem1, imagem2 } = data
   
 
 
-
-
   
   return (
     <div>
@@ -47,6 +46,7 @@ const { imagem1, imagem2 } = data
          {direitoData.body}
       </PageTemplate>
       <FormSection /> 
+      <Footer />
     </div>
   )
 }
