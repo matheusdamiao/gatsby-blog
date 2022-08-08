@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import Bars from './../images/bars-solid.svg'
+import Logo from './../images/logo-mobile.png'
+
 
 const MenuDesktop = () => {
   const menuStyle = {
@@ -28,6 +30,11 @@ const MenuDesktop = () => {
     cursor: 'pointer'
   }
 
+  const [clicked, setClicked] = useState(false)
+  const openMenu = () =>{
+    setClicked(!clicked)
+  }
+
   return (
     <>
       <div className='divMenu'>
@@ -45,14 +52,24 @@ const MenuDesktop = () => {
         </ul>
       </div>
       <div className='div-menu-mobile'>
-        <div style={{height:'80px', marginLeft: '80px', marginTop: '20px'}}>
-            <StaticImage 
-            src="../images/logo-mobile.png"
-            alt='logo'
-              />
-          </div>  
-        <img src={Bars} className='menuBars'/>
-      </div>
+        <div style={{width: '100%', padding: '0', marginLeft: '50px'}}>
+            <StaticImage
+            src='./../images/logo-mobile.png' alt='logo' className='logo-mobile' />
+        </div>  
+        <div style={{width: '100%', padding: '0', margin: '0', textAlign: 'right', marginRight: '50px'}} onClick={openMenu}>
+          <StaticImage 
+          src='./../images/bars-solid.svg' className='menuBars'/>
+        </div> 
+        
+      </div> 
+      <div className= {clicked ? 'menuAtivo' : 'menuDesativado'}>
+          <ul className='ul-mobile'>
+            <li style={liStyle}>Serviços</li>
+            <li style={liStyle}>Blog</li>
+            <li style={liStyle}>Sobre</li>
+            <li style={liStyle}>Contato</li>
+          </ul>
+        </div>
     </>
   )
 }
