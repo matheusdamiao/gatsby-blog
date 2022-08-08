@@ -8,7 +8,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
     
 }
 
@@ -17,6 +17,10 @@ html {
     
 }
 
+a {
+    text-decoration: none;
+    color:rgb(80, 80, 80)
+}
 
 
 
@@ -233,13 +237,14 @@ html {
     justify-content: center;
     margin: 0;
     box-sizing: border-box;
+    
 
     li{
-        background-color: white;
+        
         margin: 0;
 
         &:hover{
-            background-color: black;
+            background-color: rgba(253, 230, 250, 0.8);
             color: white;
         }
     }

@@ -19,7 +19,7 @@ const FormSection = () => {
 
 
   return (
-    <div style={style}>
+    <div id='contato' style={style}>
      
       <Contato />
       <Form />

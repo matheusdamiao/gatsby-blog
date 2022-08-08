@@ -81,8 +81,8 @@ const AreasDeAtuacao = () => {
     }
 
   return (
-    <div style={{display: 'flex', alignItems: 'center', flexWrap: 'nowrap', flexDirection: 'column'}} >
-      <h2 style={{textAlign: 'center', fontWeight: 'light', marginBottom:'70px', width: '100%'}}> Áreas de atuação </h2>
+    <div id='atuacao' style={{display: 'flex', alignItems: 'center', flexWrap: 'nowrap', flexDirection: 'column', marginTop: '100px'}} >
+      <h2  style={{textAlign: 'center', fontWeight: 'light', marginBottom:'70px', width: '100%'}}> Áreas de atuação </h2>
       <div style={cardsStyle}>
         {cardData.map( (card)=> {
           return  <Card icon={card.icone} title={card.title}> {card.body}</Card>

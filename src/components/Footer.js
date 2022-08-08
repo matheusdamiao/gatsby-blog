@@ -11,7 +11,7 @@ const Footer = () => {
         />
       <p style={{marginTop: '25px', textAlign: 'center'}}>Copyright © Cupulille & Medeiros Advogadas - 2022 <br />
  Todos os direitos reservados.</p>
-      <code>Desenvolvido por Matheus Damião & Luana Almeida</code>
+      <code style={{textAlign: 'center'}}>Desenvolvido por Matheus Damião & Luana Almeida</code>
     </div>
   )
 }
