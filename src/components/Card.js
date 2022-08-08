@@ -10,14 +10,15 @@ const Card = ({icon, title, children}) => {
         flexWrap: 'nowrap',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        width: '300px',
+        maxWidth: '300px',
+        width: '100%',
         height: '350px',
         borderRadius: '46px',
         textAlign: 'center',
         border: '1px solid black',
         margin: '10px',
         marginBottom: '50px',
-        padding: '10px',
+        padding: '10px 10px',
         border: 'none',
         backgroundColor: 'rgb(243, 240, 240, 0.85)',
         outline: 'none',
@@ -26,7 +27,8 @@ const Card = ({icon, title, children}) => {
 
    const styleH1 = {
     fontSize: '20px',
-    margin: '0'
+    margin: '0',
+    width: '100%'
    }
 
    const styleP = {

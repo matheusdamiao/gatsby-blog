@@ -34,7 +34,7 @@ const { imagem1, imagem2 } = data
 
   
   return (
-    <div>
+    <div style={{width: '100%', overflowX: 'hidden', margin: '0 auto'}}>
       <HeroSection />
       <AreasDeAtuacao />
       <Diferenciais />

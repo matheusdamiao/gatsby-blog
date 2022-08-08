@@ -30,12 +30,12 @@ const Form = () => {
 
   return (
     <div className='form'>
-      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', maxHeight: '100px', marginLeft: '10px' }}>
+      <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', marginLeft: '10px' }}>
         <StaticImage
         src='./../images/icone-contato.png'
         alt='icone'
         />
-        <h1> Fale Conosco</h1>
+        <h1 style={{width: '100%'}}> Fale Conosco</h1>
       </div>
       <p>Estamos aqui para lhe ajudar. 
         Preencha o formulário abaixo para entrarmos em contato o mais rápido possível.
