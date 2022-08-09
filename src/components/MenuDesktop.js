@@ -39,11 +39,12 @@ const MenuDesktop = () => {
     
   }
 
-  // const closeMenu = () =>{
-  //   if (window.innerWidth > 800) {
-  //     setClicked(false)
-  //   }
-  // }
+  const closeMenu = () =>{
+    if(typeof window !== 'undefined')
+    if (window.innerWidth > 800) {
+      setClicked(false)
+    }
+  }
 
  
   
@@ -55,11 +56,7 @@ const MenuDesktop = () => {
 
       
 
-      window.addEventListener('resize', function closeMenu() {
-        if (window.innerWidth > 800) {
-          setClicked(false)
-        }
-      })
+      window.addEventListener('resize', closeMenu)
 
       const divMenu = document.querySelector('.div-menu-mobile');
 
