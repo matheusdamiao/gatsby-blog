@@ -39,22 +39,31 @@ const MenuDesktop = () => {
     
   }
 
-  const closeMenu = () =>{
-    if (window.innerWidth > 800) {
-      setClicked(false)
-    }
-  }
+  // const closeMenu = () =>{
+  //   if (window.innerWidth > 800) {
+  //     setClicked(false)
+  //   }
+  // }
 
-  const isBrowser = typeof window !== "undefined"
+ 
   
    
-    useEffect((isBrowser)=>{
+    useEffect(()=>{
 
-      isBrowser.addEventListener('resize', closeMenu)
+      const isBrowser = typeof window !== "undefined"
+      if(isBrowser) {
+
+      
+
+      window.addEventListener('resize', ()=>{
+        if (window.innerWidth > 800) {
+          setClicked(false)
+        }
+      })
 
       const divMenu = document.querySelector('.div-menu-mobile');
 
-      isBrowser.addEventListener('click', (e)=>{
+      window.addEventListener('click', (e)=>{
         
         const insideDiv = e.composedPath().includes(divMenu)
         if(!insideDiv) {
@@ -62,6 +71,8 @@ const MenuDesktop = () => {
         }
   
       })
+
+    }
     },[clicked])
 
 
