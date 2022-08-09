@@ -39,7 +39,7 @@ const { imagem1, imagem2 } = data
       <AreasDeAtuacao />
       <Diferenciais />
       <Depoimentos />
-      <PageTemplate inverted={true} imagem={aboutData.imagem} subtitulo={aboutData.subtitulo} titulo={aboutData.titulo}> 
+      <PageTemplate inverted={false} imagem={aboutData.imagem} subtitulo={aboutData.subtitulo} titulo={aboutData.titulo}> 
          {aboutData.body}
       </PageTemplate>
       <PageTemplate inverted={false} imagem={direitoData.imagem} subtitulo={direitoData.subtitulo} titulo={direitoData.titulo}> 
