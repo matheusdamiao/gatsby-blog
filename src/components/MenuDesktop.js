@@ -55,7 +55,7 @@ const MenuDesktop = () => {
 
       
 
-      window.addEventListener('resize', ()=>{
+      window.addEventListener('resize', function closeMenu() {
         if (window.innerWidth > 800) {
           setClicked(false)
         }
