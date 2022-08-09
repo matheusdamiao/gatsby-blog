@@ -45,21 +45,24 @@ const MenuDesktop = () => {
     }
   }
 
-
-  window.addEventListener('resize', closeMenu)
-   
-    // useEffect(()=>{
-    //   const divMenu = document.querySelector('.div-menu-mobile');
-
-    //   window.addEventListener('click', (e)=>{
-        
-    //     const insideDiv = e.composedPath().includes(divMenu)
-    //     if(!insideDiv) {
-    //       setClicked(false)
-    //     }
+  const isBrowser = typeof window !== "undefined"
   
-    //   })
-    // },[clicked])
+   
+    useEffect((isBrowser)=>{
+
+      isBrowser.addEventListener('resize', closeMenu)
+
+      const divMenu = document.querySelector('.div-menu-mobile');
+
+      isBrowser.addEventListener('click', (e)=>{
+        
+        const insideDiv = e.composedPath().includes(divMenu)
+        if(!insideDiv) {
+          setClicked(false)
+        }
+  
+      })
+    },[clicked])
 
 
    
