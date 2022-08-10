@@ -39,7 +39,7 @@ const about = () => {
 
                 <div className='section-bio'>
                     <p>Especialistas em direito da famiília, as advogadas Vanessa Cupullile e Thays Medeiros possuem em comum a atenção e o cuidado para lidar com casos </p>
-                    <button> <a href={curriculo} title='Curriculo em pdf'> Currículo em PDF</a>  </button>
+                    <button className='button-about'> <a href={curriculo} title='Curriculo em pdf'> Currículo </a>  </button>
                 </div>
             </div>
     </section>
@@ -60,7 +60,7 @@ const about = () => {
 
                 <div className='section-bio'>
                     <p>Especialistas em direito da famiília, as advogadas Vanessa Cupullile e Thays Medeiros possuem em comum a atenção e o cuidado para lidar com casos </p>
-                    <button> <a href={curriculo} title='Curriculo em pdf'> Currículo em PDF</a>  </button>
+                    <button className='button-about'> <a href={curriculo} title='Curriculo em pdf'> Currículo </a>  </button>
                 </div>
             </div>
     </section>

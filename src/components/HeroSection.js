@@ -25,7 +25,6 @@ const HeroSection = () => {
         width: '100%',
         minWidth: '300px',
         maxWidth: '600px',
-        marginTop: '100px',
         marginLeft: '20px'
         
     }
