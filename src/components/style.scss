@@ -9,7 +9,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    
+    background-color: rgba(239, 239, 239, 0.7);
 }
 
 * {
@@ -381,9 +381,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #fff9cb;
-    height: 350px;
-    flex-wrap: nowrap;
+    background-color: rgba(252, 249, 224, 0.5);
+    height: 90%;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: 100px;
     padding: 20px;
@@ -395,26 +395,48 @@ a {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: flex-start;
 
         h1 {
-            
+            font-size: 4.5rem;
             font-family: Caudex;
-            font-size: 3em;
+            font-weight: 500;
+            font-style: normal;
+            // line-height: 90%;
+            line-height: 80px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color:rgb(63, 63, 63);
+            margin-top: 0;
+
+            @media screen and (max-width: 768px) {
+                font-size: 3rem;
+                margin-top: 20px;
+                line-height: 50px;
+            }
         }
 
 
-        h3{
-        font-family: Caudex;
-        font-size: 1.5em;
-        margin-top: 0;
-        font-weight: 300;
+        h3 {
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 25px;
+            font-weight: 500;
+            font-family: Caudex;
+            color:rgb(85, 85, 85);
+            line-height: 30px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1.2rem;
+            }
         }
     }
 
 
     .about-hero-picture {
-       position: relative;
-       bottom: 70px;
+    //    position: relative;
+       bottom: 85px;
+       opacity: 0.85;
     } 
 
 

@@ -13,7 +13,7 @@ const HeroSection = () => {
         width: '90%',
         flexWrap: 'wrap',
         justifyContent: 'space-evenly',
-        margin: '0px auto',
+        margin: '100px auto',
         flexDirection: 'row-reverse'
         
 

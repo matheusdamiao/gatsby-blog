@@ -9,15 +9,15 @@ const about = () => {
         <MenuDesktop/>
         <div className='about-hero'>
             <div className='about-hero-content'>
-                <h1>Advogadas familiaristas</h1>
+                <h1>Advogadas Familiaristas</h1>
                 <h3> Conheça melhor as nossas especialistas em direito de família</h3>
             </div>
 
             <div className='about-hero-picture'>
-                {/* <StaticImage
+                <StaticImage
                 src='./../images/advogadas-foto.png'
                 width={450}
-                quality={100} /> */}
+                quality={100} />
             </div>
 
         </div>
