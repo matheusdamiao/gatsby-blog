@@ -34,6 +34,8 @@ const Form = () => {
         <StaticImage
         src='./../images/icone-contato.png'
         alt='icone'
+        quality={100}
+        width={100}
         />
         <h1 style={{width: '100%'}}> Fale Conosco</h1>
       </div>

@@ -68,10 +68,14 @@ const Diferenciais = () => {
 
         {cardInfo.map( (card) =>{
             return <div style={{width: '300px', height: '250px', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', padding: '40px'}}> 
+                        
                         <GatsbyImage
                         image={card.icone}
-                        alt='icone'                      
+                        alt='icone'   
+                        quality={100}           
+                        
                         />
+                        
                         <p>{card.body}</p>
                     </div>
         })}

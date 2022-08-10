@@ -31,6 +31,7 @@ const Depoimento = ({nome, avatar, text, key}) => {
       <GatsbyImage
       image={avatar}
       alt='avatar'
+      quality={100}
       />
       <div style={{display: 'flex'}}>
         <img src={Star} alt=''/>

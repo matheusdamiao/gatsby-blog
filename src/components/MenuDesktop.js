@@ -96,7 +96,9 @@ const MenuDesktop = () => {
       <div className='div-menu-mobile'>
         <div style={{width: '100%', padding: '0', marginLeft: '50px'}}>
             <StaticImage
-            src='./../images/logo-mobile.png' alt='logo' className='logo-mobile' />
+            src='./../images/logo-mobile.png'
+            quality={100}
+            alt='logo' className='logo-mobile' />
         </div>  
         <div style={{width: '100%', padding: '0', margin: '0', textAlign: 'right', marginRight: '50px'}} onClick={toggleMenu}>
           <StaticImage 
