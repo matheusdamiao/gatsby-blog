@@ -2,6 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import MenuDesktop from '../components/MenuDesktop'
 import curriculo from './../images/files/curriculum.pdf'
+import Footer from '../components/Footer'
 
 const about = () => {
   return (
@@ -46,15 +47,25 @@ const about = () => {
 
 
     <section className='section-about'>
-            <div className='section-info'>
+           
+            {/* <div className='section-info'>
                 <h2> Thays Medeiros </h2>
                 <small> OAB 39493430 </small>
-            </div>
+            </div> */}
+
 
             <div className='section-wrap'>
+                <div className='section-info'>
+                    <h2> Thays Medeiros </h2>
+                    <small> OAB 39493430 </small>
+                </div>
+
+               
+
                 <div className='section-picture'>
                     <StaticImage
                     src='./../images/thays-foto.png'
+                    
                     />
                 </div>
 
@@ -63,9 +74,11 @@ const about = () => {
                     <button className='button-about'> <a href={curriculo} title='Curriculo em pdf'> Currículo </a>  </button>
                 </div>
             </div>
+
+            
     </section>
 
-
+            <Footer />
 
     </div>
       

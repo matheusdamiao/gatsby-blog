@@ -381,7 +381,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgba(252, 249, 224, 0.5);
+    background-color: rgba(252, 249, 224, 0.7);
     height: 90%;
     flex-wrap: wrap;
     width: 100%;
@@ -406,7 +406,7 @@ a {
             line-height: 80px;
             letter-spacing: 1px;
             margin-bottom: 20px;
-            color:rgb(63, 63, 63);
+            color:rgb(49, 49, 49);
             margin-top: 0;
 
             @media screen and (max-width: 768px) {
@@ -421,9 +421,10 @@ a {
             margin-top: 0;
             margin-bottom: 30px;
             font-size: 25px;
-            font-weight: 500;
+            font-weight: 300;
+            letter-spacing: 0.5px;
             font-family: Caudex;
-            color:rgb(85, 85, 85);
+            color:rgba(117, 117, 117, 0.8);
             line-height: 30px;
 
             @media screen and (max-width: 768px) {
@@ -434,9 +435,14 @@ a {
 
 
     .about-hero-picture {
-    //    position: relative;
-       bottom: 85px;
-       opacity: 0.85;
+        opacity: 0.95;
+
+       @media screen and (max-width: 768px) {
+        width: 450px;
+        top: 100px;
+    
+    }
+
     } 
 
 
@@ -461,12 +467,41 @@ section {
 
     .section-info {
         width: 100%;
-       max-width: 800px;
-       padding: 0px 20px;
+       max-width: 900px;
+        margin-left: 10px;
+    
+
+        h2 {
+            margin-bottom: 0px;
+            font-size: 3em;
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            h2 {
+                margin-left: 20px;
+                font-size: 2.5em;
+            }
+            
+            small {
+                margin-left: 20px;
+            }
+        
+        }
+        
     }
 
     .section-picture {
-        width: 400px;
+        width: 500px;
+
+
+        @media screen and (max-width: 768px) {
+            width: 350px;
+            
+        
+        }
+        
     }
 
     
@@ -477,7 +512,7 @@ section {
     display: flex;
     width: 100%;
     max-width: 1000px;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -489,18 +524,30 @@ section {
 .section-bio {
     max-width: 450px;
     width: 100%;
-    height: 100%;
-    align-self: flex-end;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
+
+    @media screen and (max-width: 768px) {
+        height: 250px;
+        justify-content: center;
+    
+    }
 }
 
 
 .button-about {
-    padding: 15px 20px;
+    
     border-radius: 20px;
     outline: none;
     border: none;
     cursor: pointer;
+    background: rgb(247, 239, 174);
+    padding: 15px 40px;
+    border-radius: 25px 25px; 
+    max-width: 200px;
 }
 
 
