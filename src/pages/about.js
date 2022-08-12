@@ -6,7 +6,8 @@ import Footer from '../components/Footer'
 
 const about = () => {
   return (
-    <div className='heroSection'>
+    
+    <>
         <MenuDesktop/>
         <div className='about-hero'>
             <div className='about-hero-content'>
@@ -48,12 +49,7 @@ const about = () => {
 
     <section className='section-about'>
            
-            {/* <div className='section-info'>
-                <h2> Thays Medeiros </h2>
-                <small> OAB 39493430 </small>
-            </div> */}
-
-
+           
             <div className='section-wrap'>
                 <div className='section-info'>
                     <h2> Thays Medeiros </h2>
@@ -80,8 +76,8 @@ const about = () => {
 
             <Footer />
 
-    </div>
-      
+    
+      </>
     
   )
 }
