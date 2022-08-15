@@ -65,6 +65,8 @@ const BlogPostTemplate = ({ data, location }) => {
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
+              <img width={200} src={previous.frontmatter.imagem}/>
+
               </Link>
             )}
           </li>
@@ -72,6 +74,8 @@ const BlogPostTemplate = ({ data, location }) => {
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
+              <img width={200} src={next.frontmatter.imagem}/>
+
               </Link>
             )}
           </li>
@@ -123,6 +127,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        imagem
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -131,6 +136,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        imagem
       }
     }
   }
