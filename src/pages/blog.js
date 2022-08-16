@@ -2,8 +2,8 @@ import React from 'react'
 import MenuDesktop from '../components/MenuDesktop'
 import { StaticImage } from 'gatsby-plugin-image'
 import Footer from '../components/Footer'
-import { Link, graphql } from "gatsby"
-
+import { graphql } from "gatsby"
+import CardBlog from '../components/cardBlog'
 
 const blog = ({data}) => {
 
@@ -31,21 +31,16 @@ const blog = ({data}) => {
             <h2 style={{textAlign: 'center'}}> Nosso Blog </h2>
             
         <div className='blog-page'>
-                  
-            {postagens.map((post)=>{
-                return(
-
-                <Link to={post.fields.slug} >
-                <div style={{maxWidth: '400px', padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <h2 style={{alignText: 'center'}}> {post.frontmatter.title}</h2>
-                    <img src={post.frontmatter.imagem} width={250}/>
-
-                    <p> {post.frontmatter.date} </p>
-                    <p> {post.frontmatter.description}</p>
-                </div>
-                </Link>    
-                )
-            })}
+         {postagens.map((post)=> {
+          return <CardBlog
+                  title={post.frontmatter.title}
+                  link={post.fields.slug}
+                  imagem={post.frontmatter.imagem}
+                  data={post.frontmatter.date}
+                  description={post.frontmatter.description}
+                  />
+         })}   
+           
 
 
 
