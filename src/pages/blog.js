@@ -3,7 +3,7 @@ import MenuDesktop from '../components/MenuDesktop'
 import { StaticImage } from 'gatsby-plugin-image'
 import Footer from '../components/Footer'
 import { graphql } from "gatsby"
-import CardBlog from '../components/cardBlog'
+import CardBlog from '../components/CardBlog'
 
 const blog = ({data}) => {
 
