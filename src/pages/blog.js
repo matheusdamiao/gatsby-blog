@@ -38,6 +38,7 @@ const blog = ({data}) => {
                   imagem={post.frontmatter.imagem}
                   data={post.frontmatter.date}
                   description={post.frontmatter.description}
+                  hashtags={post.frontmatter.hashtags}
                   />
          })}   
            
@@ -73,6 +74,7 @@ export const pageQ = graphql`
           title
           description
           imagem
+          hashtags
         }
       }
     }
