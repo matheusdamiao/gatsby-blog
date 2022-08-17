@@ -12,6 +12,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log(e);
     setInputs({
 
     })
@@ -40,7 +41,7 @@ const Form = () => {
         <h1 style={{width: '100%'}}> Fale Conosco</h1>
       </div>
       <p>Estamos aqui para lhe ajudar. 
-        Preencha o formulário abaixo para entrarmos em contato o mais rápido possível.
+        Preencha o formulário abaixo e entrarmos em contato o mais rápido possível.
       </p>
       <form className='formContato' name='form-contato' onSubmit={handleSubmit} netlify>
         <input type='text' placeholder='Nome' name='nome' value={inputs.nome || ''} onChange={handleInput}/>
