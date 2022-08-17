@@ -12,11 +12,16 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
     console.log(e);
     setInputs({
 
     })
   }
+
+
+
+
 
   const handleInput = (e) => {
     let nome = e.target.name;
@@ -43,7 +48,9 @@ const Form = () => {
       <p>Estamos aqui para lhe ajudar. 
         Preencha o formulário abaixo e entrarmos em contato o mais rápido possível.
       </p>
-      <form className='formContato' name='form-contato' onSubmit={handleSubmit} netlify>
+      <form method='post' netlify-honeypot="bot-field" data-netlify="true" className='formContato' name='form-contato' onSubmit={handleSubmit}>
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="form-contato" />
         <input type='text' placeholder='Nome' name='nome' value={inputs.nome || ''} onChange={handleInput}/>
         <input type='text' placeholder='Telefone' name='telefone' value={inputs.telefone || ''} onChange={handleInput}/>
         <input type='email' placeholder='E-mail' name='email' value={inputs.email || ''} onChange={handleInput}/>
