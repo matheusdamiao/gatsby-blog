@@ -82,7 +82,8 @@ const AreasDeAtuacao = () => {
 
   return (
     <div id='atuacao' style={{display: 'flex', alignItems: 'center', flexWrap: 'nowrap', flexDirection: 'column', marginTop: '100px'}} >
-      <h2  style={{textAlign: 'center', fontWeight: 'light', marginBottom:'70px', width: '100%'}}> Áreas de atuação </h2>
+      <h2  style={{textAlign: 'center', fontWeight: 'light', width: '100%', fontFamily: 'Caudex', marginBottom: '0', fontSize: '2.5em'}}> Atuação em Direito da Família e Sucessões </h2>
+      <p style={{marginBottom:'70px', padding: '20px', textAlign: 'center'}}> Algumas áreas em que prestamos serviços aos nossos clientes </p>
       <div style={cardsStyle}>
         {cardData.map( (card)=> {
           return  <Card icon={card.icone} title={card.title}> {card.body}</Card>

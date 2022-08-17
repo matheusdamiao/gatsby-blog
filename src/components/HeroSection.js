@@ -45,7 +45,7 @@ const HeroSection = () => {
         
                 
             <div style={heroSectionPartOne}>
-                <h1 style={{fontSize:'50px', fontFamily:'Caudex', fontWeight: '500', width: '100%'}}>  O direito da sua família em primeiro lugar </h1>
+                <h1 style={{fontSize:'70px', fontFamily:'Caudex', fontWeight: '500', width: '100%'}}>  O direito da sua família em primeiro lugar </h1>
                 <h3 style={{fontSize: '1.5em', fontWeight: '100', fontStyle:'thin', marginTop: '0', width:'90%', lineHeight:'30px', letterSpacing: '0.5px', fontFamily: 'Caudex', color: 'rgba(117, 117, 117, 0.8)', lineHeight: '30px'}}> Precisando de advogadas para te orientar  no que é o melhor a ser feito? </h3>
                 <div style={{display: 'flex',  justifyContent: 'space-between', maxWidth:'550px', height:'120px', flexWrap: 'wrap', alignItems: 'space-between', margin: '5px 5px'}}>
                     <Botao color={'#AE8FAF'} size={'250px'} height={'50px'} border={'none'}>

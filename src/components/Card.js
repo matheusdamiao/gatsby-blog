@@ -9,7 +9,7 @@ const Card = ({icon, title, children}) => {
         flexDirection: 'column',
         flexWrap: 'nowrap',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-around',
         maxWidth: '300px',
         width: '100%',
         height: '350px',
@@ -20,9 +20,8 @@ const Card = ({icon, title, children}) => {
         marginBottom: '50px',
         padding: '10px 10px',
         border: 'none',
-        backgroundColor: 'rgb(243, 240, 240, 0.85)',
-        outline: 'none',
-        boxShadow: '-4px -4px 4px rgba(255, 255, 255, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.15)'
+        backgroundColor: 'rgba(244, 244, 244, 0.7)',
+        boxShadow: '-4px -4px 4px rgba(255, 255, 255, 0.4), 0px 4px 4px rgba(0, 0, 0, 0.15)'
    } 
 
    const styleH1 = {
@@ -32,8 +31,10 @@ const Card = ({icon, title, children}) => {
    }
 
    const styleP = {
-    fontSize: '15px',
-    padding: '10px'
+    fontSize: '14px',
+    color: 'grey',
+    padding: '10px',
+    marginTop: '10px'
    }
 
   return (
