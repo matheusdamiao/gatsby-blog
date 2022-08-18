@@ -26,7 +26,7 @@ const Form = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form": e.target.getAttribute("name")      
+        "form": e.target.getAttribute("name"), ...inputs      
       }),
     })
       .then((e) => alert("/thank-you/" + e.status))
