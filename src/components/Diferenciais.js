@@ -62,18 +62,18 @@ const Diferenciais = () => {
   return (
     <div>
         
-        <div style={{height: '100%', marginTop: '100px', backgroundColor: 'rgb(240,229,240)', width: '100%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{height: '100%', marginTop: '100px', backgroundColor: 'rgba(240,229,240, 0.1)', width: '100%', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
 
-        <h2 style={{width: '100%', textAlign: 'center', lineHeight: '40px'}} >Por que contratar especialistas <br/> em Direito Familiarista?</h2>
+        <h2 style={{width: '100%', textAlign: 'center', fontSize: '3.5rem', fontFamily:'Caudex', fontWeight: '700', fontStyle: 'normal', lineHeight: '90%', letterSpacing: '1px', color: 'rgb(63, 63, 63)'}} >Por que contratar especialistas <br/> em Direito Familiarista?</h2>
 
         {cardInfo.map( (card) =>{
-            return <div style={{width: '300px', height: '250px', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', padding: '40px'}}> 
+            return <div style={{width: '200px', height: '250px', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', padding: '40px'}}> 
                         
                         <GatsbyImage
                         image={card.icone}
                         alt='icone'   
                         quality={100}           
-                        
+                        width={300}
                         />
                         
                         <p>{card.body}</p>

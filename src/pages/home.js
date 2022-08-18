@@ -8,6 +8,7 @@ import PageTemplate from "../components/PageTemplate"
 import FormSection from "../components/FormSection"
 import { getImage } from "gatsby-plugin-image"
 import Footer from "../components/Footer"
+import BlogSection from "../components/BlogSection"
 
 const Home = ({data}) => {
 
@@ -45,6 +46,7 @@ const { imagem1, imagem2 } = data
       <PageTemplate inverted={false} imagem={direitoData.imagem} subtitulo={direitoData.subtitulo} titulo={direitoData.titulo}> 
          {direitoData.body}
       </PageTemplate>
+      <BlogSection />
       <FormSection /> 
       <Footer />
     </div>

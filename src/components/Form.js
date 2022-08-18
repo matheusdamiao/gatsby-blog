@@ -2,6 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
 import Botao from './Botao'
 import './style.scss'
+import Micro from './../images/microphone-svg.svg' 
 
 
 const Form = () => {
@@ -37,11 +38,12 @@ const Form = () => {
   return (
     <div className='form'>
       <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', marginLeft: '10px' }}>
-        <StaticImage
-        src='./../images/icone-contato.png'
+        <img
+        // src='./../images/icone-contato.png'
+        src={Micro}
         alt='icone'
         quality={100}
-        width={100}
+        width={80}
         />
         <h1 style={{width: '100%'}}> Fale Conosco</h1>
       </div>

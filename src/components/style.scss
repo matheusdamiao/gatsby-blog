@@ -673,11 +673,19 @@ section {
     margin: 0;
     padding-left: 20px;
     padding-right: 20px;
-
+    padding-top: 50px;
+    
 
     p {
         width: 100%;
         word-wrap: break-word;
+        line-height: 40px;
+        font-size: 18px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 13px;
+            
+        }
     }
 
 }
@@ -698,13 +706,20 @@ section {
     max-width: 1000px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;   
     margin: 0 auto;
     padding: 20px;
+
+    
     
     @media screen and (max-width: 768px) {
         justify-content: center;
+        max-width: 500px;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 350px;
     }
 
 }
@@ -713,10 +728,21 @@ section {
     display: flex;
     flex-direction: column;
     
+    .div-foto{
+        width: 400px;
+        height: 300px;
+    
+        @media screen and (max-width: 768px) {
+            width: 300px;
+        }
+
+
+    }
 
     img {
-        max-width: 350px;
         width: 100%;
+        object-fit: cover;
+        height: 100%;
     }
 
     h3{
@@ -733,11 +759,20 @@ section {
     display: flex;
     flex-direction: column;
    
+    .div-foto{
+        width: 400px;
+        height: 300px;
 
+        @media screen and (max-width: 768px) {
+            width: 300px;
+        }
+    }
 
     img {
-        max-width: 350px;
+        // max-width: 350px;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     h3{
@@ -763,13 +798,17 @@ section {
 
 
 .blog-card {
-    width: 350px;
+    width: 400px;
     height: 550px;
     padding: 20px;
     display: flex;
     flex-direction: column; 
     align-items: space-around;
     justify-content: flex-start;
+    
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
     
 
     small {
@@ -828,8 +867,13 @@ section {
 
 
 .div-foto {
-    width: 310px;
-    height: 180px;
+    width: 400px;
+    height: 250px;
+
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .avatar-blog-card {

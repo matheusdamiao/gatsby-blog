@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import Bars from './../images/bars-solid.svg'
 import Logo from './../images/logo-mobile.png'
-
+import LogoSVG from './../images/logo-svg.svg'
+import LogoComprido from './../images/logo-svg-comprido.svg'
 
 const MenuDesktop = () => {
   const menuStyle = {
@@ -80,9 +81,12 @@ const MenuDesktop = () => {
     <>
       <div className='divMenu'>
         <div style={{minWidth: '150px', marginLeft: '20px'}}>
-          <StaticImage 
-          src="../images/logo.png"
+          {/* <StaticImage  */}
+          <img
+          // src="../images/logo.png"
+          src={LogoSVG}
           alt='logo'
+          width={350}
           />
         </div>  
         <ul style={ulStyle}>

@@ -8,6 +8,8 @@ const CardBlog = ({link, title, imagem, data, description, hashtags}) => {
 
     const [tags, setTags] = useState(['separação', 'casamento', 'pensão'])
 
+    const [cardinfo, setCardInfo] = useState([])
+
 
     useEffect( ()=>{
         if(hashtags) {
@@ -25,7 +27,7 @@ const CardBlog = ({link, title, imagem, data, description, hashtags}) => {
   return (
     
     
-    <Link to={link} >
+    <a href={link} >
         
         <div className='blog-card'>
             <div className='div-foto'>
@@ -46,7 +48,7 @@ const CardBlog = ({link, title, imagem, data, description, hashtags}) => {
             </div>
      </div>
 
-     </Link>  
+     </a>  
           
 )
 

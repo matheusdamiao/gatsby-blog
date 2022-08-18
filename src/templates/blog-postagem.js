@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import MenuDesktop from '../components/MenuDesktop'
+import CardBlog from '../components/CardBlog'
 
 const blogPostagem = ({data}) => {
 
@@ -37,22 +38,44 @@ const blogPostagem = ({data}) => {
 
 
             {previous &&
-        <div className='post-antes'>
-
-            <Link to={previous.fields.slug}><p> Anterior </p> </Link>
-            <img src={previous.frontmatter.imagem}/>
-            <small>{previous.frontmatter.date}</small>
-            <h3>{previous.frontmatter.title}</h3>
+        
+              <div>
+              <a style={{paddingLeft: '20px'}}href={previous.fields.slug}> Anterior</a>
+              <CardBlog 
+              link={previous.fields.slug}
+              title={previous.frontmatter.title}
+              imagem={previous.frontmatter.imagem}
+              data={previous.frontmatter.date}
+              hashtags={previous.frontmatter.hashtags}
             
-        </div>
+              />
+              </div>
+
             }
             {next && 
-        <div className='post-depois'>
-            <Link to={next.fields.slug}><p> Próximo </p></Link>
-            <img  src={next.frontmatter.imagem}/>
-            <small>{next.frontmatter.date}</small>
-            <h3>{next.frontmatter.title}</h3>
+        // <div className='post-depois'>
+        //     <Link to={next.fields.slug}><p style={{textAlign: 'right'}}> Próximo </p></Link>
+        //     <div className='div-foto'>
+        //       <img  src={next.frontmatter.imagem}/>
+        //     </div>
+        //     <small>{next.frontmatter.date}</small>
+        //     <h3>{next.frontmatter.title}</h3>
+        //     <p>{next.frontmatter.hashtags}</p>
+
+        // </div>
+
+        <div>
+        <a style={{textAlign: 'right', display: 'block'}}href={next.fields.slug}> Próximo </a>
+        <CardBlog 
+        link={next.fields.slug}
+        title={next.frontmatter.title}
+        imagem={next.frontmatter.imagem}
+        data={next.frontmatter.date}
+        hashtags={next.frontmatter.hashtags}
+      
+        />
         </div>
+
             
             }
 
@@ -81,8 +104,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        description 
+        date(formatString: "DD/MM/YYYY")
+        description
+        hashtags
         imagem
       }
     }
@@ -103,8 +127,9 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD/MM/YYYY")
         imagem
+        hashtags
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -113,8 +138,10 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD/MM/YYYY")
         imagem
+        hashtags
+
       }
     }
   }
