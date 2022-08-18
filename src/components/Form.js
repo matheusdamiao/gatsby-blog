@@ -20,6 +20,27 @@ const Form = () => {
   }
 
 
+  const modal = () =>{
+    const modalBtn = document.querySelector('.btn-modal');
+    const modal = document.querySelector('.close');
+
+
+    modalBtn.addEventListener('click', ()=> {
+      modal.style.display = 'none'
+    })
+
+
+    return (
+    <div className='modal-bg close'> 
+      <div className='modal-block'>
+        <p>
+        Thank you for you contact!
+        </p>
+        <button className='btn-modal'> Ok! </button>
+      </div>
+   </div>)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     fetch("/home", {
@@ -29,7 +50,7 @@ const Form = () => {
         "form-name": e.target.getAttribute("name"), ...inputs      
       }),
     })
-      .then((e) => alert("/thank-you/" + e.status))
+      .then((e) => modal())
       .catch((error) => alert(error));
   
   
