@@ -26,6 +26,11 @@ const blogPostagem = ({data}) => {
       className='blog-post-body'
         dangerouslySetInnerHTML={{ __html: post.html }}
        />
+
+      <div className='avatar-blog-card'>
+          <img src={post.frontmatter.avatar} width={40}/> 
+            <p> {post.frontmatter.author} </p>
+      </div>
     </article> 
 
 
@@ -108,6 +113,8 @@ export const pageQuery = graphql`
         description
         hashtags
         imagem
+        author
+        avatar
       }
     }
 
