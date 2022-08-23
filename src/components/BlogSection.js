@@ -14,6 +14,8 @@ query {
         imagem
         hashtags
         date (formatString: "DD/MM/YYYY")
+        author
+        avatar
       }
       fields {
         slug
