@@ -3,7 +3,7 @@ import {Link } from 'gatsby'
 import Avatar from './../images/avatar1.png'
 import HashTag from './HashTag'
 
-const CardBlog = ({link, title, imagem, data, description, hashtags}) => {
+const CardBlog = ({link, title, imagem, data, description, hashtags, avatar, author}) => {
 
 
     const [tags, setTags] = useState(['separação', 'casamento', 'pensão'])
@@ -43,8 +43,8 @@ const CardBlog = ({link, title, imagem, data, description, hashtags}) => {
              </div>
              {/* <p> {description}</p> */}
             <div className='avatar-blog-card'>
-                <img src={Avatar} width={40}/> 
-                <p> Vanessa Cupulille</p>
+                <img src={avatar} width={40}/> 
+                <p> {author} </p>
             </div>
      </div>
 
