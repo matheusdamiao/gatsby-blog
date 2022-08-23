@@ -12,6 +12,7 @@ const blogPostagem = ({data}) => {
     <>
     
       <MenuDesktop />
+    
     <article className='blog-post'>
       <header className='blog-post-header'>
         <h1>{post.frontmatter.title}</h1>
@@ -26,11 +27,17 @@ const blogPostagem = ({data}) => {
       className='blog-post-body'
         dangerouslySetInnerHTML={{ __html: post.html }}
        />
-
-      <div className='avatar-blog-card'>
-          <img src={post.frontmatter.avatar} width={40}/> 
-            <p> {post.frontmatter.author} </p>
+      <span className='span-bio'></span>
+      <div className='blog-post-bio'>
+        
+        <img src={post.frontmatter.avatar}/> 
+        <div className='blog-post-author'>
+          <p className='blog-author-name'> {post.frontmatter.author} </p>
+          <p>Advogada especialista em direito familliarista</p>
+        </div>
+        
       </div>
+      <span className='span-bio'></span>
     </article> 
 
 
@@ -52,33 +59,27 @@ const blogPostagem = ({data}) => {
               imagem={previous.frontmatter.imagem}
               data={previous.frontmatter.date}
               hashtags={previous.frontmatter.hashtags}
-            
+              author={previous.frontmatter.author}
+              avatar={previous.frontmatter.avatar}
               />
               </div>
 
             }
             {next && 
-        // <div className='post-depois'>
-        //     <Link to={next.fields.slug}><p style={{textAlign: 'right'}}> Próximo </p></Link>
-        //     <div className='div-foto'>
-        //       <img  src={next.frontmatter.imagem}/>
-        //     </div>
-        //     <small>{next.frontmatter.date}</small>
-        //     <h3>{next.frontmatter.title}</h3>
-        //     <p>{next.frontmatter.hashtags}</p>
+       
 
-        // </div>
+              <div>
+              <a style={{textAlign: 'right', display: 'block'}}href={next.fields.slug}> Próximo </a>
+              <CardBlog 
+              link={next.fields.slug}
+              title={next.frontmatter.title}
+              imagem={next.frontmatter.imagem}
+              data={next.frontmatter.date}
+              hashtags={next.frontmatter.hashtags}
+              author={next.frontmatter.author}
+              avatar={next.frontmatter.avatar}
+              />
 
-        <div>
-        <a style={{textAlign: 'right', display: 'block'}}href={next.fields.slug}> Próximo </a>
-        <CardBlog 
-        link={next.fields.slug}
-        title={next.frontmatter.title}
-        imagem={next.frontmatter.imagem}
-        data={next.frontmatter.date}
-        hashtags={next.frontmatter.hashtags}
-      
-        />
         </div>
 
             
@@ -118,15 +119,7 @@ export const pageQuery = graphql`
       }
     }
 
-    
-    allImageSharp(filter: {id: {eq: $id}}) {
-      nodes {
-        gatsbyImageData
-        id
-      }
-    }
-    
-    
+      
 
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
@@ -137,6 +130,8 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         imagem
         hashtags
+        author
+        avatar
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -148,6 +143,8 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         imagem
         hashtags
+        author
+        avatar
 
       }
     }

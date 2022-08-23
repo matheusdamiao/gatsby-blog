@@ -39,6 +39,8 @@ const blog = ({data}) => {
                   data={post.frontmatter.date}
                   description={post.frontmatter.description}
                   hashtags={post.frontmatter.hashtags}
+                  author={post.frontmatter.author}
+                  avatar={post.frontmatter.avatar}
                   />
          })}   
            

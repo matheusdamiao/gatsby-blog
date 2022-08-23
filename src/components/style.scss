@@ -782,8 +782,50 @@ section {
     }
 }
 
+.span-bio {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    // display: inline;
+    width: 92%;
+    height: 2px;
+    background-color: #CACACA;
+}
 
 
+.blog-post-bio {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    // flex-direction: column;
+
+   
+
+    .blog-post-author {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .blog-author-name {
+            font-family: Monteserrat;
+            font-size: 25px;
+            font-weight: medium;
+        }
+
+        p {
+            margin: 0;
+            font-family: Monteserrat;
+            font-size: 15px;
+            font-weight: lighter;
+            color: #2B2B2B;
+            padding-bottom: 10px;
+        }
+    }
+}
 
 
 
