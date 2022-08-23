@@ -117,6 +117,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       thumbnail: String
+      author: String
+      avatar: String
       
     }
 

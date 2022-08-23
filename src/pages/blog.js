@@ -75,6 +75,8 @@ export const pageQ = graphql`
           description
           imagem
           hashtags
+          author
+          avatar
         }
       }
     }
