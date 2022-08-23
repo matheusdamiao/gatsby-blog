@@ -44,7 +44,10 @@ query {
               title={post.frontmatter.title}
               imagem={post.frontmatter.imagem} 
               data={post.frontmatter.date}
-              hashtags={post.frontmatter.hashtags}/>
+              hashtags={post.frontmatter.hashtags}
+              author={post.frontmatter.author}
+              avatar={post.frontmatter.avatar}
+              />
           })}    
         
       </div>
