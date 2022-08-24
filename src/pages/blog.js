@@ -1,13 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MenuDesktop from '../components/MenuDesktop'
 import { StaticImage } from 'gatsby-plugin-image'
 import Footer from '../components/Footer'
 import { graphql } from "gatsby"
 import CardBlog from '../components/CardBlog'
+import HashTag from '../components/HashTag'
 
-const blog = ({data}) => {
+const Blog = ({data}) => {
 
     const postagens = data.allMarkdownRemark.nodes
+
+    
+
+    const [inputState, setInputState] = useState('')
+
+    const [hashTags, setHashTags] = useState([])
+
+
+    useEffect(()=>{
+
+      
+      const tags = postagens.map(posts =>  posts.frontmatter.hashtags)
+      const arrayTags = tags.filter(tag => tag !== null)
+      
+      console.log(arrayTags)
+
+      const umaArray = arrayTags.join(',').split(',');
+      console.log(umaArray)
+      
+      let arrayFiltrado = umaArray.reduce((obj, b) => {
+        obj[b] = ++obj[b] || 1
+        console.log(obj)
+        return obj
+      },[])
+   
+      let tagsNames = []
+      for (let key in arrayFiltrado){
+        tagsNames.push({tag: key, value: arrayFiltrado[key]})
+      }
+
+      tagsNames.sort((a,b) => b.value - a.value);
+      console.log(tagsNames)
+      setHashTags(tagsNames)
+
+      
+    
+    
+
+
+    },[inputState])
+
+
 
 
   return (
@@ -29,9 +72,24 @@ const blog = ({data}) => {
         </div>
 
             <h2 style={{textAlign: 'center'}}> Nosso Blog </h2>
+
+          <div className='search-div'>
+            <input className ='search-input' type='text' placeholder='pesquise no blog...' value={inputState} onChange={(e)=> setInputState(e.target.value)}/>
             
+            <div className='search-hashtags'>
+              <p> tags populares </p>
+                {hashTags && hashTags.map((tag)=> 
+              {return  <span onClick={()=>setInputState(tag.tag)} style={{cursor: 'pointer'}}>
+                <HashTag color='#FEFFD9'> #{tag.tag}</HashTag>
+                
+            </span> 
+              })}
+            </div>
+          </div>
+
         <div className='blog-page'>
          {postagens.map((post)=> {
+
           return <CardBlog
                   title={post.frontmatter.title}
                   link={post.fields.slug}
@@ -44,9 +102,6 @@ const blog = ({data}) => {
                   />
          })}   
            
-
-
-
         </div>
 
 
@@ -55,7 +110,7 @@ const blog = ({data}) => {
   )
 }
 
-export default blog
+export default Blog
 
 
 export const pageQ = graphql`
@@ -68,6 +123,7 @@ export const pageQ = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
+        html
         fields {
           slug
         }

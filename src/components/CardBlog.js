@@ -18,7 +18,7 @@ const CardBlog = ({link, title, imagem, data, description, hashtags, avatar, aut
             let tag3 = hashtags[2]
 
             setTags([tag1, tag2, tag3])
-            console.log(tags)
+            // console.log(tags)
 
         }   
 
