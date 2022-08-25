@@ -584,28 +584,73 @@ section {
     flex-direction: column;
     
 
+    .div-input {
+        width: 60%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        img {
+            position: absolute;
+            right: 87%;
+            top: 30%;
+            opacity: 0.5;
+       }
+
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        
+            img {
+                right: 90%;              
+           }
+        }
+
+        button {
+            border-radius: 25px;
+            padding: 5px 30px 5px 30px;
+            margin-left: 5px;
+            cursor: pointer;
+            color:rgb(80, 80, 80);
+            border-style: none;
+            font-size: 14px;
+            background-color: rgba(174, 143, 175, 0.7);
+            transition: 0.3s;
+            box-shadow: 3px 3px 5px #aaaaaa, 2px 2px 5px rgb(255, 255, 255) inset;
+
+            &:hover {
+                box-shadow: 5px 3px 15px rgb(174, 143, 175), 2px 2px 5px rgb(255, 255, 255) inset;
+            }
+
+            &:active {
+                box-shadow: 5px 3px 15px rgb(174, 143, 175),-3px 0px 3px rgb(255, 255, 255) inset;
+            }
+
+        }
+
+    }
+
+
+
     p {
         margin: 0;
         margin-bottom: 5px;
         color: #bdbdbd;
-        font-size: 12px;
+        font-size: 14px;
+        padding-right: 15px;
+        padding-left: 5px;
     }
 
 
     input {
-        width: 55%;
-        padding: 10px 20px 10px 20px;
+        width: 70%;
+        padding: 10px 20px 10px 70px;
         border-radius: 20px;
         border: 2px solid #ccc;
          -webkit-transition: 0.5s;
         transition: 0.5s;
         outline: none;
 
-
-        @media screen and (max-width: 768px) {
-            width: 80%;
-        
-        }
+      
 
       
     }
@@ -613,6 +658,7 @@ section {
 
 .search-input {
     border: none;
+    
 
     &:focus {
         border: 3px solid rgb(254, 235, 255);
@@ -631,14 +677,24 @@ section {
     width: 90%;
 
 
+    .tags{
+        display: flex;
+
+        img {
+            opacity: 0.6;
+        }
+        
+    }
+
     span {
         padding: 2px;
-        transition: 0.2s;
+        transition: 0.3s;
         border-radius: 20px;
+        border: 1px solid white;
 
         &:hover{
-            background-color: #f9fcb2;
-                
+            background-color: #FEFFD9;
+            border: 1px solid #e0e0e0;
         }
     }
 }
@@ -959,6 +1015,19 @@ section {
         padding: 8px 0px 8px 0px;
         flex-wrap: wrap;
 
+        .icons-div{
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4px;
+        }
+
+        #tag-icon {
+            width: 100%;
+            max-width: 25px;
+            opacity: 0.6;
+        }
 
     }
 

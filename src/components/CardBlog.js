@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import {Link } from 'gatsby'
 import Avatar from './../images/avatar1.png'
 import HashTag from './HashTag'
+import TagIcon from './../images/tags-icon.svg'
+
+
 
 const CardBlog = ({link, title, imagem, data, description, hashtags, avatar, author}) => {
 
@@ -35,10 +38,14 @@ const CardBlog = ({link, title, imagem, data, description, hashtags, avatar, aut
             </div>
             <small> {data} </small>
             <h3> {title}</h3>
+            
              <div className='hashTags-div'>
-                <HashTag color={'#FEFFD9'}> #{tags[0]}</HashTag>
-                <HashTag color={'#FEEBFF'}> #{tags[1]} </HashTag>
-                <HashTag color={'#EAEAEA'}> #{tags[2]} </HashTag>
+                <div className='icons-div'>
+                     <img src={TagIcon} id='tag-icon'/> 
+                </div>
+                <HashTag color={'#FEFFD9'}> {tags[0]}</HashTag>
+                <HashTag color={'#FEEBFF'}> {tags[1]} </HashTag>
+                <HashTag color={'#EAEAEA'}> {tags[2]} </HashTag>
 
              </div>
              {/* <p> {description}</p> */}
