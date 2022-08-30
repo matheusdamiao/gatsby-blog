@@ -13,8 +13,10 @@ const Depoimento = ({nome, avatar, text, key}) => {
         flexWrap: 'nowrap',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        width: '400px',
-        height: '400px',
+        maxWidth: '700px',
+        width: '100%',
+        height: '100%',
+        maxHeight: '400px',
         borderRadius: '46px',
         textAlign: 'center',
         margin: '10px',
@@ -22,17 +24,20 @@ const Depoimento = ({nome, avatar, text, key}) => {
         border: 'none',
         backgroundColor: 'rgba(244, 244, 244, 0.5)',
         outline: 'none',
-        boxShadow: '-4px -4px 4px rgba(255, 255, 255, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.15)'
+        boxShadow: '-4px -4px 4px rgba(255, 255, 255, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.15)',
+        
     }
 
   return (
     <div style={style}>
-      <h2 style={{margin: '0', marginTop: '10px'}}>{nome} </h2>
-      <GatsbyImage
-      image={avatar}
-      alt='avatar'
-      quality={100}
-      />
+       <h4 style={{margin: '0', paddingRight: '20px'}}>{nome} </h4>
+          <GatsbyImage
+          image={avatar}
+          alt='avatar'
+          quality={100}
+          
+          />
+      
       <div style={{display: 'flex'}}>
         <img src={Star} alt=''/>
         <img src={Star} alt=''/>
@@ -41,10 +46,12 @@ const Depoimento = ({nome, avatar, text, key}) => {
         <img src={Star} alt=''/>
       </div>
       <div>
-        <img src={quotesLeft} style={{position: 'relative', right: '140px', top: '10px', margin: '0', padding: '0'}}   />
+        {/* <img src={quotesLeft} style={{position: 'relative', right: '350px', top: '10px', margin: '0', padding: '0'}}   /> */}
         <p style={{margin: '0 auto', width: '80%', textAlign: 'center' }}> {text} </p>
-        <img src={quotesRight} style={{position: 'relative', left: '140px', margin: '0'}} />
+        {/* <img src={quotesRight} style={{position: 'relative', left: '350px', margin: '0'}} /> */}
       </div>
+      
+        
     </div>
   )
 }

@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import Botao from './Botao'
 import { getImage} from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const AreasDeAtuacao = () => {
   const data = useStaticQuery(graphql`
@@ -71,29 +77,45 @@ const AreasDeAtuacao = () => {
     ] 
      
 
-    const cardsStyle = {
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            justifyContent: 'space-evenly',
-            maxWidth: '1200px'
-            
-    }
-
+ 
   return (
-    <div id='atuacao' style={{display: 'flex', alignItems: 'center', flexWrap: 'nowrap', flexDirection: 'column', marginTop: '100px'}} >
-      <h2  style={{textAlign: 'center', fontWeight: 'light', width: '100%', fontFamily: 'Caudex', marginBottom: '0', fontSize: '2.5em'}}> Atuação em Direito da Família e Sucessões </h2>
-      <p style={{marginBottom:'70px', padding: '20px', textAlign: 'center'}}> Algumas áreas em que prestamos serviços aos nossos clientes </p>
-      <div style={cardsStyle}>
-        {cardData.map( (card)=> {
-          return  <Card icon={card.icone} title={card.title}> {card.body}</Card>
-                    
-                  
-        })
-      }
-      </div>
+    <div className='atuacao-div' id='atuacao'>
+      <h2> Atuação em Direito da Família e Sucessões </h2>
+      <p > Algumas áreas em que prestamos serviços aos nossos clientes </p>
+          
+      
+       <Swiper
+        modules={[Navigation, Pagination]}
+        className='swiper-atuacao-principal'
+        pagination={{clickable: 'true'}}
+        spaceBetween={50}
+        navigation
+       >
+               
+        <SwiperSlide className='swiper-atuacao'>  
+                        <Card icon={cardData[0].icone} title={cardData[0].title}> {cardData[0].body}</Card> 
+                        <Card icon={cardData[1].icone} title={cardData[1].title}> {cardData[1].body}</Card>  
+                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+
+
+        </SwiperSlide>
+
+        <SwiperSlide className='swiper-atuacao'>  
+                         <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                        <Card icon={cardData[3].icone} title={cardData[3].title}> {cardData[3].body}</Card> 
+                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                        <Card icon={cardData[5].icone} title={cardData[5].title}> {cardData[5].body}</Card>    
+
+
+        </SwiperSlide>
+
+              
+       </Swiper>
        
-    
+        
+
+
       <div style={{margin: '20px 20px'}} >
       <Botao size={'250px'} color={'rgb(247, 239, 174)'} height={'50px'} border={'none'} >
         Agende uma reunião
