@@ -1,8 +1,11 @@
 import React from 'react'
 import MenuDesktop from './MenuDesktop'
 import * as style from './HeroSectionNew.module.css'
-import foto from './../images/foto-heromenor.svg'
+import foto from './../images/foto-hero.svg'
+// import foto from './../images/foto-hero-colorida.svg'
 import logo from './../images/new-logoo.svg'
+import bars from './../images/bars-solid.svg'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const HeroSectionNew = () => {
   return (
@@ -21,6 +24,12 @@ const HeroSectionNew = () => {
            
 
           </ul>
+          {/* <div className='menubar'>
+            <StaticImage
+            width={50}
+            src='./../images/bars-solid.svg'
+            />
+          </div> */}
         </div>
 
         <div className={style.divPrincipal}>
