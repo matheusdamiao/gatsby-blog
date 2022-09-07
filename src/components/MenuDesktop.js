@@ -81,9 +81,7 @@ const MenuDesktop = () => {
     <>
       <div className='divMenu'>
         <div style={{minWidth: '150px', marginLeft: '20px'}}>
-          {/* <StaticImage  */}
           <img
-          // src="../images/logo.png"
           src={LogoSVG}
           alt='logo'
           width={350}

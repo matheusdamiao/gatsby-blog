@@ -9,6 +9,7 @@ import FormSection from "../components/FormSection"
 import { getImage } from "gatsby-plugin-image"
 import Footer from "../components/Footer"
 import BlogSection from "../components/BlogSection"
+import HeroSectionNew from "../components/HeroSectionNew"
 
 const Home = ({data}) => {
 
@@ -36,8 +37,9 @@ const { imagem1, imagem2 } = data
   
   return (
     <div style={{width: '100%', overflowX: 'hidden', margin: '0px auto'}}>
-      <HeroSection />
-      <AreasDeAtuacao />
+      {/* <HeroSection /> */}
+      <HeroSectionNew />
+      {/* <AreasDeAtuacao /> */}
       <Diferenciais />
       <Depoimentos />
       <PageTemplate inverted={false} imagem={aboutData.imagem} subtitulo={aboutData.subtitulo} titulo={aboutData.titulo}> 
