@@ -34,9 +34,9 @@ const HeroSectionNew = () => {
 
         <div className={style.divPrincipal}>
           <div className={style.div}>
-              <p> Advocacia Familiarista</p>
+              <p> Advocacia de Família e Sucessões</p>
               <h1> O direito da sua família em primeiro lugar</h1>
-              <h3> Advogadas especializadas em direito de família </h3>
+              <h3> Com atendimento humanizado, ajudamos você e sua família na resolução de problemas jurídicos </h3>
               <button> Agende uma reunião</button>
           </div>
 
