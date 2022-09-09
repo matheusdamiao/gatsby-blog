@@ -19,17 +19,17 @@ const HeroSectionNew = () => {
           </div>
           <ul>
             <a> Blog</a>
-            <a> Sobre</a>
+            <a> Atuação </a>
+            <a> Sobre nós </a>
             <a> Contato </a>
-           
-
           </ul>
-          {/* <div className='menubar'>
+          <div className={style.menubar}>
             <StaticImage
-            width={50}
+            color={'white'}
+            width={30}
             src='./../images/bars-solid.svg'
             />
-          </div> */}
+          </div>
         </div>
 
         <div className={style.divPrincipal}>

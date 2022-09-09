@@ -16,25 +16,35 @@
     z-index: 99;
     position: absolute;
     width: 100%;
-
+    top: 0;
+    height: 120px;
+    
 }
 
 .menu > .menubar {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    padding-right: 50px;
+    flex-shrink: 0;
+    cursor: pointer;
 }
 
 
 .menu > ul {
-    width: 50%;
+    width: contain;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-right: 50px;
-    flex-shrink: 0;
-
+    margin-right: 50px;
+    flex-shrink: 1;
+    /* gap: 50px; */
+    padding-top: 50px;
+    /* margin: 0; */
+    white-space: nowrap;
+    
 }
+
 
 .menu > ul > a {
     font-family: Urbanist, sans-serif;
@@ -53,9 +63,10 @@
 }
 
 .menu > .logoDiv {
-    padding-left: 60px;
-    margin-top: 40px;
+    display: flex;
     flex-shrink: 0;
+    margin: 0;
+    padding-left: 70px;
     
 }
 
@@ -143,5 +154,55 @@
     object-fit: cover;
     object-position: center;
     
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px){
+
+    .menu {
+        background-color: rgba(244,244,244, 0.8);
+
+    }
+
+    .menu > ul {
+        display: none;
+    }
+
+    .menu > .menubar{
+        display: flex;
+        
+    }
+
+
+    .divPrincipal{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .div{
+       width: 80%;
+        z-index: 10;
+    }
+
+
+    .menu > .logoDiv{
+    
+    }
+
+    .divFoto{
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        opacity: 0.7;
+        height: 100%;
+    }
 
 }
