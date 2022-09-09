@@ -26,7 +26,7 @@ const HeroSectionNew = () => {
           <div className={style.menubar}>
             <StaticImage
             color={'white'}
-            width={30}
+            width={25}
             src='./../images/bars-solid.svg'
             />
           </div>
