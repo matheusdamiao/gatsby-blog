@@ -39,7 +39,7 @@ const { imagem1, imagem2 } = data
     <div style={{width: '100%', overflowX: 'hidden', margin: '0px auto'}}>
       {/* <HeroSection /> */}
       <HeroSectionNew />
-      {/* <AreasDeAtuacao /> */}
+      <AreasDeAtuacao />
       <Diferenciais />
       <Depoimentos />
       <PageTemplate inverted={false} imagem={aboutData.imagem} subtitulo={aboutData.subtitulo} titulo={aboutData.titulo}> 

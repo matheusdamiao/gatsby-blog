@@ -6,11 +6,13 @@ const Card = ({icon, title, children}) => {
   
   return (
     <div className='card-div'>
-      <GatsbyImage 
-      image={icon}
-      alt='icon'
-      loading='eager'
-      />
+      <div className='card-icon'>
+        <GatsbyImage 
+        image={icon}
+        alt='icon'
+        loading='eager'
+        />
+      </div>
 
       <h1>{title}</h1>
       <p >{children}</p>

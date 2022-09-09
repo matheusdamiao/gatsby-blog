@@ -80,35 +80,42 @@ const AreasDeAtuacao = () => {
  
   return (
     <div className='atuacao-div' id='atuacao'>
-      <h2> Atuação em Direito da Família e Sucessões </h2>
-      <p > Algumas áreas em que prestamos serviços aos nossos clientes </p>
+      <h2> áreas de atuação </h2>
+      <p > Serviços que prestamos aos nossos clientes </p>
           
       
        <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Pagination]}
         className='swiper-atuacao-principal'
         pagination={{clickable: 'true'}}
-        spaceBetween={50}
-        navigation
+        spaceBetween={0}
+        slidesPerView={1.7}
        >
                
         <SwiperSlide className='swiper-atuacao'>  
                         <Card icon={cardData[0].icone} title={cardData[0].title}> {cardData[0].body}</Card> 
                         <Card icon={cardData[1].icone} title={cardData[1].title}> {cardData[1].body}</Card>  
-                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
-                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                        
 
 
         </SwiperSlide>
 
         <SwiperSlide className='swiper-atuacao'>  
+                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+        </SwiperSlide>
+
+        <SwiperSlide className='swiper-atuacao'>  
                          <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
                         <Card icon={cardData[3].icone} title={cardData[3].title}> {cardData[3].body}</Card> 
-                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
-                        <Card icon={cardData[5].icone} title={cardData[5].title}> {cardData[5].body}</Card>    
-
-
+                           
         </SwiperSlide>
+
+        <SwiperSlide className='swiper-atuacao'>  
+
+                         <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                        <Card icon={cardData[5].icone} title={cardData[5].title}> {cardData[5].body}</Card>  
+          </SwiperSlide>
 
               
        </Swiper>
@@ -116,11 +123,11 @@ const AreasDeAtuacao = () => {
         
 
 
-      <div style={{margin: '20px 20px'}} >
-      <Botao size={'250px'} color={'rgb(247, 239, 174)'} height={'50px'} border={'none'} >
-        Agende uma reunião
-      </Botao>
-      </div>
+      {/* <div style={{margin: '20px 20px'}} >
+        <Botao size={'250px'} color={'rgb(247, 239, 174)'} height={'50px'} border={'none'} >
+          Agende uma reunião
+        </Botao>
+      </div> */}
     </div>
   )
 }

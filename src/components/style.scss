@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 
  ::placeholder {
     color:rgba(173, 173, 173, 0.5)
@@ -391,19 +394,35 @@ a {
 
 
     h2 {
-        text-align: center;
-        font-weight: light;
-        width: 100%;
-        font-family: Caudex;
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 101.5%;
+        /* or 20px */
+
+        letter-spacing: 0.185em;
+
+        color: #2E2E2E;
         margin-bottom: 0;
-        font-size: 2.5em;
+
     }
 
 
     p{ 
         margin-bottom: 70px;
         padding: 20px;
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 101.5%;
+        /* or 30px */
+
         text-align: center;
+        letter-spacing: 0.095em;
+
+        color: #2E2E2E;
     }
 
 
@@ -424,16 +443,20 @@ a {
 
     .swiper-atuacao {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
+        gap: 50px;
         align-items: center;
         flex-wrap: nowrap;
         margin: 0;
-        width: 100%;
+        width: 70%;
         margin-left: 0;
         margin-right: 0;
         
         @media screen and (max-width: 768px) {
             flex-wrap: wrap;
+            // overflow-y:visible;
+            // width: 2000px;
+            gap: 20px;
         }
 
       
@@ -457,20 +480,26 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 300px;
-    width: 100%;
+    // align-items: flex-start;
+    justify-content: space-between;
+    max-width: 280px;
     height: 350px;
-    border-radius: 46px;
     text-align: center;
     border: 1px solid black;
     margin: 10px;
     margin-bottom: 50px;
     padding: 10px 10px;
     border: none;
-    background-color: rgba(244, 244, 244, 0.7);
-    box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.4), 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px rgba(173, 173, 173, 0.25);
+    border-radius: 9px;
+    padding: 45px 45px 20px 45px;
+
+    
+
+    .card-icon {
+        width: 40px;
+    }
+
 
 
     @media screen and (max-width: 768px) {
@@ -482,14 +511,33 @@ a {
         font-size: 20px;
         margin: 0;
         width: 100%;
+        font-family: Urbanist, sans-serif;
+        text-align: left;
+        padding: 0;
+
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 113.5%;
+        letter-spacing: 0.095em;
     }
 
 
     p {
-        font-size: 14px;
-        color: grey;
-        padding: 10px;
+        padding: 0px;
         margin-top: 10px;
+        text-align: left;
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 136.5%;
+        
+
+        letter-spacing: 0.095em;
+
+        color: #181818;
     }
 }
 
