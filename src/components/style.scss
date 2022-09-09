@@ -440,18 +440,22 @@ a {
        
 .swiper-atuacao-principal {
     width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
 
     .swiper-atuacao {
         display: flex;
         justify-content: space-evenly;
         gap: 50px;
         align-items: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         margin: 0;
         width: 70%;
         margin-left: 0;
         margin-right: 0;
+        margin-right: 40px;
         
+
         @media screen and (max-width: 768px) {
             flex-wrap: wrap;
             // overflow-y:visible;
@@ -493,7 +497,7 @@ a {
     box-shadow: 0px 4px 4px rgba(173, 173, 173, 0.25);
     border-radius: 9px;
     padding: 45px 45px 20px 45px;
-
+    flex-shrink: 0;
     
 
     .card-icon {

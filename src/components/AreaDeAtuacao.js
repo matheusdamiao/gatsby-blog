@@ -89,33 +89,29 @@ const AreasDeAtuacao = () => {
         className='swiper-atuacao-principal'
         pagination={{clickable: 'true'}}
         spaceBetween={0}
-        slidesPerView={1.7}
+        slidesPerView={1}
        >
                
         <SwiperSlide className='swiper-atuacao'>  
                         <Card icon={cardData[0].icone} title={cardData[0].title}> {cardData[0].body}</Card> 
                         <Card icon={cardData[1].icone} title={cardData[1].title}> {cardData[1].body}</Card>  
-                        
+                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
 
 
         </SwiperSlide>
 
         <SwiperSlide className='swiper-atuacao'>  
-                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
-                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
-        </SwiperSlide>
-
-        <SwiperSlide className='swiper-atuacao'>  
-                         <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                     
                         <Card icon={cardData[3].icone} title={cardData[3].title}> {cardData[3].body}</Card> 
-                           
+                        <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                         <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
+                        <Card icon={cardData[5].icone} title={cardData[5].title}> {cardData[5].body}</Card> 
+
         </SwiperSlide>
 
-        <SwiperSlide className='swiper-atuacao'>  
-
-                         <Card icon={cardData[2].icone} title={cardData[2].title}> {cardData[2].body}</Card> 
-                        <Card icon={cardData[5].icone} title={cardData[5].title}> {cardData[5].body}</Card>  
-          </SwiperSlide>
+       
+       
 
               
        </Swiper>
