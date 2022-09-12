@@ -1,6 +1,10 @@
 /* CSS Custom Properties Definitions */
 
 :root {
+  --swiper-pagination-bullet-inactive-color: #D9D9D9;
+  --swiper-pagination-color: #AE8FAF;
+
+
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
   --maxWidth-sm: 24rem;
