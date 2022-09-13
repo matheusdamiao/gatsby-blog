@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.divPrincipal {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+    margin-top: 100px;
+}
+
+
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 150px;
+    width: 100%;
+    
+}
+
+
+.titulo > h1 {
+    font-family: Urbanist;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 101.5%;
+    text-align: left;
+    letter-spacing: 0.095em;
+    color: #2E2E2E;
+    
+    margin-top: 0;
+}
+
+
+.titulo > h3 {
+    text-align: left;
+    font-family: Urbanist;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 101.5%;
+    letter-spacing: 0.185em;
+
+    color: #2E2E2E;
+    
+}
+
+
+.textoEfoto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* flex-wrap: wrap-reverse; */
+}
+
+
+
+.foto {
+    /* max-width: 500px; */
+}
+
+.foto > img {
+    width: 100%;
+    opacity: 0.7;
+    object-position: center;
+}
+
+
+.divTexto{
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 70px;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.divTexto > p {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 136%;
+    /* or 19px */
+
+    letter-spacing: 0.095em;
+    padding-top: 40px;
+    color: #181818;
+    
+}
+
+.divTexto > button {
+    background: #AE8FAF;
+    box-shadow: -3.36475px -3.36475px 4px rgba(255, 255, 255, 0.25), 0px 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    max-width: 300px;
+    height: 60px;
+    border: none;
+}
+
+
+
+@media screen and (max-width: 768px) { 
+
+    .titulo{
+        padding-left: 0;
+    }
+
+    .textoEfoto{
+        flex-wrap: wrap-reverse;
+        padding-right: 20px;
+       
+    }
+
+
+
+    .divPrincipal{
+        padding-left: 20px;
+    }
+}

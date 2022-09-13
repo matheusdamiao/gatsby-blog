@@ -10,6 +10,7 @@ import { getImage } from "gatsby-plugin-image"
 import Footer from "../components/Footer"
 import BlogSection from "../components/BlogSection"
 import HeroSectionNew from "../components/HeroSectionNew"
+import Page from '../components/Page'
 
 const Home = ({data}) => {
 
@@ -42,12 +43,13 @@ const { imagem1, imagem2 } = data
       <AreasDeAtuacao />
       <Diferenciais />
       <Depoimentos />
-      <PageTemplate inverted={false} imagem={aboutData.imagem} subtitulo={aboutData.subtitulo} titulo={aboutData.titulo}> 
+      <Page />
+      {/* <PageTemplate inverted={false} imagem={aboutData.imagem} subtitulo={aboutData.subtitulo} titulo={aboutData.titulo}> 
          {aboutData.body}
       </PageTemplate>
       <PageTemplate inverted={false} imagem={direitoData.imagem} subtitulo={direitoData.subtitulo} titulo={direitoData.titulo}> 
          {direitoData.body}
-      </PageTemplate>
+      </PageTemplate> */}
       <BlogSection />
       <FormSection /> 
       <Footer />

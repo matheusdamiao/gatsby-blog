@@ -12,7 +12,9 @@ html {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background-color: rgba(239, 239, 239, 0.7);
+    // background-color: rgba(239, 239, 239, 0.7);
+    background-image: url('./../images/texture-gelo.svg');
+
 }
 
 * {
@@ -498,8 +500,9 @@ a {
     border-radius: 9px;
     padding: 45px 45px 20px 45px;
     flex-shrink: 0;
+    background-color: white;
     
-
+    
     .card-icon {
         width: 40px;
     }
