@@ -11,6 +11,7 @@ import Footer from "../components/Footer"
 import BlogSection from "../components/BlogSection"
 import HeroSectionNew from "../components/HeroSectionNew"
 import Page from '../components/Page'
+import NewBlogSection from "../components/NewBlogSection"
 
 const Home = ({data}) => {
 
@@ -50,7 +51,8 @@ const { imagem1, imagem2 } = data
       <PageTemplate inverted={false} imagem={direitoData.imagem} subtitulo={direitoData.subtitulo} titulo={direitoData.titulo}> 
          {direitoData.body}
       </PageTemplate> */}
-      <BlogSection />
+      {/* <BlogSection /> */}
+      <NewBlogSection />
       <FormSection /> 
       <Footer />
     </div>

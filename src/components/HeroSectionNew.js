@@ -6,6 +6,7 @@ import foto from './../images/foto-hero.svg'
 import logo from './../images/new-logoo.svg'
 import bars from './../images/bars-solid.svg'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 
 const HeroSectionNew = () => {
   return (
@@ -18,10 +19,10 @@ const HeroSectionNew = () => {
               />
           </div>
           <ul>
-            <a> Blog</a>
-            <a> Atuação </a>
-            <a> Sobre nós </a>
-            <a> Contato </a>
+            <Link to="/blog"> Blog</Link>
+            <a href='#atuacao'> Atuação </a>
+            <Link to="/about"> Sobre nós </Link>
+            <a href='#contato'> Contato </a>
           </ul>
           <div className={style.menubar}>
             <StaticImage

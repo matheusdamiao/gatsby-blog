@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Depoimento from './Depoimento'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectCards, EffectCreative, EffectFade, EffectFlip, Navigation, Pagination } from 'swiper';
+import { Autoplay, EffectCards, EffectCreative, EffectFade, EffectFlip, Navigation, Pagination, Parallax } from 'swiper';
 import * as style from './Depoimentos.module.css'
 import 'swiper/css/pagination'
 
@@ -87,7 +87,7 @@ const Depoimentos = () => {
       </div>
       <div className={style.slider}>
         <Swiper
-        modules={[Navigation, Pagination, EffectCards]}
+        modules={[Navigation, Pagination, EffectCards, Autoplay, Parallax]}
         className={style.swiperDepoimentoPrincipal}       
         pagination={{
           clickable:'true',
@@ -98,34 +98,42 @@ const Depoimentos = () => {
         Navigation
         effect='cards'
         cardsEffect={{slideShadows: false}}
-        
-        
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+
+        }}
+        parallax= {{
+          parallax: true,
+          enabled: true}}
         >
 
-          <SwiperSlide className={style.swiperDepoimento}>
+          <SwiperSlide  className={style.swiperDepoimento}>
       
-             <Depoimento nome={depoimentoState[0].nome} avatar={depoimentoState[0].foto} text={depoimentoState[0].texto} key={depoimentoState[0].index}  />
+             <Depoimento data-swiper-parallax-duration="3000"  nome={depoimentoState[0].nome} avatar={depoimentoState[0].foto} text={depoimentoState[0].texto} key={depoimentoState[0].index}  />
       
           </SwiperSlide>
 
-          <SwiperSlide className={style.swiperDepoimento}>
+          <SwiperSlide  className={style.swiperDepoimento}>
 
-            <Depoimento nome={depoimentoState[1].nome} avatar={depoimentoState[3].foto} text={depoimentoState[3].texto} key={depoimentoState[3].index}  />
+            <Depoimento data-swiper-parallax-duration="3000" nome={depoimentoState[1].nome} avatar={depoimentoState[3].foto} text={depoimentoState[3].texto} key={depoimentoState[3].index}  />
 
           </SwiperSlide>
 
-          <SwiperSlide className={style.swiperDepoimento}>
+          <SwiperSlide data-swiper-parallax-duration='1000' className={style.swiperDepoimento}>
          
-             <Depoimento nome={depoimentoState[2].nome} avatar={depoimentoState[1].foto} text={depoimentoState[1].texto} key={depoimentoState[1].index}  />
+             <Depoimento   nome={depoimentoState[2].nome} avatar={depoimentoState[1].foto} text={depoimentoState[1].texto} key={depoimentoState[1].index}  />
             
           </SwiperSlide>
 
 
-          <SwiperSlide className={style.swiperDepoimento}>
-              <Depoimento nome={depoimentoState[3].nome} avatar={depoimentoState[4].foto} text={depoimentoState[4].texto} key={depoimentoState[4].index}  />
+          <SwiperSlide data-swiper-parallax-duration='1000'  className={style.swiperDepoimento}>
+
+              <Depoimento  nome={depoimentoState[3].nome} avatar={depoimentoState[4].foto} text={depoimentoState[4].texto} key={depoimentoState[4].index}  />
+
           </SwiperSlide>
 
-          <SwiperSlide className={style.swiperDepoimento}>
+          <SwiperSlide data-swiper-parallax-duration='600'    className={style.swiperDepoimento}>
          
              <Depoimento nome={depoimentoState[5].nome} avatar={depoimentoState[5].foto} text={depoimentoState[5].texto} key={depoimentoState[5].index}  />
 
