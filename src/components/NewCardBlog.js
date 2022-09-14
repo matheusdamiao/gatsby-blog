@@ -15,7 +15,7 @@ const NewCardBlog = ({imagem, title, date, description, avatar, nome, oab, bio, 
         <h3>{title}</h3>
         <small> {date}</small>
         <p>{description}</p>
-        <div>
+        <div className={style.tags}>
             <span>{hashtags[0]}</span>
             <span>{hashtags[1]}</span>
             <span>{hashtags[2]}</span>

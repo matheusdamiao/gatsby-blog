@@ -1,5 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectCards, EffectCreative, EffectFade, EffectFlip, Navigation, Pagination, Parallax } from 'swiper';
 import NewCardBlog from './NewCardBlog'
 import * as style from './NewBlogsection.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -41,7 +42,28 @@ console.log(post2)
         </div>
 
         <div className={style.divSlider}>
-            <Swiper>
+            <Swiper
+            modules={[Navigation, Pagination, EffectCards, Autoplay, Parallax]}
+            className={style.swiperDepoimentoPrincipal}
+            slidesPerView={1.5}      
+            pagination={{
+              clickable:'true',
+              
+              
+          }}
+            gap={0}
+            Navigation
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+    
+            // }}
+            parallax= {{
+              parallax: true,
+              enabled: true}}
+            >
+            
+            
             
                 <SwiperSlide>
                     <NewCardBlog 

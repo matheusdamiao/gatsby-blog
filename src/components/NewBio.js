@@ -1,10 +1,10 @@
 import React from 'react'
-
+import * as style from './NewBio.module.css'
 
 const NewBio = ({avatar, oab, nome, bio}) => {
   return (
-    <div style={{display: 'flex'}}>
-        <div>
+    <div className={style.divPrincipal}>
+        <div className={style.avatar}>
             <img src={avatar}/>
         </div>
         <div style={{display: 'flex', flexDirection: 'column'}}>
