@@ -1,11 +1,18 @@
 /* CSS Custom Properties Definitions */
 
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction {
+  bottom: -40px !important;
+}
+
 :root {
   --swiper-pagination-bullet-inactive-color: #000000; 
   --swiper-pagination-color: #AE8FAF;
 
-
-  --maxWidth-none: "none";
+   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
   --maxWidth-sm: 24rem;
   --maxWidth-md: 28rem;

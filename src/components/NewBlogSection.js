@@ -16,12 +16,13 @@ query {
       frontmatter {
         title
         imagem
-        
+        description
         hashtags
         date (formatString: "DD/MM/YYYY")
         author
         avatar
       }
+      excerpt
       fields {
         slug
       }
@@ -37,30 +38,42 @@ console.log(post2)
   return (
     <div className={style.divPrincipal}>
         <div className={style.divTitulo}>
-            <h4> artigos selecionados </h4>
-            <h2> Últimas postagens </h2>
+            <h4> blog </h4>
+            <h2> Conheça nossas últimas publicações </h2>
         </div>
 
         <div className={style.divSlider}>
             <Swiper
             modules={[Navigation, Pagination, EffectCards, Autoplay, Parallax]}
             className={style.swiperDepoimentoPrincipal}
-            slidesPerView={1.5}      
+            
+            breakpoints={{
+              800: {
+                slidesPerView: 1,
+                gap: 100
+              },
+              1000: {
+                slidesPerView: 1.5
+              }
+            }}       
             pagination={{
               clickable:'true',
+              type: 'bullets'
               
-              
-          }}
-            gap={0}
+              }}
+            gap={20}
             Navigation
-            // autoplay={{
-            //   delay: 3000,
-            //   disableOnInteraction: false,
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
     
-            // }}
+            }}
             parallax= {{
               parallax: true,
               enabled: true}}
+
+           
+              
             >
             
             
@@ -70,12 +83,14 @@ console.log(post2)
                     title={post1.frontmatter.title}
                     imagem={post1.frontmatter.imagem}
                     date={post1.frontmatter.date}
-                    // description={post1.frontmatter.description}
+                    description={post1.excerpt}
                     hashtags={post1.frontmatter.hashtags}
                     avatar={post1.frontmatter.avatar}
                     bio='Advogada especialista em Direito da Família'
                     nome={post1.frontmatter.author}
-                    oab='23920' />
+                    oab='23920'
+                    link={post1.fields.slug} 
+                    />
                 </SwiperSlide> 
 
                 <SwiperSlide>
@@ -83,12 +98,14 @@ console.log(post2)
                     title={post2.frontmatter.title}
                     imagem={post2.frontmatter.imagem}
                     date={post2.frontmatter.date}
-                    // description={post2.frontmatter.description}
+                    description={post2.excerpt}
                     hashtags={post2.frontmatter.hashtags}
                     avatar={post2.frontmatter.avatar}
                     bio='Advogada especialista em Direito da Família'
                     nome={post2.frontmatter.author}
-                    oab='23920' />
+                    oab='23920'
+                    link={post2.fields.slug}
+                     />
                 </SwiperSlide> 
 
 
@@ -97,12 +114,14 @@ console.log(post2)
                     title={post3.frontmatter.title}
                     imagem={post3.frontmatter.imagem}
                     date={post3.frontmatter.date}
-                    // description={post3.frontmatter.description}
+                    description={post3.excerpt}
                     hashtags={post3.frontmatter.hashtags}
                     avatar={post3.frontmatter.avatar}
                     bio='Advogada especialista em Direito da Família'
                     nome={post3.frontmatter.author}
-                    oab='23920' />
+                    oab='23920' 
+                    link={post3.fields.slug}
+                    />
                 </SwiperSlide> 
           
             </Swiper>

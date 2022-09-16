@@ -40,10 +40,13 @@ a {
 .form {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 200px 0px 0px 0px;
-    padding-left: 10px;
+    
+    
+    
 
     h1 {
         text-align:  left;
@@ -68,28 +71,42 @@ a {
         justify-content: center;
         max-width: 450px;
         width: 100%;
-
-
-        // input:last-of-type {
-        //     height: 200px;
-        //     text-align: top;
-        //     margin-bottom: 20px;
-            
-        // }
+        padding-right: 20px;
+        padding-top: 50px;
+       
        
             textarea {
                 height: 100px;
-                max-width: 400px;
-                padding: 20px 20px;
+                max-width: 380px;
+                padding: 15px 20px;
                 width: 100%;
-                margin: 10px 0px 20px 20px;
+                margin-bottom: 20px;
                 font-size: 14px;
                 color: rgb(80, 80, 80);
-                border-radius: 25px 25px;
-                border: none;
-                background-color: rgb(243, 240, 240);
+                border-radius: 9px;
+                border: 1px solid rgb(216, 216, 216);
                 outline: none;
 
+            }
+
+
+            button {
+                max-width: 390px;
+                padding: 15px 20px;
+                width: 100%;
+                border-radius: 9px;
+                background-color:rgba(174, 143, 175, 1);
+                color: white;   
+                font-family: 'Urbanist';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 98%;
+                /* or 29px */
+                border: none;
+                letter-spacing: 0.165em;
+                cursor: pointer;
+                color: #FFFFFF;
             }
 
 
@@ -98,15 +115,13 @@ a {
     input {
         padding: 15px 20px;
         width: 100%;
-        max-width: 400px;
-        margin: 10px 0px 10px 20px;
+        max-width: 380px;
         font-size: 14px;
-        color: rgb(85, 85, 85);
-        border-radius: 25px 25px;
-        border: none;
-        background-color: rgb(243, 240, 240);
+        color: rgb(0, 0, 0);
+        border-radius: 9px;
+        border: 1px solid rgb(216, 216, 216);
         outline: none;
-        box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.5), 0px 4px 4px rgba(63, 63, 63, 0.15);
+        margin-bottom: 20px;
 
        
 

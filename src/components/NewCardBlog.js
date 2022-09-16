@@ -2,11 +2,11 @@ import React from 'react'
 import * as style from './NewCardBlog.module.css'
 import NewBio from './NewBio'
 
-const NewCardBlog = ({imagem, title, date, description, avatar, nome, oab, bio, hashtags}) => {
+const NewCardBlog = ({imagem, title, date, description, avatar, nome, oab, bio, hashtags, link}) => {
 
 
   return (
-    <div className={style.divPrincipal}>
+    <a href={link} className={style.divPrincipal}>
       <div className={style.divImagem}>
         <img src={imagem}/>
       </div>
@@ -22,7 +22,7 @@ const NewCardBlog = ({imagem, title, date, description, avatar, nome, oab, bio, 
         </div>
         <NewBio avatar={avatar} nome={nome} oab={oab} bio={bio}/>
       </div>
-    </div>
+    </a>
   )
 }
 

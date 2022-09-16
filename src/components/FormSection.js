@@ -8,21 +8,19 @@ const FormSection = () => {
   const style = {
     display: 'flex',
     justifyContent: 'center',
-    maxWidth: '1400px',
+    alignItems: 'center',
     width: '100%',
-    flexWrap: 'wrap-reverse',
+    height: '100%'
     
     
   }
 
-
-
-
   return (
     <div id='contato' style={style}>
      
-      <Contato />
       <Form />
+      {/* <Contato /> */}
+
     </div>
   )
 }

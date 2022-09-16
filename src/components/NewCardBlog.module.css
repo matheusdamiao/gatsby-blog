@@ -11,23 +11,29 @@
     border-radius: 9px;
     width: 100%;
     max-width: 850px;
+    transition: all 0.5s;
   }
 
 
-.divImagem {
+.divPrincipal:hover {
+    transform: scale(1.1, 1.1);
     
+}
+
+
+.divImagem {
     display: flex;
     align-items: center;
-    max-height: 350px;
+    max-height: 100vh;
     height: 100%;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 .divImagem > img {
     width: 100%;
     object-fit: cover;
     height: 100vh;
-    max-height: 350px;
+    max-height: 400px;
     
 }
 
@@ -35,9 +41,9 @@
 .divTexto {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding: 20px;
     width: 100%;
-    
+    justify-content: space-between;
 }
 
 
@@ -63,7 +69,8 @@
     line-height: 92.5%; 
     letter-spacing: -0.015em;
     color: #3F3F3F;
-
+    padding-top: 15px;
+    letter-spacing: 1px;
 }
 
 
@@ -75,6 +82,7 @@
     line-height: 116%;
     letter-spacing: 1px;
     color: #181818;
+    padding-top: 20px;
 }
 
 
@@ -88,5 +96,41 @@
 }
 
 .tags > span{
-    background-color: ;
+    padding: 5px 10px;
+    border-radius: 9px;
+    background-color: #ffffff;
+     color: rgb(112, 112, 112);
+     font-size: 9px;
+     font-family: 'Urbanist';
+     letter-spacing: 1px;
+     border: 1px solid rgb(206, 206, 206);
+     outline: none;
+}
+
+
+@media screen and (max-width: 768px) { 
+
+    .divPrincipal{
+        max-width: 600px;
+    }
+
+    .divTexto > h3 {
+        font-size: 25px;
+    }
+
+    .divTexto > small {
+        font-size: 10px;
+        padding-top: 10px;
+       
+    }
+
+    .divTexto > p {
+        font-size: 12px;
+        
+    }
+
+    .tags{
+        font-size: 10px;
+        padding-right: 10px;
+    }
 }

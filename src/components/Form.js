@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Botao from './Botao'
 import './style.scss'
 import Micro from './../images/microphone-svg.svg' 
-
+import * as style from "./Form.module.css"
 
 const Form = () => {
 
@@ -78,28 +78,21 @@ const Form = () => {
 
     return (
       <div className='form'>
-        <div style={{display: 'flex', width: '100%', justifyContent: 'flex-start', marginLeft: '10px' }}>
-          <img
-          // src='./../images/icone-contato.png'
-          src={Micro}
-          alt='icone'
-          quality={100}
-          width={80}
-          />
-          <h1 style={{width: '100%'}}> Fale Conosco</h1>
+        <div className={style.divTitulo}>
+          <h3> fale conosco</h3>
+          <h1> Mande uma mensagem </h1>
+          <p>Estamos aqui para lhe ajudar. 
+          Preencha o formulário abaixo e entraremos em contato o mais rápido possível.
+          </p>
         </div>
-        <p>Estamos aqui para lhe ajudar. 
-          Preencha o formulário abaixo e entrarmos em contato o mais rápido possível.
-        </p>
+       
         <form method='POST' netlify-honeypot="bot-field" data-netlify="true" className='formContato' name='form' onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="form" />
           <input type='text' placeholder='Nome' name='nome' value={inputs.nome || ''} onChange={handleInput}/>
           <input type='text' placeholder='Telefone' name='telefone' value={inputs.telefone || ''} onChange={handleInput}/>
           <input type='email' placeholder='E-mail' name='email' value={inputs.email || ''} onChange={handleInput}/>
           <textarea type='text' placeholder='Escreva sua mensagem aqui' name='text' value={inputs.text || ''} onChange={handleInput} />
-          <div style={{marginLeft: '20px', width: '100%'}}>
-          <Botao type='submit' size={'100%'} color={'rgb(247, 239, 174)'} height={'50px'} border={'none'}> Enviar</Botao>
-          </div>
+          <button type='submit'> Enviar</button>
         </form>
       </div>
   )

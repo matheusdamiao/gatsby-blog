@@ -7,10 +7,10 @@ const NewBio = ({avatar, oab, nome, bio}) => {
         <div className={style.avatar}>
             <img src={avatar}/>
         </div>
-        <div style={{display: 'flex', flexDirection: 'column'}}>
-            <p style={{margin: '0'}}>{nome}</p>
-            <small>{oab}</small>
-            <p>{bio}</p>
+        <div className={style.divTexto}>
+            <p className={style.nome}>{nome}</p>
+            <small>OAB {oab}</small>
+            <p className={style.bio}>{bio}</p>
         </div>
     </div>
   )

@@ -125,4 +125,9 @@
     .divPrincipal{
         padding-left: 20px;
     }
+
+
+    .divTexto {
+        padding-right: 0;
+    }
 }
