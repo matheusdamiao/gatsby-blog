@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.divGeral {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 100px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.divPrincipal {
+    
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.divSpan {
+    margin-top: 25px;
+}
+
+.divPrincipal > span {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 118.5%;
+    /* or 24px */
+
+    text-align: justify;
+    letter-spacing: 0.07em;
+    margin-top: 50px;
+    color: #181818;
+}
+
+.divTitulo {
+
+}
+
+
+.divTitulo > h3 {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 101.5%;
+    /* or 20px */
+    margin: 0;
+    /* padding-left: 0; */
+    letter-spacing: 0.16em;
+    color: #2E2E2E;
+}
+
+
+.divTitulo > h1{
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 101.5%;
+    /* or 30px */
+    padding-left: 0;
+    letter-spacing: 0.095em;
+    margin: 0;
+    margin-top: 10px;
+    color: #2E2E2E;
+}
+
+
+.divSocial {
+    
+    max-width: 250px;
+    width: 100%;
+}
+
+.divSocial > h1 {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 101.5%;
+    /* or 30px */
+    padding-left: 0;
+    letter-spacing: 0.095em;
+    margin: 0;
+    margin-top: 10px;
+    color: #2E2E2E;
+
+}
+
+.divSocial > h3 {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 101.5%;
+    /* or 20px */
+    margin: 0;
+    /* padding-left: 0; */
+    letter-spacing: 0.16em;
+    color: #2E2E2E;
+}
+
+
+.divLogos {
+    padding-top: 30px;
+    display: flex;
+    gap: 30px;
+    
+}
+
+.divLogos > img {
+    width: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .divGeral {
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+    
+    .divPrincipal{
+        margin-top: 50px;
+    }
+
+    .divSocial{
+        max-width: 300px;
+    }
+}

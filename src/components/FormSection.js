@@ -10,7 +10,8 @@ const FormSection = () => {
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: '100%'
+    height: '100%',
+    flexWrap: 'wrap'
     
     
   }
@@ -19,7 +20,7 @@ const FormSection = () => {
     <div id='contato' style={style}>
      
       <Form />
-      {/* <Contato /> */}
+      <Contato />
 
     </div>
   )

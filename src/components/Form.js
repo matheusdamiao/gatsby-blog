@@ -92,7 +92,7 @@ const Form = () => {
           <input type='text' placeholder='Telefone' name='telefone' value={inputs.telefone || ''} onChange={handleInput}/>
           <input type='email' placeholder='E-mail' name='email' value={inputs.email || ''} onChange={handleInput}/>
           <textarea type='text' placeholder='Escreva sua mensagem aqui' name='text' value={inputs.text || ''} onChange={handleInput} />
-          <button type='submit'> Enviar</button>
+          <button type='submit'> Enviar mensagem</button>
         </form>
       </div>
   )
