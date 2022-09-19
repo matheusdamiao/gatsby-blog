@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+.divMenu {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 50px; */
+   
+
+
+
+    display: flex;
+    /* justify-content: space-between; */
+    z-index: 99;
+    
+    top: 0;
+    position: fixed;
+    background-color: rgba(244,244,244,0.3);
+
+}
+
+
+.divLogo {
+    /* min-width: 150px; */
+    /* margin-left: 20px; */
+
+    display: flex;
+    flex-shrink: 0;
+    margin: 0;
+    padding-right: 70px;
+    margin-top: 10px;
+   
+}
+
+.divLogo > img {
+    width: 80%;
+}
+
+
+.divLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding-top: 50px;
+    
+}
+
+.divLinks > li {
+
+    font-size: 20px;
+    font-family: Urbanist;
+    list-style: none;
+    padding: 10px 30px;
+    border-radius: 9px;
+    cursor: pointer
+
+  
+}
+
+.divLinks > li > a {
+    font-family: Urbanist, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 9px
+}
+
+
+.lastLi{
+
+    font-size: 20px;
+    font-family: Urbanist;
+    background-color: #AE8FAF;
+    padding: 10px 35px;
+    border-radius: 9px;
+    cursor: pointer;
+    list-style: none;
+    color: white;
+ }  
+
+
+
+
+
+
+
+
+
+
+ .div-menu-mobile {
+    display: none;
+    margin: 0;
+    background-color: rgba(224, 203, 225, 0.5);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 768px){
+    
+    .divMenu {
+        display: none;
+    }
+
+    .div-menu-mobile {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        z-index: 999;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        top: 0;
+        height: 100px;
+        overflow-x: hidden;
+        position: fixed;
+        
+    }
+}

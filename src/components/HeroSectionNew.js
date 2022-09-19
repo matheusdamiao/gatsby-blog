@@ -9,6 +9,10 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 
 const HeroSectionNew = () => {
+
+
+
+
   return (
     <div className={style.main}>
         {/* <MenuDesktop /> */}
@@ -16,17 +20,16 @@ const HeroSectionNew = () => {
           <div className={style.logoDiv}>
             <img 
             src={logo}
-              />
+            />
           </div>
           <ul>
             <Link to="/blog"> Blog</Link>
-            <a href='#atuacao'> Atuação </a>
+            <a href='/home#atuacao'> Atuação </a>
             <Link to="/about"> Sobre nós </Link>
-            <a href='#contato'> Contato </a>
+            <a href='/#contato'> Contato </a>
           </ul>
           <div className={style.menubar}>
             <StaticImage
-            color={'white'}
             width={25}
             src='./../images/bars-solid.svg'
             />
