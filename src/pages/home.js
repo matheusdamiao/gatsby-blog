@@ -54,7 +54,7 @@ const { imagem1, imagem2 } = data
       {/* <BlogSection /> */}
       <NewBlogSection />
       <FormSection /> 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
