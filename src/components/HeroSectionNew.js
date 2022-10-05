@@ -23,10 +23,10 @@ const HeroSectionNew = () => {
             />
           </div>
           <ul>
-            <Link to="/blog"> Blog</Link>
+            <a href="/home"> Blog</a>
             <a href='/home#atuacao'> Atuação </a>
-            <Link to="/about"> Sobre nós </Link>
-            <a href='/#contato'> Contato </a>
+            <a to="/home"> Sobre nós </a>
+            <a href='/home'> Contato </a>
           </ul>
           <div className={style.menubar}>
             <StaticImage
