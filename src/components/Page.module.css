@@ -104,6 +104,16 @@
     max-width: 300px;
     height: 60px;
     border: none;
+    color: white;
+    font-family: 'Urbanist';
+    text-transform: uppercase;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.divTexto > button:hover {
+    box-shadow: 8px 5px 30px rgba(174, 143, 175, 1);
+   
 }
 
 

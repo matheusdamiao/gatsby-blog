@@ -72,6 +72,9 @@
     color: white;
  }  
 
+ .lastLi > a {
+    color: white;
+ }
 
 
  .div-menu-mobile {

@@ -1,29 +1,79 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import * as style from "./Footer.module.css"
+import logoInsta from "./../images/instagram-square-brands4.svg"
+import logoLi from "./../images/linkedin-brands4.svg"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
-    <div
-      style={{
-        background: "rgba(224, 203, 225, 0.5)",
-        width: "100%",
-        height: "400px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        marginTop: "50px",
-      }}
-    >
-      <StaticImage src="../images/new-logo.svg" alt="logo" />
-      <p style={{ marginTop: "25px", textAlign: "center" }}>
-        Copyright © Cupulille & Medeiros Advogadas - 2022 <br />
-        Todos os direitos reservados.
-      </p>
-      <code style={{ textAlign: "center" }}>
-        Desenvolvido por Matheus Damião & Luana Almeida
-      </code>
-    </div>
+    <>
+      <div className={style.divPrincipal}>
+        <div>
+          <StaticImage width={400} src="../images/new-logo.svg" alt="logo" />
+        </div>
+        <div className={style.wrapperContent}>
+          <div className={style.contato}>
+            <h3>Contato</h3>
+            <span>
+              <StaticImage src="../images/icone-tel.png" alt="logo" />
+              <p> (21) 22349-2934 / (21) 99923-8192</p>
+            </span>
+
+            <span>
+              <StaticImage src="../images/icone-msg.png" alt="logo" />
+              <p> elasdescomplicam@gmail.com </p>
+            </span>
+
+            <span>
+              <StaticImage src="../images/icone-clock.png" alt="logo" />
+              <p> 8:00 - 18:00 </p>
+            </span>
+          </div>
+
+          <div className={style.social}>
+            <h3> Social </h3>
+            <div className={style.divLogos}>
+              <a href="./">
+                <img src={logoInsta} />{" "}
+              </a>
+              <a href="./">
+                <img src={logoLi} />{" "}
+              </a>
+            </div>
+          </div>
+
+          <div className={style.siteMap}>
+            <h3>Site</h3>
+            <div className={style.siteMapWrapper}>
+              <div className={style.links1}>
+                <Link to="">Áreas de atuação</Link>
+                <Link to="">Especialistas</Link>
+                <Link to="">Depoimentos</Link>
+              </div>
+              <div className={style.links2}>
+                <Link to=""> Blog</Link>
+                <Link to=""> Escritório</Link>
+                <Link to=""> Fale conosco </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={style.copy}>
+        <p>
+          Copyright © Cupulille & Medeiros Advogadas - 2023 <br />
+          Todos os direitos reservados.
+        </p>
+        <code>
+          Desenvolvido por{" "}
+          <a href="http://matheusdamiao.netlify.com" target="_blank">
+            Matheus Damião
+          </a>
+        </code>
+      </div>
+    </>
   )
 }
 

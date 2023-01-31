@@ -1,27 +1,13 @@
-import React from 'react'
-import Form from './Form'
-import Contato from './Contato'
-
+import React from "react"
+import Form from "./Form"
+import Contato from "./Contato"
+import "./style.scss"
 
 const FormSection = () => {
-
-  const style = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: '100%',
-    flexWrap: 'wrap'
-    
-    
-  }
-
   return (
-    <div id='contato' style={style}>
-     
+    <div id="contato" className="formSection">
       <Form />
       <Contato />
-
     </div>
   )
 }

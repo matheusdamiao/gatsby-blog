@@ -15,7 +15,14 @@ const Home = ({ data }) => {
   const { imagem1, imagem2 } = data
 
   return (
-    <div style={{ width: "100%", overflowX: "hidden", margin: "100px auto" }}>
+    <div
+      style={{
+        width: "100%",
+        overflowX: "hidden",
+        margin: "100px auto",
+        marginBottom: "20px",
+      }}
+    >
       <MenuDesktop />
       <HeroSectionNew />
       <AreasDeAtuacao />
@@ -24,7 +31,7 @@ const Home = ({ data }) => {
       <Page />
       <NewBlogSection />
       <FormSection />
-      {/* <Footer /> */}{" "}
+      <Footer />
     </div>
   )
 }

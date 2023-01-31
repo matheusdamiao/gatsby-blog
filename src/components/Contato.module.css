@@ -3,8 +3,7 @@
 .divGeral {
     display: flex;
     width: 100%;
-    max-width: 900px;
-    margin-top: 100px;
+    max-width: 600px;
     justify-content: space-around;
     flex-wrap: wrap;
     
@@ -12,18 +11,31 @@
 
 .divPrincipal {
     
-    max-width: 300px;
+    /* max-width: 300px; */
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .divSpan {
     margin-top: 25px;
+    width: 100%;
 }
+
+.divSpan > span > p {
+    font-size: 24px;
+    transition: 0.2s;
+    border-radius: 9px;
+}
+
+.divSpan > span > p:hover {
+    background-color: #dcc9dd;
+    font-weight: 300;
+}
+
 
 .divPrincipal > span {
     font-family: 'Urbanist';
@@ -37,6 +49,7 @@
     letter-spacing: 0.07em;
     margin-top: 50px;
     color: #181818;
+    display: flex;
 }
 
 .divTitulo {
@@ -74,9 +87,8 @@
 
 
 .divSocial {
-    
-    max-width: 250px;
     width: 100%;
+    padding-top: 50px;
 }
 
 .divSocial > h1 {
@@ -115,6 +127,18 @@
     
 }
 
+.divLogos > a {
+    background-color: transparent;
+}
+
+.divLogos > a > img {
+    transition: 0.2s;
+}
+
+.divLogos > a > img:hover {
+    box-shadow: 8px 5px 30px rgba(174, 143, 175, 1);
+}
+
 .divLogos > img {
     width: 30px;
 }
@@ -123,7 +147,7 @@
 @media screen and (max-width: 768px) {
     
     .divGeral {
-        padding-left: 20px;
+        padding-left: 50px;
         padding-right: 10px;
     }
     
@@ -131,7 +155,8 @@
         margin-top: 50px;
     }
 
-    .divSocial{
-        max-width: 300px;
+    .divSpan > span > p {
+        font-size: 16px;
+        word-wrap: break-word;
     }
 }
