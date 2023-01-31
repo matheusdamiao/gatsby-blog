@@ -30,8 +30,7 @@ const Blog = ({data}) => {
         return (
            (post.props.author && post.props.author.toLowerCase().includes(query.toLowerCase()) )||
            post.props.title.toLowerCase().includes(query.toLowerCase()) || 
-           (post.props.hashtags && post.props.hashtags.join(',').toLowerCase().includes(query.toLowerCase()))
-           
+           (post.props.hashtags && post.props.hashtags.join(',').toLowerCase().includes(query.toLowerCase()))    
         )
       })
 
@@ -67,29 +66,6 @@ const Blog = ({data}) => {
 
       getAllPostsInfo(queryData)
       console.log(fullPostsList)
-      // const tags = postagens.map(posts =>  posts.frontmatter.hashtags)
-      // const arrayTags = tags.filter(tag => tag !== null)
-            
-      // const umaArray = arrayTags.join(',').split(',');
-            
-      // let arrayFiltrado = umaArray.reduce((obj, b) => {
-      //   obj[b] = ++obj[b] || 1
-      //   return obj
-      // },[])
-   
-      // let tagsNames = []
-      // for (let key in arrayFiltrado){
-      //   tagsNames.push({tag: key, value: arrayFiltrado[key]})
-      // }
-
-      // tagsNames.sort((a,b) => b.value - a.value);
-      
-      // setHashTags(tagsNames)
-
-      // const titles = postagens.map( title => title.frontmatter.title)
-      // setTitles(titles)
-  
-      // search(inputState)
     
 
     },[])

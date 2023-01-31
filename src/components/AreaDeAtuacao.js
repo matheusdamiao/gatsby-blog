@@ -88,7 +88,7 @@ const AreasDeAtuacao = () => {
         modules={[Pagination]}
         className='swiper-atuacao-principal'
         pagination={{clickable: 'true'}}
-        spaceBetween={0}
+        spaceBetween={50}
         slidesPerView={1}
        >
                
