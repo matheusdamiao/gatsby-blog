@@ -28,7 +28,8 @@ const Form = () => {
         ...inputs,
       }),
     })
-      .then(e => setIsLoading(false) && setIsSent(true))
+      .then(e => setIsLoading(false))
+      .then(e => setIsSent(true))
       .catch(error => alert(`Ops, ocorreu este erro: ${error}`))
 
     setInputs({})
