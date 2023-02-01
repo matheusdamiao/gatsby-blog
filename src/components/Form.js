@@ -28,13 +28,10 @@ const Form = () => {
         ...inputs,
       }),
     })
-      .then(e => alert(e))
-      .catch(error => alert(error))
-      .finally(e => setIsLoading(false) && setIsSent(true))
-    // console.log(e);
-    // setInputs({
+      .then(e => setIsLoading(false) && setIsSent(true))
+      .catch(error => alert(`Ops, ocorreu este erro: ${error}`))
 
-    // })
+    setInputs({})
   }
 
   const handleInput = e => {
