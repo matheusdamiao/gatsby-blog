@@ -18,7 +18,7 @@
     line-height: 101.5%;
     /* or 20px */
     margin: 0;
-    /* padding-left: 0; */
+    padding: 0px 20px;
     letter-spacing: 0.16em;
     color: #2E2E2E;
     }
@@ -29,8 +29,7 @@
     font-weight: 600;
     font-size: 30px;
     line-height: 101.5%;
-    /* or 30px */
-    padding-left: 0;
+    padding: 0px 20px;
     letter-spacing: 0.095em;
     margin: 0;
     margin-top: 10px;
@@ -44,14 +43,12 @@
     font-weight: 200;
     font-size: 20px;
     line-height: 117%;
-    /* or 23px */
-
+    padding: 0px 20px;
     letter-spacing: 0.05em;
     margin: 0;
     margin-top: 50px;   
     color: #181818;
-    padding-left: 0;
-    /* padding-right: 20px; */
+
 }
 
 @media screen and (max-width: 768px) {
