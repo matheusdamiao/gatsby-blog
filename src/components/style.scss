@@ -621,42 +621,59 @@ a {
     align-items: center;
     justify-content: center;
     height: 90%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     margin-top: 100px;
-    padding: 20px;
+    // padding: 20px;
 
     .about-hero-content {
-        max-width: 500px;
+        padding-left: 70px;
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        z-index: 92;
+
+
+        @media screen and (max-width: 1000px) {
+           height: 100vh;
+           justify-content: center;
+           padding-left: 40px;
+        }
 
         small {
-            font-family: 'Urbanist';
+            font-family: Urbanist, sans-serif;
+            margin: 0;
+            color: #000000;
+            font-size: 15px;
             font-weight: 200;
-            font-size: 20px;
-            letter-spacing: 0.16em;
+            letter-spacing: 3px;
+
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                letter-spacing: 3px;
+                margin-bottom: 5px;
+                padding-left: 5px;
+            }
+           
         }
 
         h1 {
+            font-family: Urbanist, sans-serif;
             font-size: 60px;
-            font-family: 'Urbanist';
             font-weight: 400;
-            font-style: normal;
-            line-height: 80px;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            color:rgb(46, 46, 46);
-            margin-top: 0;
+            line-height: 117%;
+            letter-spacing: 3px;
+            color: #2E2E2E;
+            margin: 0;           
+    
 
             @media screen and (max-width: 768px) {
-                font-size: 3rem;
-                margin-top: 20px;
-                line-height: 50px;
+                font-size: 40px;
+                width: 90%;
             }
         }
 
@@ -664,33 +681,65 @@ a {
         h3 {
             margin-top: 0;
             margin-bottom: 30px;
-            font-size: 25px;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            font-family: Caudex;
-            color:rgba(117, 117, 117, 0.8);
-            line-height: 30px;
+            font-family: Urbanist, sans-serif;
+            font-weight: 400;
+            margin: 0;
+            padding: 30px 0px 30px 0px;
+            letter-spacing: 2px;
+            line-height: 150%;
+            font-size: 20px;
+            max-width: 700px;
+
 
             @media screen and (max-width: 768px) {
-                font-size: 1.2rem;
+                font-size: 18px;
+                width: 90%;
             }
         }
     }
 
 
     .about-hero-picture {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
         
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
 
-       @media screen and (max-width: 768px) {
-        width: 450px;
+       @media screen and (max-width: 1000px) {
+        position: absolute;
+        height: 100vh;
         top: 100px;
-    
+        align-items: center;
+        justify-content: center;
+
+        img {
+            object-position: 0px 0px;
+        }
     }
 
+
+    @media screen and (max-width: 600px) {
+        
+        img {
+            object-position: -100px 0px;
+        }
     } 
 
 
+
+
+    }
+   
+
+
 }
+
 
 
 section {
@@ -709,10 +758,21 @@ section {
     // position: relative;
     // margin-left: 20px;
 
+    @media screen and (max-width: 768px) {
+       margin-top: 0px;
+    
+    }
+
+
     .section-info {
         width: 100%;
        max-width: 900px;
-        margin-left: 10px;
+        // margin-left: 20px;
+
+        @media screen and (max-width: 768px) {
+            padding-left: 20px;
+        
+        }
     
 
         h2 {
@@ -733,13 +793,20 @@ section {
 
 
         @media screen and (max-width: 768px) {
+
+            .section-info {
+                max-width: 450px;
+            }
+            
+
             h2 {
-                margin-left: 20px;
-                font-size: 2.5em;
+                font-size: 25px;
             }
             
             small {
-                margin-left: 20px;
+                margin-top: 5px;
+                font-size: 12px;
+                margin-bottom: 20px;
             }
         
         }
@@ -752,8 +819,7 @@ section {
 
         @media screen and (max-width: 768px) {
             width: 350px;
-            
-        
+            padding: 0px 20px;
         }
         
     }
@@ -770,7 +836,7 @@ section {
     justify-content: center;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    // margin-left: 50px;
+    // padding-left: 20px;
 }
 
 
@@ -784,31 +850,55 @@ section {
     justify-content: space-between;
     padding: 20px;
 
+    @media screen and (max-width: 930px) {
+        margin-top: 20px;
+        height: 100%;
+        gap: 20px;
+    }
+
+    
     @media screen and (max-width: 768px) {
         height: 250px;
         justify-content: center;
-    
+        padding-left: 20px;
+        margin-top: 0px;
     }
+
+
+    p {
+        font-weight: 400;
+        margin: 0;
+        
+    }
+
 }
 
 
 .button-about {
     
-    border-radius: 20px;
+    border-radius: 9px;
     outline: none;
     border: none;
     cursor: pointer;
-    background: rgb(247, 239, 174);
+    background-color: #AE8FAF;
     padding: 15px 40px;
-    border-radius: 25px 25px; 
     max-width: 200px;
+
+
+    @media screen and (max-width: 768px) {
+        margin-top: 20px;
+        padding: 10px 30px;
+        font-size: 12px;
+        max-width: 150px;
+    }
+    
+    a {
+        color: white;
+        font-family: 'Urbanist';
+        font-weight: 400;
+        text-transform: uppercase;
+    }
 }
-
-
-
-
-
-
 
 
 // </ about page >
@@ -818,7 +908,126 @@ section {
 
 
 
+
+
+
 // < blog page >
+
+
+.blog-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 100px;
+
+    @media screen and (max-width: 1000px) {
+        
+        height: 100vh;
+        
+      }
+
+}
+
+
+.blog-hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 70px;
+    z-index: 92;
+
+    @media screen and (max-width: 1000px) {
+      padding-left: 40px;  
+      height: 100vh;
+      justify-content: center;
+    }
+
+    p{
+        font-family: Urbanist, sans-serif;
+        margin: 0;
+        color: #2E2E2E;
+        font-size: 15px;
+        font-weight: 200;
+        letter-spacing: 3px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 12px;
+            
+          }
+    }
+
+
+    h1 {
+        font-family: 'Urbanist';
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 117%;
+        letter-spacing: 3px;
+        color: rgb(46, 46, 46);
+        margin: 15px 0px 0px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 40px;
+            width: 90%;
+          }
+    }
+
+    h3 {
+        font-family: Urbanist, sans-serif;
+        font-weight: 400;
+        margin: 0px;
+        letter-spacing: 2px;
+        line-height: 150%;
+        font-size: 20px;
+        padding: 30px 0px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 18px;
+            width: 90%;
+            
+          }
+    }
+}
+
+.blog-hero-picture {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    max-height: 600px;
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        object-position: 0px 130px;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 1000px) {
+        justify-content: center;
+        max-height: max-content;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        overflow: visible;
+
+        img {
+            object-position: 0px 0px;
+            object-fit: cover;
+            flex-shrink: 0;
+            height: 100%;
+        }
+    }
+}
+
+
 
 .blog-page {
     display: flex;
@@ -826,19 +1035,23 @@ section {
      flex-wrap: wrap;
      justify-content: space-around;
      width: 100%;
-     max-width: 1300px;
+    //  max-width: 1300px;
      margin: 0 auto;
+     margin-top: 80px;
+
 }
 
 
 .search-div {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
     
 
     .div-input {
+        margin-top: 50px;
+        padding-left: 20px;
         width: 60%;
         position: relative;
         display: flex;
@@ -846,7 +1059,7 @@ section {
 
         img {
             position: absolute;
-            right: 87%;
+            right: 85%;
             top: 30%;
             opacity: 0.5;
        }
@@ -859,20 +1072,29 @@ section {
            }
         }
 
+        @media screen and (max-width: 600px) {
+            width: 90%;
+        
+            img {
+                right: 85%;              
+           }
+        }
+
         button {
-            border-radius: 25px;
+            border-radius: 9px;
             padding: 5px 30px 5px 30px;
             margin-left: 5px;
             cursor: pointer;
-            color:rgb(80, 80, 80);
+            color:rgb(255, 255, 255);
             border-style: none;
+            font-family: Urbanist;
             font-size: 14px;
-            background-color: rgba(174, 143, 175, 0.7);
-            transition: 0.3s;
-            box-shadow: 3px 3px 5px #aaaaaa, 2px 2px 5px rgb(255, 255, 255) inset;
+            background-color: #AE8FAF;
+            transition: 0.2s;
+            // box-shadow: 3px 3px 5px #aaaaaa, 2px 2px 5px rgb(255, 255, 255) inset;
 
             &:hover {
-                box-shadow: 5px 3px 15px rgb(174, 143, 175), 2px 2px 5px rgb(255, 255, 255) inset;
+                box-shadow: 2px 5px 10px rgb(174, 143, 175);
             }
 
             &:active {
@@ -898,11 +1120,11 @@ section {
     input {
         width: 70%;
         padding: 10px 20px 10px 70px;
-        border-radius: 20px;
-        border: 2px solid #ccc;
+        border-radius: 9px;
+        border: 1px solid #ccc;
          -webkit-transition: 0.5s;
-        transition: 0.5s;
-        outline: none;
+        transition: 2s;
+        outline-color: rgb(174, 143, 175);
 
       
 
@@ -915,8 +1137,7 @@ section {
     
 
     &:focus {
-        border: 3px solid rgb(254, 235, 255);
-        outline: none;
+        outline-color: rgb(248, 209, 250);
     }
 }
 
@@ -954,6 +1175,48 @@ section {
 }
 
 
+
+.blog-title-div { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 50px;
+    padding-left: 100px;
+
+    @media screen and (max-width: 760px) {
+        padding-left: 20px;
+    }
+
+
+    h4 {
+        font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 101.5%;
+    letter-spacing: 0.185em;
+    color: #2E2E2E;
+    margin: 0;
+    padding-bottom: 20px;
+    }
+
+    h2 { 
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 101.5%;
+        letter-spacing: 0.095em;
+        color: #2E2E2E;
+        margin: 0;
+
+    }
+}
+
+
+
 // < / blog page >
 
 
@@ -982,11 +1245,8 @@ section {
 
 .blog-post-header {
    margin-top: 50px;
-//    max-width: 1000px;
    display: flex;
    flex-direction: column;
-
-//    margin-left: 20px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -1003,9 +1263,10 @@ section {
 
 
      h1 {
-            font-size: 4.5rem;
-            font-family: Caudex;
+            font-size: 60px;
+            font-family: 'Urbanist';
             font-weight: 500;
+            text-align: center;
             font-style: normal;
             // line-height: 90%;
             line-height: 80px;
@@ -1016,7 +1277,7 @@ section {
             // width: 100%;
 
             @media screen and (max-width: 768px) {
-                font-size: 3rem;
+                font-size: 35px;
                 margin-top: 20px;
                 line-height: 50px;
             }
@@ -1053,9 +1314,11 @@ section {
         word-wrap: break-word;
         line-height: 40px;
         font-size: 18px;
+        font-weight: 400;
 
         @media screen and (max-width: 768px) {
-            font-size: 13px;
+            font-size: 14px;
+            letter-spacing: 0;
             
         }
     }
@@ -1068,6 +1331,9 @@ section {
     padding-right: 20px;
     width: 100%;
     text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
 
 
@@ -1075,9 +1341,8 @@ section {
 
 .posts-antes-depois {
     width: 100%;
-    max-width: 1000px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;   
     margin: 0 auto;
@@ -1095,6 +1360,8 @@ section {
     }
 
 }
+
+
 
 .post-antes {
     display: flex;
@@ -1181,16 +1448,16 @@ section {
         justify-content: flex-start;
 
         .blog-author-name {
-            font-family: Monteserrat;
+            font-family: 'Urbanist';
             font-size: 25px;
-            font-weight: medium;
+            font-weight: 400;
         }
 
         p {
             margin: 0;
-            font-family: Monteserrat;
+            font-family: 'Urbanist';
             font-size: 15px;
-            font-weight: lighter;
+            font-weight: 300;
             color: #2B2B2B;
             padding-bottom: 10px;
         }
@@ -1208,19 +1475,35 @@ section {
 
 // < blog card >
 
+.link-div{
+    
+}
+
 
 .blog-card {
-    width: 400px;
+    width: 500px;
     height: 550px;
     padding: 20px;
     display: flex;
     flex-direction: column; 
     align-items: space-around;
     justify-content: flex-start;
+    font-family: Urbanist;
+    transition: 0.3s;
+    overflow: hidden;
+
     
     @media screen and (max-width: 768px) {
-        width: 100%;
+       max-width: 500px;
     }
+
+    @media screen and (max-width: 500px) {
+        max-width: 400px;
+     }
+
+     @media screen and (max-width: 400px) {
+        width: 100%;
+     }
     
 
     small {
@@ -1230,19 +1513,21 @@ section {
     }
 
     h3 {
-        margin: 0;
-        font-family: Caudex;
-        font-weight: 600;
-        text-align: left;
-        font-size: 1.8em;
-        padding-bottom: 10px;
+        font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 101%;
+    letter-spacing: 2px;
+    color: #181818;
+    margin: 0;
+    max-width: 400px;
     }
 
     img {
         object-fit: cover;
         width: 100%;
         height: 100%;
-        
     }
 
 
@@ -1289,15 +1574,18 @@ section {
 }
 
 
-
+.blog-card:hover {
+     box-shadow: 10px 10px 30px rgb(209, 208, 208);
+}
 
 .div-foto {
-    width: 400px;
+    // width: 400px;
+    width: 100%;
     height: 250px;
-
 
     @media screen and (max-width: 768px) {
         width: 100%;
+        
     }
 }
 

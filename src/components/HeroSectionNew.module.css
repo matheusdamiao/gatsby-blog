@@ -4,7 +4,7 @@
 
 
 .main {
-    background-image: url('./../images/texture-gelo.svg');
+    /* background-image: url('./../images/texture-gelo.svg'); */
     background-position: center;
     
 }
@@ -93,17 +93,15 @@
     height: 100vh;
     width: 60%;
     padding-left: 70px;
-    /* margin-top: 50px; */
-    padding-top: 150px;
 }
 
 .div > p {
     font-family: Urbanist, sans-serif;
     margin: 0;
-    color: #2E2E2E;
+    color: #000000;
     font-size: 15px;
     font-weight: 200;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 
 }
 .div > h1 {
@@ -119,7 +117,7 @@
 
 .div > h3 {
     font-family: Urbanist, sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     margin: 0;
     padding: 30px 0px 30px 0px;
     letter-spacing: 2px;
@@ -155,8 +153,6 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
-    
-
 }
 
 
@@ -208,7 +204,7 @@
     }
 
     .div > p {
-        font-size: 10px;
+        font-size: 12px;
         letter-spacing: 3px;
     }
 
@@ -228,6 +224,10 @@
         z-index: 0;
         opacity: 0.7;
         height: 100%;
+    }
+
+    .divFoto > img {
+        object-position: 0px -100px;
     }
 
 }

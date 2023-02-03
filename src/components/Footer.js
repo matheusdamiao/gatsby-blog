@@ -63,8 +63,18 @@ const Footer = () => {
 
       <div className={style.copy}>
         <p>
-          Copyright © Cupulille & Medeiros Advogadas - 2023 <br />
-          Todos os direitos reservados.
+          Copyright © Cupulille & Medeiros Advogadas - 2023 - Todos os direitos
+          reservados.
+        </p>
+        <p>
+          All family images by Vlada Karpovich via{" "}
+          <a
+            href="https://www.pexels.com/@vlada-karpovich/collections/"
+            alt=""
+            target="_blank"
+          >
+            Pexels
+          </a>
         </p>
         <code>
           Desenvolvido por{" "}

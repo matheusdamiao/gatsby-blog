@@ -3,25 +3,25 @@ import React from "react"
 import MenuDesktop from "../components/MenuDesktop"
 import curriculo from "./../images/files/curriculum.pdf"
 import Footer from "../components/Footer"
+import fotobg from "./../images/foto-advogadas-svg.svg"
 
-const about = () => {
+const sobre = () => {
   return (
     <>
       <MenuDesktop />
       <div className="about-hero">
         <div className="about-hero-content">
-          <small>escritório</small>
+          <small> Escritório</small>
           <h1>Conheça melhor nossa equipe</h1>
-          <h3> Advogadas familiaristas </h3>
+          <h3>
+            {" "}
+            Advogadas especializadas em resolver conflitos jurídicos
+            relacionados à família{" "}
+          </h3>
         </div>
 
         <div className="about-hero-picture">
-          <StaticImage
-            src="./../images/foto-advogadas-svg.svg"
-            alt=""
-            width={800}
-            quality={100}
-          />
+          <img src={fotobg} alt="" />
         </div>
       </div>
 
@@ -33,7 +33,7 @@ const about = () => {
 
         <div className="section-wrap">
           <div className="section-picture">
-            <StaticImage src="./../images/vanessa-fotozin.png" alt="" />
+            <StaticImage src="./../images/vanessa-foto.svg" alt="" />
           </div>
 
           <div className="section-bio">
@@ -86,4 +86,4 @@ const about = () => {
   )
 }
 
-export default about
+export default sobre

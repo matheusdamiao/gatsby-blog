@@ -1,15 +1,6 @@
 import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import {
-  Autoplay,
-  EffectCards,
-  EffectCreative,
-  EffectFade,
-  EffectFlip,
-  Navigation,
-  Pagination,
-  Parallax,
-} from "swiper"
+import { Autoplay, EffectCards, Navigation, Pagination, Parallax } from "swiper"
 import NewCardBlog from "./NewCardBlog"
 import * as style from "./NewBlogsection.module.css"
 import { graphql, useStaticQuery } from "gatsby"

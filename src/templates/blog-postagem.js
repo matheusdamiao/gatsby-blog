@@ -1,59 +1,55 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import MenuDesktop from '../components/MenuDesktop'
-import CardBlog from '../components/CardBlog'
+import React from "react"
+import { graphql, Link } from "gatsby"
+import MenuDesktop from "../components/MenuDesktop"
+import CardBlog from "../components/CardBlog"
+import Footer from "../components/Footer"
 
-const blogPostagem = ({data}) => {
-
-    const post = data.markdownRemark
-    const { previous, next } = data;
+const blogPostagem = ({ data }) => {
+  const post = data.markdownRemark
+  const { previous, next } = data
 
   return (
     <>
-    
       <MenuDesktop />
-    
-    <article className='blog-post'>
-      <header className='blog-post-header'>
-        <h1>{post.frontmatter.title}</h1>
-        <div className='blog-post-header-avatar'>
-             <small> {post.frontmatter.date}</small>
-             {/* <img src={post.frontmatter.avatar??} /> */}
+
+      <article className="blog-post">
+        <header className="blog-post-header">
+          <h1>{post.frontmatter.title}</h1>
+          <div className="blog-post-header-avatar">
+            <small> {post.frontmatter.date}</small>
+            {/* <img src={post.frontmatter.avatar} /> */}
+          </div>
+          <img width={1000} src={post.frontmatter.imagem} />
+        </header>
+
+        <section
+          className="blog-post-body"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+        <span className="span-bio"></span>
+        <div className="blog-post-bio">
+          <img src={post.frontmatter.avatar} />
+          <div className="blog-post-author">
+            <p className="blog-author-name"> {post.frontmatter.author} </p>
+            <p>Advogada especialista em direito familliarista</p>
+          </div>
         </div>
-        <img width={1000} src={post.frontmatter.imagem}/>
-      </header>      
-      
-      <section 
-      className='blog-post-body'
-        dangerouslySetInnerHTML={{ __html: post.html }}
-       />
-      <span className='span-bio'></span>
-      <div className='blog-post-bio'>
-        
-        <img src={post.frontmatter.avatar}/> 
-        <div className='blog-post-author'>
-          <p className='blog-author-name'> {post.frontmatter.author} </p>
-          <p>Advogada especialista em direito familliarista</p>
-        </div>
-        
-      </div>
-      <span className='span-bio'></span>
-    </article> 
+        <span className="span-bio"></span>
+      </article>
 
+      <h3 className="posts-antes-depois-header">
+        {" "}
+        Conheça outros artigos em nosso blog
+      </h3>
 
-
-
-    <h3 className='posts-antes-depois-header'> Conheça outros artigos em nosso blog</h3>
-
-
-    <div className='posts-antes-depois'>
-
-
-            {previous &&
-        
-              <div>
-              <a style={{paddingLeft: '20px'}}href={previous.fields.slug}> Anterior</a>
-              <CardBlog 
+      <div className="posts-antes-depois">
+        {previous && (
+          <div>
+            <a style={{ paddingLeft: "20px" }} href={previous.fields.slug}>
+              {" "}
+              Anterior
+            </a>
+            <CardBlog
               link={previous.fields.slug}
               title={previous.frontmatter.title}
               imagem={previous.frontmatter.imagem}
@@ -61,16 +57,19 @@ const blogPostagem = ({data}) => {
               hashtags={previous.frontmatter.hashtags}
               author={previous.frontmatter.author}
               avatar={previous.frontmatter.avatar}
-              />
-              </div>
-
-            }
-            {next && 
-       
-
-              <div>
-              <a style={{textAlign: 'right', display: 'block'}}href={next.fields.slug}> Próximo </a>
-              <CardBlog 
+            />
+          </div>
+        )}
+        {next && (
+          <div>
+            <a
+              style={{ textAlign: "right", display: "block" }}
+              href={next.fields.slug}
+            >
+              {" "}
+              Próximo{" "}
+            </a>
+            <CardBlog
               link={next.fields.slug}
               title={next.frontmatter.title}
               imagem={next.frontmatter.imagem}
@@ -78,14 +77,11 @@ const blogPostagem = ({data}) => {
               hashtags={next.frontmatter.hashtags}
               author={next.frontmatter.author}
               avatar={next.frontmatter.avatar}
-              />
-
-        </div>
-
-            
-            }
-
-    </div>
+            />
+          </div>
+        )}
+      </div>
+      <Footer />
     </>
   )
 }
@@ -93,11 +89,7 @@ const blogPostagem = ({data}) => {
 export default blogPostagem
 
 export const pageQuery = graphql`
-  query BlogPost(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPost($id: String!, $previousPostId: String, $nextPostId: String) {
     site {
       siteMetadata {
         title
@@ -118,8 +110,6 @@ export const pageQuery = graphql`
         avatar
       }
     }
-
-      
 
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
@@ -145,7 +135,6 @@ export const pageQuery = graphql`
         hashtags
         author
         avatar
-
       }
     }
   }

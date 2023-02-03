@@ -1,8 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
-import Botao from "./Botao"
 import "./style.scss"
-import Micro from "./../images/microphone-svg.svg"
 import * as style from "./Form.module.css"
 
 const Form = () => {
@@ -28,7 +26,11 @@ const Form = () => {
         ...inputs,
       }),
     })
-      .then(e => setIsLoading(false))
+      .then(e =>
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 4000)
+      )
       .then(e => setIsSent(true))
       .catch(error => alert(`Ops, ocorreu este erro: ${error}`))
 

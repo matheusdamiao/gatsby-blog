@@ -56,7 +56,7 @@ const MenuDesktop = () => {
           </li>
           <li>
             {" "}
-            <Link to="/about">Sobre</Link>
+            <Link to="/sobre">Sobre</Link>
           </li>
           <li className={style.lastLi}>
             {" "}
@@ -92,7 +92,7 @@ const MenuDesktop = () => {
             <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <Link to="/about">Sobre</Link>
+            <Link to="/sobre">Sobre</Link>
           </li>
           <li>
             <Link to="/home#contato">Contato</Link>
