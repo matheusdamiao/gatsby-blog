@@ -39,13 +39,13 @@ const MenuDesktop = () => {
     <>
       <div className={style.divMenu}>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <Link className={style.divLogo} to="/home" alt="homepage">
+          <Link className={style.divLogo} to="/" alt="homepage">
             <img src={logo} alt="logo" />
           </Link>
         </div>
         <ul className={style.divLinks}>
           <li>
-            <Link to="/home#atuacao">Serviços</Link>
+            <Link to="/#atuacao">Serviços</Link>
           </li>
           <li>
             <Link to="/blog">Blog</Link>
@@ -56,14 +56,14 @@ const MenuDesktop = () => {
           </li>
           <li className={style.lastLi}>
             {" "}
-            <Link to="/home#contato">Contato</Link>
+            <Link to="/#contato">Contato</Link>
           </li>
         </ul>
       </div>
 
       <div className="div-menu-mobile">
         <div className="div-logo-mobile">
-          <Link to="/home">
+          <Link to="/">
             <img src={logo} alt="" />
           </Link>
         </div>
@@ -82,7 +82,7 @@ const MenuDesktop = () => {
       >
         <ul className="ul-mobile">
           <li>
-            <Link to="/home#atuacao">Serviços</Link>
+            <Link to="/#atuacao">Serviços</Link>
           </li>
           <li>
             <Link to="/blog">Blog</Link>
@@ -91,7 +91,7 @@ const MenuDesktop = () => {
             <Link to="/sobre">Sobre</Link>
           </li>
           <li>
-            <Link to="/home#contato">Contato</Link>
+            <Link to="/#contato">Contato</Link>
           </li>
         </ul>
       </div>

@@ -10,7 +10,7 @@ import Page from "../components/Page"
 import NewBlogSection from "../components/NewBlogSection"
 import MenuDesktop from "../components/MenuDesktop"
 
-const Home = ({ data }) => {
+const Index = ({ data }) => {
   // const { imagem1, imagem2 } = data
 
   return (
@@ -35,7 +35,7 @@ const Home = ({ data }) => {
   )
 }
 
-export default Home
+export default Index
 
 export const pageQuery = graphql`
   query {
