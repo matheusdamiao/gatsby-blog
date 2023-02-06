@@ -1,14 +1,14 @@
 ---
 title: Os deveres de um pai além da pensão
 date: 2022-08-23T16:11:01.935Z
-description: saiba mais
+description: "Há muitos deveres que um pai deve levar em consideração "
 hashtags:
   - paternidade
   - deveres
   - direitos
 imagem: /assets/paternidade.jpg
 author: Vanessa Cupulille
-avatar: /assets/avatar1.png
+avatar: /assets/avatar-vanessa.png
 ---
 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec vestibulum tellus. Mauris dapibus, ex non lacinia laoreet, orci massa vulputate velit, at hendrerit arcu ipsum vel sem. Curabitur sit amet leo sit amet urna suscipit efficitur vel et lorem. Duis tempor sodales augue. Suspendisse potenti. Duis pellentesque nunc venenatis, euismod turpis sed, fermentum ante. Aenean vel aliquam ex. Mauris eleifend aliquet massa. Aliquam lectus lectus, pulvinar ut velit nec, commodo hendrerit odio. Nunc a congue lacus. Pellentesque eu gravida augue. Aliquam viverra laoreet libero eu imperdiet. Morbi sit amet placerat ipsum. Quisque ac dictum odio, eget faucibus justo. Integer vel dapibus velit.
 
