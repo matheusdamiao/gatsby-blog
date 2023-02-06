@@ -36,10 +36,10 @@ const Contato = () => {
         <h1> Redes Sociais </h1>
         <div className={style.divLogos}>
           <a href="./" alt="">
-            <img src={logoInsta} />{" "}
+            <img src={logoInsta} alt="" />{" "}
           </a>
           <a href="./" alt="">
-            <img src={logoLi} />{" "}
+            <img src={logoLi} alt="" />{" "}
           </a>
         </div>
       </div>

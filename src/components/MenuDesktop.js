@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import Bars from "./../images/bars-solid.svg"
-import Logo from "./../images/logo-mobile.png"
-import LogoSVG from "./../images/logo-svg.svg"
-import LogoComprido from "./../images/logo-svg-comprido.svg"
 import logo from "./../images/new-logo.svg"
 
 import { Link } from "gatsby"
@@ -68,7 +64,7 @@ const MenuDesktop = () => {
       <div className="div-menu-mobile">
         <div className="div-logo-mobile">
           <Link to="/home">
-            <img src={logo} />
+            <img src={logo} alt="" />
           </Link>
         </div>
         <div className="div-bars" onClick={toggleMenu}>

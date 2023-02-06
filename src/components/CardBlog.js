@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
-import Avatar from "./../images/avatar1.png"
 import HashTag from "./HashTag"
 import TagIcon from "./../images/tags-icon.svg"
 
@@ -15,8 +13,6 @@ const CardBlog = ({
   author,
 }) => {
   const [tags, setTags] = useState(["separação", "casamento", "pensão"])
-
-  const [cardinfo, setCardInfo] = useState([])
 
   useEffect(() => {
     if (hashtags) {
@@ -33,14 +29,14 @@ const CardBlog = ({
     <a className="link-div" href={link}>
       <div className="blog-card">
         <div className="div-foto">
-          <img src={imagem} />
+          <img src={imagem} alt="" />
         </div>
         <small> {data} </small>
         <h3> {title}</h3>
 
         <div className="hashTags-div">
           <div className="icons-div">
-            <img src={TagIcon} id="tag-icon" />
+            <img src={TagIcon} id="tag-icon" alt="" />
           </div>
           <HashTag color={"#FEFFD9"}> {tags[0]}</HashTag>
           <HashTag color={"#FEEBFF"}> {tags[1]} </HashTag>
@@ -48,7 +44,7 @@ const CardBlog = ({
         </div>
         {/* <p> {description}</p> */}
         <div className="avatar-blog-card">
-          <img src={avatar} width={40} />
+          <img src={avatar} width={40} alt="" />
           <p> {author} </p>
         </div>
       </div>

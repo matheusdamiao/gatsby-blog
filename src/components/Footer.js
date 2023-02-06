@@ -1,9 +1,9 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-import * as style from "./Footer.module.css"
 import logoInsta from "./../images/instagram-square-brands4.svg"
 import logoLi from "./../images/linkedin-brands4.svg"
 import { Link } from "gatsby"
+import * as style from "./Footer.module.css"
 
 const Footer = () => {
   return (
@@ -35,10 +35,10 @@ const Footer = () => {
             <h3> Social </h3>
             <div className={style.divLogos}>
               <a href="./">
-                <img src={logoInsta} />{" "}
+                <img src={logoInsta} alt="" />{" "}
               </a>
               <a href="./">
-                <img src={logoLi} />{" "}
+                <img src={logoLi} alt="" />{" "}
               </a>
             </div>
           </div>

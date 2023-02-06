@@ -2,11 +2,6 @@ import React from "react"
 import MenuDesktop from "./MenuDesktop"
 import * as style from "./HeroSectionNew.module.css"
 import foto from "./../images/foto-hero.svg"
-// import foto from './../images/foto-hero-colorida.svg'
-import logo from "./../images/new-logoo.svg"
-import bars from "./../images/bars-solid.svg"
-import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
 
 const HeroSectionNew = () => {
   return (
@@ -20,7 +15,10 @@ const HeroSectionNew = () => {
             Com atendimento humanizado, ajudamos você e sua família na resolução
             de problemas jurídicos{" "}
           </h3>
-          <button> Agende uma reunião</button>
+          <button>
+            {" "}
+            <a href="/home#contato"> Agende uma reunião </a>
+          </button>
         </div>
 
         <div className={style.divFoto}>

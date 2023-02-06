@@ -97,11 +97,12 @@
     
 }
 
-.divTexto > button {
+.divTexto > a > button {
     background: #AE8FAF;
     box-shadow: -3.36475px -3.36475px 4px rgba(255, 255, 255, 0.25), 0px 4px 16px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
-    max-width: 300px;
+    /* max-width: 300px; */
+    width: 100%;
     height: 60px;
     border: none;
     color: white;
@@ -111,9 +112,13 @@
     cursor: pointer;
 }
 
-.divTexto > button:hover {
+.divTexto > a > button:hover {
     box-shadow: 8px 5px 30px rgba(174, 143, 175, 1);
-   
+}
+
+.divTexto > a {
+    color: white;
+    max-width: 300px;
 }
 
 

@@ -140,6 +140,16 @@
     outline: none;
     border: none;
     color: white;
+    transition: 0.4s;
+}
+
+.div > button > a {
+    color: white;
+}
+
+.div > button:hover {
+    box-shadow: 8px 5px 30px rgba(174, 143, 175, 1);
+    
 }
 
 

@@ -39,14 +39,14 @@
 }
 
 
-.divTexto {
+.divTexto { 
     display: flex;
     flex-direction: column;
     padding: 20px;
     width: 100%;
     /* max-width: 400px; */
     justify-content: space-between;
-    height: 100px;
+    height: 100%;
 }
 
 

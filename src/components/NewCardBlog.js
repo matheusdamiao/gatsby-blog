@@ -1,6 +1,5 @@
 import React from "react"
 import * as style from "./NewCardBlog.module.css"
-import NewBio from "./NewBio"
 
 const NewCardBlog = ({
   imagem,
@@ -17,7 +16,7 @@ const NewCardBlog = ({
   return (
     <a href={link} className={style.divPrincipal}>
       <div className={style.divImagem}>
-        <img src={imagem} />
+        <img src={imagem} alt="" />
       </div>
 
       <div className={style.divTexto}>

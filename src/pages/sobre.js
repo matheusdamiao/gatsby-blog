@@ -1,4 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image"
+import "./../components/style.scss"
 import React from "react"
 import MenuDesktop from "../components/MenuDesktop"
 import curriculo from "./../images/files/curriculum.pdf"

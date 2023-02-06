@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react"
 import MenuDesktop from "../components/MenuDesktop"
-import { StaticImage } from "gatsby-plugin-image"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import CardBlog from "../components/CardBlog"
-import HashTag from "../components/HashTag"
 import SearchIcon from "./../images/search-icon.svg"
-import TagsIcon from "./../images/tags-icon.svg"
 import fotobg from "./../images/hero-blog-foto.png"
 import NewBlogSection from "../components/NewBlogSection"
 
@@ -81,7 +78,7 @@ const Blog = ({ data }) => {
         </div>
 
         <div className="blog-hero-picture">
-          <img src={fotobg} />
+          <img src={fotobg} alt="" />
         </div>
       </div>
 
@@ -94,7 +91,7 @@ const Blog = ({ data }) => {
 
       <div className="search-div">
         <div className="div-input">
-          <img src={SearchIcon} width={20} />
+          <img src={SearchIcon} width={20} alt="" />
           <input
             className="search-input"
             type="text"

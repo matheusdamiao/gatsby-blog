@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import "./style.scss"
 import * as style from "./Form.module.css"

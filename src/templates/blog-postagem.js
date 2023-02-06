@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import MenuDesktop from "../components/MenuDesktop"
 import CardBlog from "../components/CardBlog"
 import Footer from "../components/Footer"
@@ -19,7 +19,7 @@ const blogPostagem = ({ data }) => {
             <small> {post.frontmatter.date}</small>
             {/* <img src={post.frontmatter.avatar} /> */}
           </div>
-          <img width={1000} src={post.frontmatter.imagem} />
+          <img width={1000} src={post.frontmatter.imagem} alt="" />
         </header>
 
         <section
@@ -28,7 +28,7 @@ const blogPostagem = ({ data }) => {
         />
         <span className="span-bio"></span>
         <div className="blog-post-bio">
-          <img src={post.frontmatter.avatar} />
+          <img src={post.frontmatter.avatar} alt="" />
           <div className="blog-post-author">
             <p className="blog-author-name"> {post.frontmatter.author} </p>
             <p>Advogada especialista em direito familliarista</p>

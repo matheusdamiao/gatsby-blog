@@ -4,7 +4,6 @@ import AreasDeAtuacao from "../components/AreaDeAtuacao"
 import Diferenciais from "../components/Diferenciais"
 import Depoimentos from "../components/Depoimentos"
 import FormSection from "../components/FormSection"
-import { getImage } from "gatsby-plugin-image"
 import Footer from "../components/Footer"
 import HeroSectionNew from "../components/HeroSectionNew"
 import Page from "../components/Page"
@@ -12,7 +11,7 @@ import NewBlogSection from "../components/NewBlogSection"
 import MenuDesktop from "../components/MenuDesktop"
 
 const Home = ({ data }) => {
-  const { imagem1, imagem2 } = data
+  // const { imagem1, imagem2 } = data
 
   return (
     <div
