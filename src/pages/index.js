@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React from "react"
 import AreasDeAtuacao from "../components/AreaDeAtuacao"
 import Diferenciais from "../components/Diferenciais"
 import Depoimentos from "../components/Depoimentos"
@@ -10,9 +9,7 @@ import Page from "../components/Page"
 import NewBlogSection from "../components/NewBlogSection"
 import MenuDesktop from "../components/MenuDesktop"
 
-const Index = ({ data }) => {
-  // const { imagem1, imagem2 } = data
-
+const Index = () => {
   return (
     <div
       style={{
@@ -36,19 +33,3 @@ const Index = ({ data }) => {
 }
 
 export default Index
-
-export const pageQuery = graphql`
-  query {
-    imagem1: file(relativePath: { eq: "foto-advogadas.png" }) {
-      childImageSharp {
-        gatsbyImageData
-      }
-    }
-
-    imagem2: file(relativePath: { eq: "imagem-familia.png" }) {
-      childImageSharp {
-        gatsbyImageData
-      }
-    }
-  }
-`

@@ -2,9 +2,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import "./../components/style.scss"
 import React from "react"
 import MenuDesktop from "../components/MenuDesktop"
-import curriculo from "./../images/files/curriculum.pdf"
 import Footer from "../components/Footer"
 import fotobg from "./../images/foto-advogadas-svg.svg"
+import advogadas from "./../images/advogadas-juntas.png"
 
 const sobre = () => {
   return (
@@ -15,9 +15,8 @@ const sobre = () => {
           <small> Escritório</small>
           <h1>Conheça melhor nossa equipe</h1>
           <h3>
-            {" "}
-            Advogadas especializadas em resolver conflitos jurídicos
-            relacionados à família{" "}
+            Especialistas em Direito de Família e Sucessões, atuamos e prezamos
+            por uma advocacia humanizada
           </h3>
         </div>
 
@@ -26,30 +25,57 @@ const sobre = () => {
         </div>
       </div>
 
-      <section className="section-about">
-        <div className="section-info">
-          <h2> Vanessa Cupullile</h2>
-          <small> OAB 39493430 </small>
+      <section className="about-office">
+        <div className="title">
+          <small>Quem somos</small>
+          <h3>Cupullile e Medeiros Advogadas</h3>
         </div>
+        <div className="body-text">
+          <p>
+            O escritório Cupulille & Medeiros Advogadas é especialista na
+            resolução de conflitos familiares, com ênfase na garantia do Direito
+            das Mulheres e do Direito das Crianças e dos Adolescentes, com um
+            olhar sensível, engajado e acolhedor. Oferecemos serviços
+            multidisciplinares, contando com parcerias em todo Brasil para
+            atuação conjunta, afinal, juntas somos mais fortes!
+          </p>
+        </div>
+        <div className="div-imagem">
+          <img src={advogadas} alt="" />
+        </div>
+      </section>
 
+      <div className="nossa-equipe">
+        <h3>Nossa equipe</h3>
+        <p>
+          O escritório Cupulille & Medeiros Advogadas é formado por uma equipe
+          de duas mulheres, especialistas em Direito de Família e Sucessões,
+          atuando e prezando por uma advocacia humanizada.
+        </p>
+      </div>
+
+      <section className="section-about">
         <div className="section-wrap">
-          <div className="section-picture">
-            <StaticImage src="./../images/vanessa-foto.svg" alt="" />
+          <div className="section-info">
+            <h2> Vanessa Cupullile</h2>
+            <small> OAB 39493430 </small>
           </div>
 
           <div className="section-bio">
             <p>
-              Especialistas em direito da famiília, as advogadas Vanessa
-              Cupullile e Thays Medeiros possuem em comum a atenção e o cuidado
-              para lidar com casos{" "}
+              Pós-graduanda em Planejamento Patrimonial, Familiar e Sucessório
+              pela Legale Educacional. Pós-graduada em Direito de Famílias e
+              Sucessões pela Pontífica Universidade Católica do Rio de Janeiro
+              (PUC-Rio). Graduada em Direito pela Universidade Candido Mendes.
+              Delegada da Comissão de Assistência às Vítimas de Violência
+              Doméstica da OAB de Niterói. Atuação e experiência com direito de
+              família, sucessões, direito civil e violência doméstica e
+              familiar.{" "}
             </p>
-            <button className="button-about">
-              {" "}
-              <a href={curriculo} title="Curriculo em pdf">
-                {" "}
-                Currículo{" "}
-              </a>{" "}
-            </button>
+          </div>
+
+          <div className="section-picture">
+            <StaticImage src="./../images/vanessa-foto.svg" alt="" />
           </div>
         </div>
       </section>
@@ -61,23 +87,18 @@ const sobre = () => {
             <small> OAB 39493430 </small>
           </div>
 
-          <div className="section-picture">
-            <StaticImage src="./../images/thays-foto.svg" alt="" />
-          </div>
-
           <div className="section-bio">
             <p>
-              Especialistas em direito da famiília, as advogadas Vanessa
-              Cupullile e Thays Medeiros possuem em comum a atenção e o cuidado
-              para lidar com casos{" "}
+              Graduada em Direito pela Universidade Candido Mendes. Delegada da
+              Comissão de Assistência às Vítimas de Violência Doméstica da OAB
+              de Niterói. Atuação e experiência com direito de família,
+              sucessões, direito trabalhista, direito do consumidor, direito
+              civil e violência doméstica e familiar.{" "}
             </p>
-            <button className="button-about">
-              {" "}
-              <a href={curriculo} title="Curriculo em pdf">
-                {" "}
-                Currículo{" "}
-              </a>{" "}
-            </button>
+          </div>
+
+          <div className="section-picture">
+            <StaticImage src="./../images/thays-foto.svg" alt="" />
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
 import React from "react"
-import MenuDesktop from "./MenuDesktop"
 import * as style from "./HeroSectionNew.module.css"
 import foto from "./../images/foto-hero.svg"
 
@@ -8,7 +7,6 @@ const HeroSectionNew = () => {
     <div className={style.main}>
       <div className={style.divPrincipal}>
         <div className={style.div}>
-          <p> Advocacia de Família e Sucessões</p>
           <h1> O direito da sua família em primeiro lugar</h1>
           <h3>
             {" "}

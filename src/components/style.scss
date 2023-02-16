@@ -692,7 +692,7 @@ a {
 
 
             @media screen and (max-width: 768px) {
-                font-size: 18px;
+                font-size: 20px;
                 width: 90%;
             }
         }
@@ -742,41 +742,28 @@ a {
 
 
 
-section {
-    width: 100%;
-}
-
 .section-about {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap-reverse;
     margin-top: 100px;
-    // margin: 40px auto;
-    // position: relative;
-    // margin-left: 20px;
+   width: 100%;
+
 
     @media screen and (max-width: 768px) {
        margin-top: 0px;
-    
+        
     }
 
 
     .section-info {
-        width: 100%;
-       max-width: 900px;
-        // margin-left: 20px;
+    
 
         @media screen and (max-width: 768px) {
-            padding-left: 20px;
+            padding-left: 0px;
         
         }
     
 
         h2 {
-            margin-bottom: 0px;
+            margin: 0px;
             font-size: 30px;
             font-weight: 600;
             font-family: "Urbanist";
@@ -814,12 +801,12 @@ section {
     }
 
     .section-picture {
-        width: 500px;
-
+        order: 3;
+        display: flex;
 
         @media screen and (max-width: 768px) {
-            width: 350px;
-            padding: 0px 20px;
+            padding: 0;
+            order: 1;
         }
         
     }
@@ -831,24 +818,38 @@ section {
 .section-wrap {
     display: flex;
     width: 100%;
-    max-width: 1000px;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: row-reverse;
+    max-height: 700px;
+    max-width: 1400px;
+    flex-direction: column;
     flex-wrap: wrap;
-    // padding-left: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 80px;
+    padding-left: 70px;
+
+    @media screen and (max-width: 1100px) {
+        flex-wrap: wrap;
+        width: 100%;
+        max-height: 100%;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+   
+    @media screen and (max-width: 768px) {
+        align-items: flex-start;
+    }
 }
 
 
 
 .section-bio {
-    max-width: 450px;
-    width: 100%;
-    height: 450px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding-top: 20px;
+    order: 2;
 
     @media screen and (max-width: 930px) {
         margin-top: 20px;
@@ -858,45 +859,146 @@ section {
 
     
     @media screen and (max-width: 768px) {
-        height: 250px;
         justify-content: center;
-        padding-left: 20px;
         margin-top: 0px;
     }
 
 
     p {
-        font-weight: 400;
+        font-weight: 300;
         margin: 0;
-        
+        font-size: 20px;
+        line-height: 150%;
+        padding: 0;
+        margin-top: 50px;
+        padding-right: 20px;
+        margin-bottom: 20px;
     }
 
 }
 
 
-.button-about {
+
+
+
+.about-office {
+    display: flex;
+    max-width: 1400px;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    max-height: 600px;
+    margin-top: 80px;
+    padding-left: 70px;
     
-    border-radius: 9px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background-color: #AE8FAF;
-    padding: 15px 40px;
-    max-width: 200px;
+
+    @media screen and (max-width: 1100px) {
+        flex-wrap: wrap;
+        width: 100%;
+        max-height: 100%;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+
+
+    @media screen and (max-width: 600px) {
+        align-items: flex-start;
+        
+    }
+
+    .body-text {
+        display: flex;
+        
+        p {
+            text-align: left;
+            max-width: 500px;
+            line-height: 150%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            order: 3;
+         }
+    }
+
+
+    .div-imagem {
+        max-width: 505px;
+      
+        @media screen and (max-width: 1100px) {
+           margin-top: 50px;
+           order: 1;
+           width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+        
+    }
+
+    h3 {
+        margin-bottom: 0px;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "Urbanist";
+        letter-spacing: 0.095em;
+    }
+
+    small {
+        font-family: "Urbanist";
+        font-weight: 200;
+        letter-spacing: 0.07em;
+        display: block;
+        font-size: 18px;
+    }
 
 
     @media screen and (max-width: 768px) {
-        margin-top: 20px;
-        padding: 10px 30px;
-        font-size: 12px;
-        max-width: 150px;
-    }
+
+           
+
+        h2 {
+            font-size: 25px;
+        }
+        
+        small {
+            margin-top: 5px;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
     
-    a {
-        color: white;
-        font-family: 'Urbanist';
-        font-weight: 400;
-        text-transform: uppercase;
+    }
+}
+
+
+    .nossa-equipe {
+        margin-top: 100px;
+    padding-left: 70px;
+
+    @media screen and (max-width: 1100px) {
+        margin-top: 50px;
+       padding-left: 40px;
+     }
+
+    h3 {
+        margin-bottom: 50px;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "Urbanist";
+        letter-spacing: 0.095em;
+    }
+
+    p {
+        text-align: left;
+        line-height: 150%;
+        margin-bottom: 75px;
+        font-size: 20px;
+        max-width: 1300px;
     }
 }
 
