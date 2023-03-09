@@ -1,22 +1,18 @@
+import { Link } from "gatsby"
+import React from "react"
 
-import { GatsbyImage } from 'gatsby-plugin-image'
-import React from 'react'
-
-const Card = ({icon, title, children}) => {
-  
+const Card = ({ icon, title, children }) => {
   return (
-    <div className='card-div'>
-      <div className='card-icon'>
-        <GatsbyImage 
-        image={icon}
-        alt='icon'
-        loading='eager'
-        />
-      </div>
+    <Link to={`/areasdeatuacao#${children}`}>
+      <div className="card-div">
+        <div className="card-icon">
+          <img src={icon} alt="icon" />
+        </div>
 
-      <h1>{title}</h1>
-      <p >{children}</p>
-    </div>
+        <h1>{title}</h1>
+        <p> saiba mais</p>
+      </div>
+    </Link>
   )
 }
 

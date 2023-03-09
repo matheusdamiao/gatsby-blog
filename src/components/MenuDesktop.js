@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import logo from "./../images/new-logo.svg"
-
+import zapp from "./../images/zap-component.svg"
 import { Link } from "gatsby"
 
 import * as style from "./Menu.module.css"
@@ -45,6 +45,9 @@ const MenuDesktop = () => {
         </div>
         <ul className={style.divLinks}>
           <li>
+            <Link to="/areasdeatuacao">Áreas de atuação </Link>
+          </li>
+          <li>
             <Link to="/#atuacao">Serviços</Link>
           </li>
           <li>
@@ -82,6 +85,9 @@ const MenuDesktop = () => {
       >
         <ul className="ul-mobile">
           <li>
+            <Link to="/areasdeatuacao">Áreas de atuação </Link>
+          </li>
+          <li>
             <Link to="/#atuacao">Serviços</Link>
           </li>
           <li>
@@ -95,6 +101,12 @@ const MenuDesktop = () => {
           </li>
         </ul>
       </div>
+      <a
+        className={style.zapLink}
+        href="https://api.whatsapp.com/send?phone=5521971877705"
+      >
+        <img src={zapp} alt="zap" className={style.zapImg} />
+      </a>
     </>
   )
 }
