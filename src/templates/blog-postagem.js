@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import MenuDesktop from "../components/MenuDesktop"
 import CardBlog from "../components/CardBlog"
 import Footer from "../components/Footer"
+import Seo from "../components/seo"
 
 const blogPostagem = ({ data }) => {
   const post = data.markdownRemark
@@ -10,6 +11,10 @@ const blogPostagem = ({ data }) => {
 
   return (
     <>
+      <Seo
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
       <MenuDesktop />
 
       <article className="blog-post">
