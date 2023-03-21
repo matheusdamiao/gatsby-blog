@@ -45,7 +45,9 @@ const MenuDesktop = () => {
         </div>
         <ul className={style.divLinks}>
           <li>
-            <Link to="/areasdeatuacao">Áreas de atuação </Link>
+            <Link to="/areasdeatuacao" style={{ whiteSpace: "nowrap" }}>
+              Áreas de atuação{" "}
+            </Link>
           </li>
           <li>
             <Link to="/#atuacao">Serviços</Link>
