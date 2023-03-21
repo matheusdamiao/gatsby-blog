@@ -70,7 +70,7 @@ const Blog = ({ data }) => {
 
   return (
     <>
-      <Seo />
+      <Seo title="Blog" />
       <MenuDesktop />
       <div className="blog-hero">
         <div className="blog-hero-content">

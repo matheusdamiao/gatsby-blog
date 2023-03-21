@@ -20,7 +20,7 @@ const Index = () => {
         marginBottom: "20px",
       }}
     >
-      <Seo />
+      <Seo title="" />
       <MenuDesktop />
       <HeroSectionNew />
 

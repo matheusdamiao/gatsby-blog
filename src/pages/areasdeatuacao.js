@@ -12,7 +12,7 @@ import Seo from "../components/seo"
 const areasdeatuacao = () => {
   return (
     <>
-      <Seo />
+      <Seo title="Áreas de atuação" />
       <MenuDesktop />
       <div className="header">
         <h1>Áreas de Atuação</h1>

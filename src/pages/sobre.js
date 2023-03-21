@@ -10,7 +10,7 @@ import Seo from "../components/seo"
 const sobre = () => {
   return (
     <>
-      <Seo />
+      <Seo title="Sobre nós" />
       <MenuDesktop />
       <div className="about-hero">
         <div className="about-hero-content">
