@@ -160,7 +160,7 @@
 .divFoto > img {
     
     width: 100%;
-    opacity: 70%;
+    /* opacity: 70%; */
     object-fit: cover;
     object-position: center;
 }
