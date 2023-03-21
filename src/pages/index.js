@@ -21,6 +21,7 @@ const Index = () => {
     >
       <MenuDesktop />
       <HeroSectionNew />
+
       <AreasDeAtuacao />
       <Diferenciais />
       <Depoimentos />
