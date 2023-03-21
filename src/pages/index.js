@@ -8,6 +8,7 @@ import HeroSectionNew from "../components/HeroSectionNew"
 import Page from "../components/Page"
 import NewBlogSection from "../components/NewBlogSection"
 import MenuDesktop from "../components/MenuDesktop"
+import Seo from "../components/seo"
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         marginBottom: "20px",
       }}
     >
+      <Seo />
       <MenuDesktop />
       <HeroSectionNew />
 

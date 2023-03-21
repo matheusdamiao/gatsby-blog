@@ -6,6 +6,7 @@ import CardBlog from "../components/CardBlog"
 import SearchIcon from "./../images/search-icon.svg"
 import fotobg from "./../images/hero-blog-foto.png"
 import NewBlogSection from "../components/NewBlogSection"
+import Seo from "../components/seo"
 
 const Blog = ({ data }) => {
   const queryData = data.allMarkdownRemark.nodes
@@ -69,6 +70,7 @@ const Blog = ({ data }) => {
 
   return (
     <>
+      <Seo />
       <MenuDesktop />
       <div className="blog-hero">
         <div className="blog-hero-content">

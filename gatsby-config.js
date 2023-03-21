@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Direito de Família e Sucessões | Cupulille e Medeiros Advogadas`,
     author: {
-      name: `Matheus Damião`,
-      summary: `who lives and works in Brazil building useful things.`,
+      name: `Vanessa Cupulille e Thays Medeiros`,
+      summary: `Advogadas especialistas em advocacia familiarista e de sucessões`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Escritório de advocacia especializado em advocacia familiar. Atendimento no Rio de Janeiro e em todo Brasil`,
+    siteUrl: `https://cupulilleemedeirosadvocacia.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
   },
   plugins: [

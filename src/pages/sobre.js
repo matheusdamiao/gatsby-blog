@@ -5,10 +5,12 @@ import MenuDesktop from "../components/MenuDesktop"
 import Footer from "../components/Footer"
 import fotobg from "./../images/foto-advogadas-svg.svg"
 import advogadas from "./../images/advogadas-juntas.png"
+import Seo from "../components/seo"
 
 const sobre = () => {
   return (
     <>
+      <Seo />
       <MenuDesktop />
       <div className="about-hero">
         <div className="about-hero-content">

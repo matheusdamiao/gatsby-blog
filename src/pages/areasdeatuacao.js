@@ -7,10 +7,12 @@ import briefcase from "./../images/briefcase.svg"
 import idCard from "./../images/id-card-solid.svg"
 import cart from "./../images/cart-shopping.svg"
 import Footer from "../components/Footer"
+import Seo from "../components/seo"
 
 const areasdeatuacao = () => {
   return (
     <>
+      <Seo />
       <MenuDesktop />
       <div className="header">
         <h1>Áreas de Atuação</h1>
