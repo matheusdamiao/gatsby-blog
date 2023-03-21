@@ -1,6 +1,7 @@
 import React from "react"
 import * as style from "./HeroSectionNew.module.css"
 import foto from "./../images/foto-hero.svg"
+import fotoadvs from "./../images/fotoAdvogadas.png"
 
 const HeroSectionNew = () => {
   return (
@@ -20,7 +21,7 @@ const HeroSectionNew = () => {
         </div>
 
         <div className={style.divFoto}>
-          <img src={foto} />
+          <img src={fotoadvs} />
         </div>
       </div>
     </div>
