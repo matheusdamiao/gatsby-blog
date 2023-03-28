@@ -1,13 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import MenuDesktop from "../components/MenuDesktop"
 import CardBlog from "../components/CardBlog"
 import Footer from "../components/Footer"
 import Seo from "../components/seo"
+import linkedin from "./../images/linkedin-logo.svg"
+import facebook from "./../images/facebook-logo.svg"
+import twitter from "./../images/twitter-logo.svg"
+import copy from "./../images/copy-paste.svg"
 
-const blogPostagem = ({ data }) => {
+const BlogPostagem = ({ data }) => {
   const post = data.markdownRemark
-  const { previous, next } = data
+  const { previous, next, site } = data
+
+  const [copyStatus, setCopyStatus] = useState("Copiar link")
+
+  const copyLink = () => {
+    if (copyStatus === "Copiado!") {
+      setCopyStatus("Copiar link")
+      navigator.clipboard.writeText("")
+      return
+    }
+    navigator.clipboard.writeText(
+      `${site.siteMetadata.siteUrl + post.fields.slug}`
+    )
+    setCopyStatus("Copiado!")
+  }
 
   return (
     <>
@@ -41,6 +59,57 @@ const blogPostagem = ({ data }) => {
         </div>
         <span className="span-bio"></span>
       </article>
+
+      <div className="share-post">
+        <h3> Compartilhe este artigo </h3>
+        <div className="links">
+          <ul>
+            <a
+              rel="noopener noreferrer"
+              href={
+                "https://www.linkedin.com/shareArticle?url=" +
+                site.siteMetadata.siteUrl +
+                post.fields.slug
+              }
+              target="_blank"
+            >
+              <img src={linkedin} width={50} alt="" />
+            </a>
+          </ul>
+          <ul>
+            <a
+              rel="noopener noreferrer"
+              href={
+                "https://www.facebook.com/sharer/sharer.php?u=" +
+                site.siteMetadata.siteUrl +
+                post.fields.slug
+              }
+              target="_blank"
+            >
+              <img src={facebook} width={50} alt="" />
+            </a>
+          </ul>
+          <ul>
+            <a
+              rel="noopener noreferrer"
+              href={
+                "https://www.twitter.com/share?url=" +
+                site.siteMetadata.siteUrl +
+                post.fields.slug
+              }
+              target="_blank"
+            >
+              <img src={twitter} width={50} alt="" />
+            </a>
+          </ul>
+          <ul>
+            <button className="copy-btn" onClick={() => copyLink()}>
+              {" "}
+              <img src={copy} width={50} alt="" /> {copyStatus}{" "}
+            </button>
+          </ul>
+        </div>
+      </div>
 
       <h3 className="posts-antes-depois-header">
         {" "}
@@ -91,13 +160,14 @@ const blogPostagem = ({ data }) => {
   )
 }
 
-export default blogPostagem
+export default BlogPostagem
 
 export const pageQuery = graphql`
   query BlogPost($id: String!, $previousPostId: String, $nextPostId: String) {
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
 
@@ -105,6 +175,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "DD/MM/YYYY")

@@ -1360,7 +1360,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px auto;
+    margin: 50px auto;
   
 }
 
@@ -1584,6 +1584,64 @@ a {
             padding-bottom: 10px;
         }
     }
+}
+
+
+.share-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-family: 'Urbanist';
+        font-size: 20px;
+        font-weight: 400;
+        padding-bottom: 20px;
+    }
+}
+
+
+.links {
+    width: 100%;
+    height:  150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    ul:hover {
+        a {
+            img {
+                transition: 0.2s;
+                width: 60px;
+            }
+        }
+    }
+
+    ul {
+        button {
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            font-family: 'Urbanist';
+            padding: 0;
+            cursor: pointer;
+        }
+        button:hover {
+            img {
+                transition: 0.2s;
+                width: 60px;
+            }
+        }
+    }
+
 }
 
 
