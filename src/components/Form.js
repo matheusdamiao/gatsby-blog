@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./style.scss"
 import * as style from "./Form.module.css"
+import Spining from "./Spining"
 
 const Form = () => {
   const [inputs, setInputs] = useState({})
@@ -28,10 +29,13 @@ const Form = () => {
       .then(e =>
         setTimeout(() => {
           setIsLoading(false)
-        }, 4000)
+        }, 2000)
       )
       .then(e => setIsSent(true))
-      .catch(error => alert(`Ops, ocorreu este erro: ${error}`))
+      .catch(
+        error =>
+          console.log(`Ops, ocorreu este erro: ${error}`) && setIsSent(false)
+      )
 
     setInputs({})
   }
@@ -71,6 +75,7 @@ const Form = () => {
           name="nome"
           value={inputs.nome || ""}
           onChange={handleInput}
+          required
         />
         <input
           type="text"
@@ -78,6 +83,7 @@ const Form = () => {
           name="telefone"
           value={inputs.telefone || ""}
           onChange={handleInput}
+          required
         />
         <input
           type="email"
@@ -92,13 +98,16 @@ const Form = () => {
           name="text"
           value={inputs.text || ""}
           onChange={handleInput}
+          required
         />
         <button type="submit">
-          {isLoading
-            ? "Carregando..."
-            : !isSent
-            ? "Enviar mensagem"
-            : "Mensagem enviada!"}
+          {isLoading ? (
+            <Spining />
+          ) : !isSent ? (
+            "Enviar mensagem"
+          ) : (
+            "Mensagem enviada!"
+          )}
         </button>
       </form>
     </div>
