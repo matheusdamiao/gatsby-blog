@@ -38,9 +38,9 @@ const CardBlog = ({
           <div className="icons-div">
             <img src={TagIcon} id="tag-icon" alt="" />
           </div>
-          <HashTag color={"#FEFFD9"}> {tags[0]}</HashTag>
-          <HashTag color={"#FEEBFF"}> {tags[1]} </HashTag>
-          <HashTag color={"#EAEAEA"}> {tags[2]} </HashTag>
+          <HashTag backgroundColor={"#FEFFD9"}> {tags[0]}</HashTag>
+          <HashTag backgroundColor={"#FEEBFF"}> {tags[1]} </HashTag>
+          <HashTag backgroundColor={"#EAEAEA"}> {tags[2]} </HashTag>
         </div>
         {/* <p> {description}</p> */}
         <div className="avatar-blog-card">

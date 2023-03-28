@@ -1,8 +1,22 @@
-import React from 'react'
+import React from "react"
 
-const HashTag = ({color, children}) => {
+const HashTag = ({ backgroundColor, color, children, setSearchState }) => {
   return (
-    <div style={{backgroundColor: color, minWidth: '10px', fontSize: '15px', padding: '3px 8px 3px 8px', borderRadius: '25px', fontFamily: 'Monteserrat', fontWeight: 'light', color: '#7a7a7a', margin: '0px 5px 5px 5px'}}>
+    <div
+      style={{
+        backgroundColor: backgroundColor,
+        minWidth: "10px",
+        fontSize: "14px",
+        padding: "3px 8px 3px 8px",
+        borderRadius: "25px",
+        fontFamily: "Urbanist ",
+        fontWeight: "500",
+        color: `${color ? color : "#7a7a7a"}`,
+        margin: "0px 5px 5px 5px",
+        cursor: "pointer",
+      }}
+      onClick={() => setSearchState({ query: "teste" })}
+    >
       {children}
     </div>
   )

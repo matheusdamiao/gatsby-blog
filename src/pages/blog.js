@@ -7,6 +7,8 @@ import SearchIcon from "./../images/search-icon.svg"
 import fotobg from "./../images/hero-blog-foto.png"
 import NewBlogSection from "../components/NewBlogSection"
 import Seo from "../components/seo"
+import HashTag from "../components/HashTag"
+import TagIcon from "./../images/tags-icon.svg"
 
 const Blog = ({ data }) => {
   const queryData = data.allMarkdownRemark.nodes
@@ -61,12 +63,42 @@ const Blog = ({ data }) => {
 
   useEffect(() => {
     getAllPostsInfo(queryData)
-    console.log(fullPostsList)
+    // console.log(fullPostsList)
+  }, [])
+
+  useEffect(() => {
+    organizeTags()
   }, [])
 
   const { postsFiltrados, query } = searchState
   const temInput = postsFiltrados && query !== emptyInput
   const postagens = temInput ? postsFiltrados : fullPostsList
+
+  // tags
+  const [showTags, setShowTags] = useState([])
+
+  const organizeTags = () => {
+    let tags = []
+    let allTags = queryData.map(post => {
+      tags.push(post.frontmatter.hashtags)
+    })
+    let uniqueTags = tags
+      .flat()
+      .filter((v, i, a) => a.indexOf(v) == i)
+      .join(", ")
+
+    let clickableTags = uniqueTags.split(", ").map(tag => (
+      <HashTag
+        backgroundColor="#AE8FAF"
+        color="white"
+        setSearchState={setSearchState}
+      >
+        {tag}
+      </HashTag>
+    ))
+    console.log(clickableTags)
+    setShowTags(clickableTags)
+  }
 
   return (
     <>
@@ -102,16 +134,13 @@ const Blog = ({ data }) => {
           <button> Pesquisar </button>
         </div>
 
-        {/* <div className="search-hashtags">
+        <div className="search-hashtags">
           <div className="tags">
-            <img src={TagsIcon} width={25} />
-            <p> tags </p>
-          </div> */}
-        {/* {fullPostsList.map((post)=>{
-                 return  <HashTag>{post.props.hashtags}</HashTag>
-                            
-                })} */}
-        {/* </div> */}
+            <img src={TagIcon} width={30} />
+            {/* <p> tags </p> */}
+            <div className="arrayTags">{showTags}</div>
+          </div>
+        </div>
       </div>
 
       <div className="blog-page">{postagens}</div>

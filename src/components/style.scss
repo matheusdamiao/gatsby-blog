@@ -13,8 +13,6 @@ html {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    // background-color: rgba(239, 239, 239, 0.7);
-    // background-image: url('./../images/texture-gelo.svg');
 
 }
 
@@ -1174,15 +1172,15 @@ a {
 
     .div-input {
         margin-top: 50px;
-        padding-left: 20px;
-        width: 60%;
+        padding-left: 50px;
+        width: 70%;
         position: relative;
         display: flex;
         justify-content: center;
 
         img {
             position: absolute;
-            right: 85%;
+            right: 92%;
             top: 30%;
             opacity: 0.5;
        }
@@ -1241,7 +1239,7 @@ a {
 
 
     input {
-        width: 70%;
+        width: 100%;
         padding: 10px 20px 10px 70px;
         border-radius: 9px;
         border: 1px solid #ccc;
@@ -1267,19 +1265,26 @@ a {
 
 .search-hashtags {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    padding: 10px 30px 30px 30px;
-    width: 90%;
-
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 50px;
+    padding-top: 20px;
+    
 
     .tags{
         display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
 
         img {
             opacity: 0.6;
+        }
+
+
+        .arrayTags {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
         }
         
     }
