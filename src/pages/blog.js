@@ -21,8 +21,13 @@ const Blog = ({ data }) => {
 
   const [fullPostsList, setFullPostsList] = useState([])
 
-  const inputFunction = e => {
-    const query = e.target.value
+  const inputFunction = (e, q) => {
+    let query
+    if (q) {
+      query = q
+    } else {
+      query = e.target.value
+    }
     const postsFiltrados = fullPostsList.filter(post => {
       return (
         (post.props.author &&
@@ -63,19 +68,20 @@ const Blog = ({ data }) => {
 
   useEffect(() => {
     getAllPostsInfo(queryData)
-    // console.log(fullPostsList)
-  }, [])
+    console.log(postsFiltrados, query)
+  }, [searchState])
 
-  useEffect(() => {
-    organizeTags()
-  }, [])
-
+  // Posts render logic
   const { postsFiltrados, query } = searchState
   const temInput = postsFiltrados && query !== emptyInput
   const postagens = temInput ? postsFiltrados : fullPostsList
 
   // tags
   const [showTags, setShowTags] = useState([])
+
+  useEffect(() => {
+    organizeTags()
+  }, [])
 
   const organizeTags = () => {
     let tags = []
@@ -92,6 +98,7 @@ const Blog = ({ data }) => {
         backgroundColor="#AE8FAF"
         color="white"
         setSearchState={setSearchState}
+        tag={tag}
       >
         {tag}
       </HashTag>
@@ -129,9 +136,10 @@ const Blog = ({ data }) => {
           <input
             className="search-input"
             type="text"
+            value={"" || searchState.query}
             onChange={e => inputFunction(e)}
           />
-          <button> Pesquisar </button>
+          <button onClick={e => inputFunction(e, query)}> Pesquisar </button>
         </div>
 
         <div className="search-hashtags">

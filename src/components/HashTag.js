@@ -1,6 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 
-const HashTag = ({ backgroundColor, color, children, setSearchState }) => {
+const HashTag = ({
+  backgroundColor,
+  color,
+  children,
+  setSearchState,
+  searchState,
+  tag,
+}) => {
+  const [isActive, setIsActive] = useState(false)
   return (
     <div
       style={{
@@ -15,7 +23,7 @@ const HashTag = ({ backgroundColor, color, children, setSearchState }) => {
         margin: "0px 5px 5px 5px",
         cursor: "pointer",
       }}
-      onClick={() => setSearchState({ query: "teste" })}
+      onClick={() => setSearchState({ query: `${tag}` })}
     >
       {children}
     </div>
