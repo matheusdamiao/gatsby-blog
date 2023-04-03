@@ -16,9 +16,7 @@ const Page = () => {
             {" "}
             Especialistas em direito da famiília, as advogadas Vanessa Cupullile
             e Thaís Medeiros possuem em comum a atenção e o cuidado para lidar
-            com casos Especialistas em direito da famiília, as advogadas Vanessa
-            Cupullile e Thaís Medeiros possuem em comum a atenção e o cuidado
-            para lidar com casos{" "}
+            com cada caso.{" "}
           </p>
 
           <a href="/sobre">

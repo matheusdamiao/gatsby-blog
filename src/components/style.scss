@@ -206,7 +206,7 @@ a {
 .div-menu-mobile {
     display: none;
     margin: 0;
-    background-color: rgba(244,244,244, 0.8);
+    background-color: #F0EAF0;
     box-sizing: border-box;
     overflow-x: hidden;
     
@@ -449,19 +449,19 @@ a {
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
-
+    background-color: #F0EAF0;
 
     h2 {
         font-family: 'Urbanist';
         font-style: normal;
-        font-weight: 100;
-        font-size: 20px;
+        font-weight: 400;
+        font-size: 25px;
         line-height: 101.5%;
         /* or 20px */
 
         letter-spacing: 0.185em;
 
-        color: #2E2E2E;
+        color: #828282;
         margin-bottom: 0;
 
     }

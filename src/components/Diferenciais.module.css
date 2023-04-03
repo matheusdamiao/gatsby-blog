@@ -2,14 +2,14 @@
 
 
 .divPrincipal {
-    height: 100vh;
+    height: 100%;
     margin-top: 100px;
      width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-image: url('./../images/Frame8.png');
+    /* background-image: url('./../images/Frame8.png'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,16 +20,16 @@
 }
 
 .topico {
-    /* width: 100%; */
+
     text-align: center;
     font-family: Urbanist;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 20px;
+    /* font-style: normal; */
+    font-weight: 400;
+    font-size: 25px;
     line-height: 101.5%;
     letter-spacing: 0.185em;
 
-    color: #2E2E2E;
+    color: #828282;
     
     
 }
@@ -37,7 +37,7 @@
 .titulo{
     margin-bottom: 70px;
     font-family: Urbanist;
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 600;
     font-size: 30px;
     line-height: 101.5%;
@@ -53,6 +53,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .card {

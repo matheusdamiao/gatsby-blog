@@ -2,31 +2,35 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import logoInsta from "./../images/instagram-square-brands4.svg"
 import logoLi from "./../images/linkedin-brands4.svg"
+import logo from "../images/logo-last-stroke.svg"
 import { Link } from "gatsby"
 import * as style from "./Footer.module.css"
+import logoPhone from "../images/phone.svg"
+import logoMail from "../images/logo-mail.svg"
+import logoClock from "../images/logo-clock.svg"
 
 const Footer = () => {
   return (
     <>
       <div className={style.divPrincipal}>
         <div>
-          <StaticImage width={400} src="../images/new-logo.svg" alt="logo" />
+          <img src={logo} alt="logo" width={400} />
         </div>
         <div className={style.wrapperContent}>
           <div className={style.contato}>
             <h3>Contato</h3>
             <span>
-              <StaticImage src="../images/icone-tel.png" alt="logo" />
+              <img src={logoPhone} alt="logo" width={40} />
               <p> (21) 22349-2934 / (21) 99923-8192</p>
             </span>
 
             <span>
-              <StaticImage src="../images/icone-msg.png" alt="logo" />
+              <img src={logoMail} alt="logo" width={40} />
               <p> elasdescomplicam@gmail.com </p>
             </span>
 
             <span>
-              <StaticImage src="../images/icone-clock.png" alt="logo" />
+              <img src={logoClock} width={40} alt="logo" />
               <p> 8:00 - 18:00 </p>
             </span>
           </div>
@@ -35,10 +39,10 @@ const Footer = () => {
             <h3> Social </h3>
             <div className={style.divLogos}>
               <a href="./">
-                <img src={logoInsta} alt="" />{" "}
+                <img src={logoInsta} width={40} alt="" />{" "}
               </a>
               <a href="./">
-                <img src={logoLi} alt="" />{" "}
+                <img src={logoLi} width={40} alt="" />{" "}
               </a>
             </div>
           </div>

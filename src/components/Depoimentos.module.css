@@ -31,19 +31,19 @@
     letter-spacing: 0.095em;
     color: #2E2E2E;
     width: 100%;
-    margin-top: 0;
+    margin-top: 15px;
 }
 
 .divTitulo > h3 {
     text-align: center;
     font-family: Urbanist;
     font-style: normal;
-    font-weight: 100;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
     line-height: 101.5%;
     letter-spacing: 0.185em;
 
-    color: #2E2E2E;
+    color: #828282;
     
 }
 

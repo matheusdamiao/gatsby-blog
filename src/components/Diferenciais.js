@@ -38,22 +38,22 @@ const Diferenciais = () => {
     {
       icone: getImage(icone1),
       title: "Atendimento humanizado",
-      body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
+      // body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
     },
     {
       icone: getImage(icone2),
       title: "Experiência na área",
-      body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
+      // body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
     },
     {
       icone: getImage(icone3),
       title: "Sensibilidade e Respeito",
-      body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
+      // body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
     },
     {
       icone: getImage(icone4),
       title: "Acompanhe seu processo",
-      body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
+      // body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
     },
   ]
 
@@ -72,7 +72,7 @@ const Diferenciais = () => {
                 </div>
 
                 <h3>{card.title}</h3>
-                <p>{card.body}</p>
+                {/* <p>{card.body}</p> */}
               </div>
             )
           })}

@@ -31,8 +31,7 @@
     text-align: left;
     letter-spacing: 0.095em;
     color: #2E2E2E;
-    
-    margin-top: 0;
+    margin-top: 15px;
 }
 
 
@@ -40,12 +39,12 @@
     text-align: left;
     font-family: Urbanist;
     font-style: normal;
-    font-weight: 100;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
     line-height: 101.5%;
     letter-spacing: 0.185em;
 
-    color: #2E2E2E;
+    color: #828282;
     
 }
 
@@ -86,15 +85,13 @@
 .divTexto > p {
     font-family: 'Urbanist';
     font-style: normal;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 20px;
-    line-height: 136%;
-    /* or 19px */
-
+    line-height: 160%;
     letter-spacing: 0.095em;
     padding-top: 40px;
-    color: #181818;
-    
+    color: #494949;
+    text-align: left;
 }
 
 .divTexto > a > button {

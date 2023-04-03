@@ -22,11 +22,11 @@
 .divTitulo > h4 {
     font-family: 'Urbanist';
     font-style: normal;
-    font-weight: 100;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
     line-height: 101.5%;
     letter-spacing: 0.185em;
-    color: #2E2E2E;
+    color: #828282;
     margin: 0;
     padding-bottom: 20px;
 }
