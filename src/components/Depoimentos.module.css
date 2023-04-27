@@ -84,18 +84,27 @@
 
     .divTitulo{
         margin-bottom: -80px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 40px;
     }
-
-/*     
-    .swiperDepoimento{
-        height: 100vh;
-    } */
 
     .swiperDepoimento{
         flex-wrap: wrap;
         height: 100vh;
     }
 
+
+    .divTitulo > h1{
+        text-align: left;
+        font-size: 25px;
+    }
+
+    .divTitulo > h3 {
+        text-align: left;
+        font-size: 18px;
+
+    }
 
 
     

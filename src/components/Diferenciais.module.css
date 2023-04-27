@@ -111,3 +111,28 @@ color: #505050;
   
 
 }
+
+
+@media screen and (max-width: 768px){
+    
+    .divPrincipal{
+        justify-content:  flex-start;
+        
+    }
+
+
+    .topico{
+        font-size: 18px;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    .titulo {
+        font-size: 25px;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+  
+
+}

@@ -451,6 +451,10 @@ a {
     flex-direction: column;
     background-color: #F0EAF0;
 
+
+    
+          
+
     h2 {
         font-family: 'Urbanist';
         font-style: normal;
@@ -491,41 +495,60 @@ a {
         justify-content: space-evenly;
         max-width: 1200px;
     }
+
+
+
+      @media screen and (max-width: 768px) {
+                align-items: flex-start;
+                padding-left: 40px;
+
+
+                h2{
+                    font-size: 18px;
+                }
+
+                p {
+                    text-align: left;
+                    padding: 0;
+                    padding-top: 15px;
+                    font-size: 25px;
+                }
+            }
 }
 
 
        
        
-.swiper-atuacao-principal {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
+// .swiper-atuacao-principal {
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: nowrap;
 
-    .swiper-atuacao {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 50px;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 0;
-        width: 70%;
-        margin-left: 0;
-        margin-right: 0;
-        margin-right: 40px;
+//     .swiper-atuacao {
+//         display: flex;
+//         justify-content: space-evenly;
+//         gap: 50px;
+//         align-items: center;
+//         flex-wrap: wrap;
+//         margin: 0;
+//         width: 70%;
+//         margin-left: 0;
+//         margin-right: 0;
+//         margin-right: 40px;
         
 
-        @media screen and (max-width: 768px) {
-            flex-wrap: wrap;
-            // overflow-y:visible;
-            // width: 2000px;
-            gap: 20px;
-        }
+//         @media screen and (max-width: 768px) {
+//             flex-wrap: wrap;
+//             // overflow-y:visible;
+//             // width: 2000px;
+//             gap: 20px;
+//         }
 
       
-     }
+//      }
 
 
-}
+// }
      
 
     
