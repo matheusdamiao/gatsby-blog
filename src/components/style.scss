@@ -750,7 +750,12 @@ a {
         }
     } 
 
-
+    @media screen and (max-width: 500px) {
+        
+        img {
+            object-position: -300px 0px;
+        }
+    } 
 
 
     }
