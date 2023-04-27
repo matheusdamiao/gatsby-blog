@@ -11,7 +11,6 @@ const MenuDesktop = () => {
 
   const toggleMenu = () => {
     setClicked(!clicked)
-    console.log(clicked)
   }
 
   // const closeMenu = () => {
@@ -102,22 +101,21 @@ const MenuDesktop = () => {
           duration: 0.3,
         }}
         className={clicked ? "menuAtivo" : "menuDesativado"}
-        // onChange={closeMenu}
       >
         <ul className="ul-mobile">
-          <li>
+          <li onClick={() => toggleMenu()}>
             <Link to="/areasdeatuacao">Áreas de atuação </Link>
           </li>
-          <li>
+          <li onClick={() => toggleMenu()}>
             <Link to="/#atuacao">Serviços</Link>
           </li>
-          <li>
+          <li onClick={() => toggleMenu()}>
             <Link to="/blog">Blog</Link>
           </li>
-          <li>
+          <li onClick={() => toggleMenu()}>
             <Link to="/sobre">Sobre</Link>
           </li>
-          <li>
+          <li onClick={() => toggleMenu()}>
             <Link to="/#contato">Contato</Link>
           </li>
         </ul>
