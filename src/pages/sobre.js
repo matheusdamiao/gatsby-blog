@@ -6,10 +6,30 @@ import Footer from "../components/Footer"
 import fotobg from "./../images/foto-advogadas-svg.svg"
 import advogadas from "./../images/advogadas-juntas.png"
 import Seo from "../components/seo"
+import { motion } from "framer-motion"
 
 const sobre = () => {
   return (
-    <>
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: -200,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: 200,
+      }}
+      transition={{
+        type: "spring",
+        mass: 0.35,
+        stiffness: 75,
+        duration: 0.3,
+      }}
+    >
       <Seo title="Sobre nós" />
       <MenuDesktop />
       <div className="about-hero">
@@ -106,7 +126,7 @@ const sobre = () => {
       </section>
 
       <Footer />
-    </>
+    </motion.div>
   )
 }
 

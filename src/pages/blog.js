@@ -9,6 +9,7 @@ import NewBlogSection from "../components/NewBlogSection"
 import Seo from "../components/seo"
 import HashTag from "../components/HashTag"
 import TagIcon from "./../images/tags-icon.svg"
+import { motion } from "framer-motion"
 
 const Blog = ({ data }) => {
   const queryData = data.allMarkdownRemark.nodes
@@ -108,7 +109,26 @@ const Blog = ({ data }) => {
   }
 
   return (
-    <>
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: -200,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: 200,
+      }}
+      transition={{
+        type: "spring",
+        mass: 0.35,
+        stiffness: 75,
+        duration: 0.3,
+      }}
+    >
       <Seo title="Blog" />
       <MenuDesktop />
       <div className="blog-hero">
@@ -154,7 +174,7 @@ const Blog = ({ data }) => {
       <div className="blog-page">{postagens}</div>
 
       <Footer />
-    </>
+    </motion.div>
   )
 }
 

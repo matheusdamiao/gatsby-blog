@@ -1,42 +1,40 @@
 import React, { useEffect, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-// import logo from "./../images/new-logo.svg"
 import logo from "./../images/logo-last-stroke.svg"
-// import logo from "./../images/logo-grosso.svg"
-
 import zapp from "./../images/zap-component.svg"
 import { Link } from "gatsby"
-
 import * as style from "./Menu.module.css"
+import { motion } from "framer-motion"
 
 const MenuDesktop = () => {
   const [clicked, setClicked] = useState(false)
 
   const toggleMenu = () => {
     setClicked(!clicked)
+    console.log(clicked)
   }
 
-  const closeMenu = () => {
-    if (typeof window !== "undefined")
-      if (window.innerWidth > 800) {
-        setClicked(false)
-      }
-  }
+  // const closeMenu = () => {
+  //   if (typeof window !== "undefined")
+  //     if (window.innerWidth > 800) {
+  //       setClicked(false)
+  //     }
+  // }
 
-  useEffect(() => {
-    const isBrowser = typeof window !== "undefined"
+  // useEffect(() => {
+  //   const isBrowser = typeof window !== "undefined"
 
-    if (isBrowser) {
-      window.addEventListener("resize", closeMenu)
-      const divMenu = document.querySelector(".div-menu-mobile")
-      window.addEventListener("click", e => {
-        const insideDiv = e.composedPath().includes(divMenu)
-        if (!insideDiv) {
-          setClicked(false)
-        }
-      })
-    }
-  }, [clicked])
+  //   if (isBrowser) {
+  //     window.addEventListener("resize", closeMenu)
+  //     const divMenu = document.querySelector(".div-menu-mobile")
+  //     window.addEventListener("click", e => {
+  //       const insideDiv = e.composedPath().includes(divMenu)
+  //       if (!insideDiv) {
+  //         setClicked(false)
+  //       }
+  //     })
+  //   }
+  // }, [clicked])
 
   return (
     <>
@@ -84,9 +82,27 @@ const MenuDesktop = () => {
         </div>
       </div>
 
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: -200,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+        }}
+        exit={{
+          opacity: 0,
+          x: 200,
+        }}
+        transition={{
+          type: "spring",
+          mass: 0.35,
+          stiffness: 75,
+          duration: 0.3,
+        }}
         className={clicked ? "menuAtivo" : "menuDesativado"}
-        onChange={closeMenu}
+        // onChange={closeMenu}
       >
         <ul className="ul-mobile">
           <li>
@@ -105,7 +121,7 @@ const MenuDesktop = () => {
             <Link to="/#contato">Contato</Link>
           </li>
         </ul>
-      </div>
+      </motion.div>
       <a
         className={style.zapLink}
         href="https://api.whatsapp.com/send?phone=5521971877705"
