@@ -206,7 +206,7 @@ a {
 .div-menu-mobile {
     display: none;
     margin: 0;
-    background-color: #F0EAF0;
+    background-color: #FCF8FB;
     box-sizing: border-box;
     overflow-x: hidden;
     
@@ -450,7 +450,8 @@ a {
     flex-wrap: nowrap;
     flex-direction: column;
     background-color: #F0EAF0;
-
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     
           
@@ -501,7 +502,7 @@ a {
       @media screen and (max-width: 768px) {
                 align-items: flex-start;
                 padding-left: 40px;
-
+                padding-right: 40px;
 
                 h2{
                     font-size: 18px;
@@ -516,43 +517,9 @@ a {
             }
 }
 
-
-       
-       
-// .swiper-atuacao-principal {
-//     width: 100%;
-//     display: flex;
-//     flex-wrap: nowrap;
-
-//     .swiper-atuacao {
-//         display: flex;
-//         justify-content: space-evenly;
-//         gap: 50px;
-//         align-items: center;
-//         flex-wrap: wrap;
-//         margin: 0;
-//         width: 70%;
-//         margin-left: 0;
-//         margin-right: 0;
-//         margin-right: 40px;
-        
-
-//         @media screen and (max-width: 768px) {
-//             flex-wrap: wrap;
-//             // overflow-y:visible;
-//             // width: 2000px;
-//             gap: 20px;
-//         }
-
-      
-//      }
-
-
-// }
      
 
-    
- 
+
 
 // < / areas de atuação componente >
 
@@ -567,6 +534,18 @@ a {
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 20px;
+}
+
+.card-link { 
+    width: 400px;
+    padding: 0;
+
+
+
+    @media screen and (max-width: 768px) {
+       width: 100%;
+    }
 }
 
 .card-div {
@@ -574,11 +553,11 @@ a {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    // width: 400px;
     width: 400px;
     height: 250px;
     text-align: center;
     border: 1px solid black;
-    margin: 10px;
     margin-bottom: 10px;
     padding: 10px 10px;
     border: none;
@@ -587,6 +566,8 @@ a {
     padding: 45px 0px 0px 45px;
     flex-shrink: 0;
     background-color: #FCF8FB;
+    // background-color: #ac268a;
+
     cursor: pointer;
     transition: 0.3s;
   
@@ -600,7 +581,8 @@ a {
 
 
     @media screen and (max-width: 768px) {
-       
+       width: 100%;
+       margin: 0;
     }
 
 
