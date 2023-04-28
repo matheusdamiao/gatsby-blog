@@ -70,19 +70,9 @@ const Footer = () => {
           Copyright © Cupulille & Medeiros Advogadas - 2023 - Todos os direitos
           reservados.
         </p>
-        <p>
-          All family images by Vlada Karpovich via{" "}
-          <a
-            href="https://www.pexels.com/@vlada-karpovich/collections/"
-            alt=""
-            target="_blank"
-          >
-            Pexels
-          </a>
-        </p>
         <code>
           Desenvolvido por{" "}
-          <a href="http://matheusdamiao.netlify.com" target="_blank">
+          <a href="http://matheusdamiao.com.br" target="_blank">
             Matheus Damião
           </a>
         </code>

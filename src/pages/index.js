@@ -19,7 +19,7 @@ const Index = () => {
         style={{
           width: "100%",
           overflowX: "hidden",
-          margin: "100px auto",
+          margin: "80px auto",
           marginBottom: "20px",
         }}
         initial={{
