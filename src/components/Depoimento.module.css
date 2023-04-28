@@ -17,7 +17,7 @@
     margin: 10px;
     padding: 10px;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
     border: none;
     /* background-color: rgba(244, 244, 244, 0.5); */
     outline: none;
@@ -89,7 +89,8 @@
 @media screen and (max-width: 768px) { 
 
     .divDepoimento{
-       max-height: 500px;
+       max-height: 800px;
+        max-width: 350px;
     }
 
     .quoteRight{
