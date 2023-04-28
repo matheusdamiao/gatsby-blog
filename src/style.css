@@ -1,5 +1,10 @@
 /* CSS Custom Properties Definitions */
 
+
+.NewBlogsection-module--swiperDepoimentoPrincipal--iiC-f > .swiper-wrapper{
+  gap: 20px;
+}
+
 .swiper {
   overflow: visible !important;
 }

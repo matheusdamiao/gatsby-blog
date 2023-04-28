@@ -53,11 +53,16 @@
     overflow: hidden;
 }
 
+
 .swiperDepoimentoPrincipal{
     padding-top: 100px;
     padding-left: 100px;
     height: 100%;
     height: 700px;
+}
+
+.swiperDepoimentoPrincipal:first-child {
+    gap: 40px;
 }
 
 @media screen and (max-width: 768px) { 
