@@ -37,7 +37,7 @@ const Diferenciais = () => {
   const cardInfo = [
     {
       icone: getImage(icone1),
-      title: "Atendimento humanizado",
+      title: "Atendimento personalizado e humanizado",
       // body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
     },
     {
@@ -47,12 +47,12 @@ const Diferenciais = () => {
     },
     {
       icone: getImage(icone3),
-      title: "Sensibilidade e Respeito",
+      title: "Sensibilidade, Respeito e Empatia",
       // body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
     },
     {
       icone: getImage(icone4),
-      title: "Acompanhe seu processo",
+      title: "Relatórios Processuais para acompanhar seu processo",
       // body: "Lorem ipsum  lorem ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum",
     },
   ]
@@ -60,7 +60,7 @@ const Diferenciais = () => {
   return (
     <div>
       <div className={style.divPrincipal}>
-        <h2 className={style.topico}> especialistas </h2>
+        {/* <h2 className={style.topico}> especialistas </h2> */}
         <p className={style.titulo}> Nosso diferencial está em cada detalhe </p>
 
         <div className={style.cards}>

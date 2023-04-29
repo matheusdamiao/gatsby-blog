@@ -38,8 +38,11 @@ const areasdeatuacao = () => {
         <div className="header">
           <h1>Áreas de Atuação</h1>
           <h3>
-            Com atendimento humanizado, ajudamos você e sua família na resolução
-            de problemas jurídicos
+            Nosso escritório presta assistência jurídica, tanto de forma
+            judicial, quanto de forma extrajudicial, prezando por uma advocacia
+            célere e eficiente. Atuamos também com consultorias jurídicas para
+            jovens advogados e para escritórios que necessitam de atuação em uma
+            de nossas especialidades.
           </h3>
         </div>
         <div className="wrapperContent">

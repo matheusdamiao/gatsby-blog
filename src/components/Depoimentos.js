@@ -75,8 +75,8 @@ const Depoimentos = () => {
     <>
       <div className={style.mainDiv}>
         <div className={style.divTitulo}>
-          <h3> depoimentos </h3>
-          <h1> Os relatos de nossos clientes</h1>
+          <h3> Depoimentos </h3>
+          <h1> Os relatos das nossas clientes</h1>
         </div>
         <div className={style.slider}>
           <Swiper

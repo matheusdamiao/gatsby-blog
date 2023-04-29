@@ -12,8 +12,8 @@ const HeroSectionNew = () => {
           <h1> O direito da sua família em primeiro lugar</h1>
           <h3>
             {" "}
-            Com atendimento humanizado, ajudamos você e sua família na resolução
-            de problemas jurídicos{" "}
+            Com atendimento humanizado, ajudamos mulheres, mães, crianças e
+            adolescentes na prevenção e resolução de conflitos familiares.
           </h3>
           <button>
             {" "}

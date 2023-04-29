@@ -48,8 +48,8 @@ const AreasDeAtuacao = () => {
 
   return (
     <div className="atuacao-div" id="atuacao">
-      <h2> áreas de atuação </h2>
-      <p> Serviços que prestamos aos nossos clientes </p>
+      <h2> Áreas de Atuação </h2>
+      <p> Serviços que prestamos ao nossas clientes </p>
 
       <div className="wrapperCards">
         <Card icon={cardData[0].icone} title={cardData[0].title}>
