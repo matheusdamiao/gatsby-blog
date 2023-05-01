@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import logo from "./../images/logo-last-stroke.svg"
+import logo from "./../images/logo-novo.svg"
 import zapp from "./../images/zap-component.svg"
 import { Link } from "gatsby"
 import * as style from "./Menu.module.css"
