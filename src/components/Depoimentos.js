@@ -10,13 +10,13 @@ import "swiper/css/pagination"
 const Depoimentos = () => {
   const data = useStaticQuery(graphql`
     query {
-      avatar1: file(relativePath: { eq: "avatar1.png" }) {
+      avatar1: file(relativePath: { eq: "luciana.png" }) {
         childImageSharp {
           gatsbyImageData
         }
       }
 
-      avatar2: file(relativePath: { eq: "avatar2.png" }) {
+      avatar2: file(relativePath: { eq: "wanessa.png" }) {
         childImageSharp {
           gatsbyImageData
         }
@@ -34,41 +34,41 @@ const Depoimentos = () => {
 
   const [depoimentoState, setDepoimentoState] = useState([
     {
-      nome: "Maria",
+      nome: "Luciana",
       foto: getImage(avatar1),
       texto:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
+        "Nos últimos tempos tem sido difícil encontrarmos profissionais que, além de desempenharem com excelência seu papel, também tenham a  capacidade e a humanidade de comunicar com os seus clientes e de entender os seus receios.        Tive a sorte de encontrar Thays e Vanessa,  que, desde o primeiro momento, souberam nos escutar e segurar nossas mãos quando o desespero tomou conta de nossa família.     Parabenizo e agradeço a ambas por terem nos acompanhado neste momento complicado de nossas vidas e pelo sucesso na jornada que seguimos juntas. E sabemos que não foi fácil!",
     },
     {
-      nome: "João",
+      nome: "Wanessa",
       foto: getImage(avatar2),
       texto:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
+        "Vanessa e Thays são profissionais maravilhosas, muito humanas, dedicadas ao trabalho, que foram essenciais no momento mais difícil da vida da minha família. Sem elas, os processos seriam muito mais difíceis de se lidar. Tenho só a agradecer por toda dedicação, comprometimento e carinho que elas tiveram",
     },
-    {
-      nome: "Pedro",
-      foto: getImage(avatar3),
-      texto:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
-    },
-    {
-      nome: "Henrique",
-      foto: getImage(avatar2),
-      texto:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
-    },
-    {
-      nome: "Luana",
-      foto: getImage(avatar2),
-      texto:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
-    },
-    {
-      nome: "Zaara",
-      foto: getImage(avatar2),
-      texto:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
-    },
+    // {
+    //   nome: "Pedro",
+    //   foto: getImage(avatar3),
+    //   texto:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
+    // },
+    // {
+    //   nome: "Henrique",
+    //   foto: getImage(avatar2),
+    //   texto:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
+    // },
+    // {
+    //   nome: "Luana",
+    //   foto: getImage(avatar2),
+    //   texto:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
+    // },
+    // {
+    //   nome: "Zaara",
+    //   foto: getImage(avatar2),
+    //   texto:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
+    // },
   ])
 
   return (
@@ -112,13 +112,13 @@ const Depoimentos = () => {
               <Depoimento
                 data-swiper-parallax-duration="3000"
                 nome={depoimentoState[1].nome}
-                avatar={depoimentoState[3].foto}
-                text={depoimentoState[3].texto}
-                key={depoimentoState[3].index}
+                avatar={depoimentoState[1].foto}
+                text={depoimentoState[1].texto}
+                key={depoimentoState[1].index}
               />
             </SwiperSlide>
 
-            <SwiperSlide
+            {/* <SwiperSlide
               data-swiper-parallax-duration="1000"
               className={style.swiperDepoimento}
             >
@@ -128,9 +128,9 @@ const Depoimentos = () => {
                 text={depoimentoState[1].texto}
                 key={depoimentoState[1].index}
               />
-            </SwiperSlide>
+            </SwiperSlide> */}
 
-            <SwiperSlide
+            {/* <SwiperSlide
               data-swiper-parallax-duration="1000"
               className={style.swiperDepoimento}
             >
@@ -152,7 +152,7 @@ const Depoimentos = () => {
                 text={depoimentoState[5].texto}
                 key={depoimentoState[5].index}
               />
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>
