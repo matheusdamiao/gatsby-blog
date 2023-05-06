@@ -13,24 +13,24 @@ const Footer = () => {
     <>
       <div className={style.divPrincipal}>
         <div>
-          <img src={logo} alt="logo" width={400} />
+          <img src={logo} alt="logo" width={300} />
         </div>
         <div className={style.wrapperContent}>
           <div className={style.contato}>
             <h3>Contato</h3>
             <span>
               <img src={logoPhone} alt="logo" width={40} />
-              <p> (21) 22349-2934 / (21) 99923-8192</p>
+              <p> (21) 97187-7705</p>
             </span>
 
             <span>
               <img src={logoMail} alt="logo" width={40} />
-              <p> elasdescomplicam@gmail.com </p>
+              <p> contato@cupulillemedeirosadv.com </p>
             </span>
 
             <span>
               <img src={logoClock} width={40} alt="logo" />
-              <p> 8:00 - 18:00 </p>
+              <p> 9:00 - 18:00 </p>
             </span>
           </div>
 
@@ -39,9 +39,6 @@ const Footer = () => {
             <div className={style.divLogos}>
               <a href="./">
                 <img src={logoInsta} width={40} alt="" />{" "}
-              </a>
-              <a href="./">
-                <img src={logoLi} width={40} alt="" />{" "}
               </a>
             </div>
           </div>

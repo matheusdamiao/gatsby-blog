@@ -1,15 +1,11 @@
-import { StaticImage } from "gatsby-plugin-image"
 import "./../components/style.scss"
 import React from "react"
 import MenuDesktop from "../components/MenuDesktop"
 import Footer from "../components/Footer"
 import fotobg from "./../images/thays_e_vanessa.svg"
-// import fotobg from "./../images/foto-advogadas-svg.svg"
 import advogadas from "./../images/advogadass.svg"
-// import advogadas from "./../images/advogadas-juntas.png"
 import vanessa from "./../images/vanessa.svg"
 import thays from "./../images/thays.svg"
-
 import Seo from "../components/seo"
 import { motion } from "framer-motion"
 
@@ -55,7 +51,7 @@ const sobre = () => {
       <section className="about-office">
         <div className="title">
           <small>Quem somos</small>
-          <h3>Cupullile e Medeiros Advogadas</h3>
+          <h3>Cupulille e Medeiros Advogadas</h3>
         </div>
         <div className="body-text">
           <p>
@@ -72,20 +68,11 @@ const sobre = () => {
         </div>
       </section>
 
-      <div className="nossa-equipe">
-        <h3>Nossa equipe</h3>
-        <p>
-          O escritório Cupulille & Medeiros Advogadas é formado por uma equipe
-          de duas mulheres, especialistas em Direito de Família e Sucessões,
-          atuando e prezando por uma advocacia humanizada.
-        </p>
-      </div>
-
       <section className="section-about">
         <div className="section-wrap">
           <div className="section-info">
             <h2> Vanessa Cupullile</h2>
-            <small> OAB 39493430 </small>
+            <small> OAB/RJ 228.992</small>
           </div>
 
           <div className="section-bio">
@@ -102,7 +89,6 @@ const sobre = () => {
           </div>
 
           <div className="section-picture">
-            {/* <StaticImage src="./../images/vanessa-foto.svg" alt="" /> */}
             <img src={vanessa} alt="" />
           </div>
         </div>
@@ -112,7 +98,7 @@ const sobre = () => {
         <div className="section-wrap">
           <div className="section-info">
             <h2> Thays Medeiros </h2>
-            <small> OAB 39493430 </small>
+            <small> OAB/RJ 232.951</small>
           </div>
 
           <div className="section-bio">
@@ -126,7 +112,6 @@ const sobre = () => {
           </div>
 
           <div className="section-picture">
-            {/* <StaticImage src="./../images/thays-foto.svg" alt="" /> */}
             <img src={thays} alt="" />
           </div>
         </div>
