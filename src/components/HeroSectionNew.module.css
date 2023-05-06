@@ -244,3 +244,12 @@
     }
 
 }
+
+
+@media screen and (max-width: 680px){ 
+
+
+    .divFoto {
+        opacity: 1;
+    }
+}
