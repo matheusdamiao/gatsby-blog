@@ -5,8 +5,13 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 80px;
+    /* padding-left: 80px;
+    padding-right: 80px; */
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 200px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -16,7 +21,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 150px;
     width: 100%;
     
 }
@@ -51,22 +55,23 @@
 
 .textoEfoto {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     width: 100%;
     height: 100%;
+    justify-content: center;
     /* flex-wrap: wrap-reverse; */
 }
 
 
 
 .foto {
-    /* max-width: 500px; */
+    max-width: 800px;
+   width: 100%;
 }
 
 .foto > img {
     width: 100%;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     object-position: center;
 }
 
@@ -80,6 +85,7 @@
     justify-content: center;
     gap: 60px;
     width: 100%;
+    flex-grow: 0;
 }
 
 .divTexto > p {
@@ -124,22 +130,41 @@
 
     .titulo{
         padding-left: 0;
+        
     }
 
     .textoEfoto{
         flex-wrap: wrap-reverse;
         padding-right: 20px;
-       
+        
     }
 
-
+    .foto{
+        width: 100%;
+    }
 
     .divPrincipal{
         padding-left: 20px;
+        padding-right: 10px;
     }
 
 
     .divTexto {
         padding-right: 0;
+        gap: 20px;
     }
+
+    .divTexto > a {
+        max-width: 100%;
+    }
+
+    .divTexto > p {
+        padding-top: 20px;
+    }
+
+    .titulo > h3 {
+        padding-top: 20px;
+        font-size: 16px;
+    }
+    
 }

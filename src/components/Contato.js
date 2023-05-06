@@ -16,12 +16,12 @@ const Contato = () => {
         <div className={style.divSpan}>
           <span className="span">
             <StaticImage src="../images/icone-tel.png" alt="logo" />
-            <p> 21 22349-2934 / 21 99923-8192</p>
+            <p> (21) 97187-7705</p>
           </span>
 
           <span className="span">
             <StaticImage src="../images/icone-msg.png" alt="logo" />
-            <p> elasdescomplicam@gmail.com </p>
+            <p> contato@cupulillemedeirosadv.com </p>
           </span>
 
           <span className="span">
@@ -32,15 +32,19 @@ const Contato = () => {
       </div>
 
       <div className={style.divSocial}>
-        <h3> Siga-nos</h3>
-        <h1> Redes Sociais </h1>
+        {/* <h3> Siga-nos</h3> */}
+        <h1> Siga nossa rede social </h1>
         <div className={style.divLogos}>
-          <a href="./" alt="">
+          <a
+            href="https://www.instagram.com/elas.descomplicam/"
+            target="_blank"
+            alt=""
+          >
             <img src={logoInsta} alt="" />{" "}
           </a>
-          <a href="./" alt="">
+          {/* <a href="./" alt="">
             <img src={logoLi} alt="" />{" "}
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

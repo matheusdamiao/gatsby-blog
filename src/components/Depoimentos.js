@@ -22,7 +22,7 @@ const Depoimentos = () => {
         }
       }
 
-      avatar3: file(relativePath: { eq: "avatar3.png" }) {
+      avatar3: file(relativePath: { eq: "tatiana.png" }) {
         childImageSharp {
           gatsbyImageData
         }
@@ -45,12 +45,12 @@ const Depoimentos = () => {
       texto:
         "Vanessa e Thays são profissionais maravilhosas, muito humanas, dedicadas ao trabalho, que foram essenciais no momento mais difícil da vida da minha família. Sem elas, os processos seriam muito mais difíceis de se lidar. Tenho só a agradecer por toda dedicação, comprometimento e carinho que elas tiveram",
     },
-    // {
-    //   nome: "Pedro",
-    //   foto: getImage(avatar3),
-    //   texto:
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
-    // },
+    {
+      nome: "Tatiana",
+      foto: getImage(avatar3),
+      texto:
+        "Parabéns pela dedicação e profissionalismo, que vocês tem, características essas que são muito admiráveis! Vocês fazem um ótimo trabalho, em momentos de desespero vocês sabem me acalmar e explicar do jeito que consigo entender, foram dois processos e graças a Deus e a vocês que foi só sucesso, não tenho palavras para dizer o quanto sou grata por ter contratado vocês, desejo tudo de maravilhoso e muito sucesso para as minhas advogadas, que Deus continue abençoando sempre. Muito obrigada Vanessa e Thays.",
+    },
     // {
     //   nome: "Henrique",
     //   foto: getImage(avatar2),
@@ -73,7 +73,7 @@ const Depoimentos = () => {
 
   return (
     <>
-      <div className={style.mainDiv}>
+      <div id="depoimentos" className={style.mainDiv}>
         <div className={style.divTitulo}>
           <h3> Depoimentos </h3>
           <h1> Os relatos das nossas clientes</h1>
@@ -91,7 +91,7 @@ const Depoimentos = () => {
             cardsEffect={{ slideShadows: false }}
             autoplay={{
               delay: 3000,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             }}
             parallax={{
               parallax: true,
@@ -118,17 +118,17 @@ const Depoimentos = () => {
               />
             </SwiperSlide>
 
-            {/* <SwiperSlide
+            <SwiperSlide
               data-swiper-parallax-duration="1000"
               className={style.swiperDepoimento}
             >
               <Depoimento
                 nome={depoimentoState[2].nome}
-                avatar={depoimentoState[1].foto}
-                text={depoimentoState[1].texto}
-                key={depoimentoState[1].index}
+                avatar={depoimentoState[2].foto}
+                text={depoimentoState[2].texto}
+                key={depoimentoState[2].index}
               />
-            </SwiperSlide> */}
+            </SwiperSlide>
 
             {/* <SwiperSlide
               data-swiper-parallax-duration="1000"

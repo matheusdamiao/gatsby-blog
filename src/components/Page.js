@@ -1,17 +1,22 @@
 import React from "react"
 import * as style from "./Page.module.css"
-import foto from "./../images/fotoAdvogadas.png"
+// import foto from "./../images/fotoAdvogadas.png"
+import foto from "./../images/thays_e_vanessa.svg"
 
 const Page = () => {
   return (
     <div className={style.divPrincipal}>
-      <div className={style.titulo}>
+      {/* <div className={style.titulo}>
         <h3> Escritório </h3>
         <h1> Conheça melhor a nossa equipe</h1>
-      </div>
+      </div> */}
 
       <div className={style.textoEfoto}>
         <div className={style.divTexto}>
+          <div className={style.titulo}>
+            <h3> Escritório </h3>
+            <h1> Conheça melhor a nossa equipe</h1>
+          </div>
           <p>
             {" "}
             O escritório possui como principal objetivo o empoderamento

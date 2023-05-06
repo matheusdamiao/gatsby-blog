@@ -37,7 +37,10 @@ const Footer = () => {
           <div className={style.social}>
             <h3> Social </h3>
             <div className={style.divLogos}>
-              <a href="./">
+              <a
+                href="https://www.instagram.com/elas.descomplicam/"
+                target="_blank"
+              >
                 <img src={logoInsta} width={40} alt="" />{" "}
               </a>
             </div>
@@ -47,14 +50,14 @@ const Footer = () => {
             <h3>Site</h3>
             <div className={style.siteMapWrapper}>
               <div className={style.links1}>
-                <Link to="">Áreas de atuação</Link>
-                <Link to="">Especialistas</Link>
-                <Link to="">Depoimentos</Link>
+                <Link to="/areasdeatuacao">Áreas de atuação</Link>
+                <Link to="/#diferenciais"> Diferenciais </Link>
+                <Link to="/#depoimentos">Depoimentos</Link>
               </div>
               <div className={style.links2}>
-                <Link to=""> Blog</Link>
-                <Link to=""> Escritório</Link>
-                <Link to=""> Fale conosco </Link>
+                <Link to="/blog"> Blog</Link>
+                <Link to="/sobre"> Escritório</Link>
+                <Link to="/#contato"> Fale conosco </Link>
               </div>
             </div>
           </div>

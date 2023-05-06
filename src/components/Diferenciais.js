@@ -58,7 +58,7 @@ const Diferenciais = () => {
   ]
 
   return (
-    <div>
+    <div id="diferenciais">
       <div className={style.divPrincipal}>
         {/* <h2 className={style.topico}> especialistas </h2> */}
         <p className={style.titulo}> Nosso diferencial está em cada detalhe </p>
