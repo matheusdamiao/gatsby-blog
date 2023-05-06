@@ -3,8 +3,13 @@ import "./../components/style.scss"
 import React from "react"
 import MenuDesktop from "../components/MenuDesktop"
 import Footer from "../components/Footer"
-import fotobg from "./../images/foto-advogadas-svg.svg"
-import advogadas from "./../images/advogadas-juntas.png"
+import fotobg from "./../images/thays_e_vanessa.svg"
+// import fotobg from "./../images/foto-advogadas-svg.svg"
+import advogadas from "./../images/advogadass.svg"
+// import advogadas from "./../images/advogadas-juntas.png"
+import vanessa from "./../images/vanessa.svg"
+import thays from "./../images/thays.svg"
+
 import Seo from "../components/seo"
 import { motion } from "framer-motion"
 
@@ -97,7 +102,8 @@ const sobre = () => {
           </div>
 
           <div className="section-picture">
-            <StaticImage src="./../images/vanessa-foto.svg" alt="" />
+            {/* <StaticImage src="./../images/vanessa-foto.svg" alt="" /> */}
+            <img src={vanessa} alt="" />
           </div>
         </div>
       </section>
@@ -120,7 +126,8 @@ const sobre = () => {
           </div>
 
           <div className="section-picture">
-            <StaticImage src="./../images/thays-foto.svg" alt="" />
+            {/* <StaticImage src="./../images/thays-foto.svg" alt="" /> */}
+            <img src={thays} alt="" />
           </div>
         </div>
       </section>
