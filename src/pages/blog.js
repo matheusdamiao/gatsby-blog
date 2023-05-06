@@ -109,72 +109,75 @@ const Blog = ({ data }) => {
   }
 
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        x: -200,
-      }}
-      animate={{
-        opacity: 1,
-        x: 0,
-      }}
-      exit={{
-        opacity: 0,
-        x: 200,
-      }}
-      transition={{
-        type: "spring",
-        mass: 0.35,
-        stiffness: 75,
-        duration: 0.3,
-      }}
-    >
-      <Seo title="Blog" />
+    <>
       <MenuDesktop />
-      <div className="blog-hero">
-        <div className="blog-hero-content">
-          <p>Blog</p>
-          <h1>Conheça melhor os direitos de sua família</h1>
-          <h3> Leia os artigos em nosso blog e saiba mais</h3>
-        </div>
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: -200,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+        }}
+        exit={{
+          opacity: 0,
+          x: 200,
+        }}
+        transition={{
+          type: "spring",
+          mass: 0.35,
+          stiffness: 75,
+          duration: 0.3,
+        }}
+      >
+        <Seo title="Blog" />
 
-        <div className="blog-hero-picture">
-          <img src={fotobg} alt="" />
-        </div>
-      </div>
+        <div className="blog-hero">
+          <div className="blog-hero-content">
+            <p>Blog</p>
+            <h1>Conheça melhor os direitos de sua família</h1>
+            <h3> Leia os artigos em nosso blog e saiba mais</h3>
+          </div>
 
-      <NewBlogSection />
-
-      <div className="blog-title-div">
-        <h4> todos os artigos</h4>
-        <h2> Aprenda mais sobre seus direitos </h2>
-      </div>
-
-      <div className="search-div">
-        <div className="div-input">
-          <img src={SearchIcon} width={20} alt="" />
-          <input
-            className="search-input"
-            type="text"
-            value={"" || searchState.query}
-            onChange={e => inputFunction(e)}
-          />
-          <button onClick={e => inputFunction(e, query)}> Pesquisar </button>
-        </div>
-
-        <div className="search-hashtags">
-          <div className="tags">
-            <img src={TagIcon} width={30} />
-            {/* <p> tags </p> */}
-            <div className="arrayTags">{showTags}</div>
+          <div className="blog-hero-picture">
+            <img src={fotobg} alt="" />
           </div>
         </div>
-      </div>
 
-      <div className="blog-page">{postagens}</div>
+        <NewBlogSection />
 
-      <Footer />
-    </motion.div>
+        <div className="blog-title-div">
+          <h4> todos os artigos</h4>
+          <h2> Aprenda mais sobre seus direitos </h2>
+        </div>
+
+        <div className="search-div">
+          <div className="div-input">
+            <img src={SearchIcon} width={20} alt="" />
+            <input
+              className="search-input"
+              type="text"
+              value={"" || searchState.query}
+              onChange={e => inputFunction(e)}
+            />
+            <button onClick={e => inputFunction(e, query)}> Pesquisar </button>
+          </div>
+
+          <div className="search-hashtags">
+            <div className="tags">
+              <img src={TagIcon} width={30} />
+              {/* <p> tags </p> */}
+              <div className="arrayTags">{showTags}</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="blog-page">{postagens}</div>
+
+        <Footer />
+      </motion.div>
+    </>
   )
 }
 
