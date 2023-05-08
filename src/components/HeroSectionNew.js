@@ -15,7 +15,7 @@ const HeroSectionNew = () => {
           </h3>
           <button>
             {" "}
-            <a href="/home#contato"> Agende uma reunião </a>
+            <a href="/#contato"> Agende uma reunião </a>
           </button>
         </div>
 
