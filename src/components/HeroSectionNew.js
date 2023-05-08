@@ -1,8 +1,5 @@
 import React from "react"
 import * as style from "./HeroSectionNew.module.css"
-import foto from "./../images/foto-hero.svg"
-import fotoadvs from "./../images/fotoAdvogadas.png"
-// import advsjuntas from "./../images/advogadas-juntas.png"
 import advsjuntas from "./../images/advogadass.svg"
 
 const HeroSectionNew = () => {

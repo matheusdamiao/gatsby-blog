@@ -15,43 +15,47 @@ const Index = () => {
   return (
     <>
       <MenuDesktop />
-      <motion.div
+
+      <div
         style={{
           width: "100%",
           overflowX: "hidden",
-          margin: "80px auto",
+          // margin: "80px auto",
           marginBottom: "20px",
-        }}
-        initial={{
-          opacity: 0,
-          x: -200,
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        exit={{
-          opacity: 0,
-          x: 200,
-        }}
-        transition={{
-          type: "spring",
-          mass: 0.35,
-          stiffness: 75,
-          duration: 0.3,
-          delay: 0.5,
         }}
       >
         <Seo title="" />
-        <HeroSectionNew />
-        <AreasDeAtuacao />
-        <Diferenciais />
-        <Page />
-        <Depoimentos />
-        <NewBlogSection />
-        <FormSection />
-        <Footer />
-      </motion.div>
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: 0,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          exit={{
+            opacity: 0,
+            x: 100,
+          }}
+          transition={{
+            type: "spring",
+            mass: 0.35,
+            stiffness: 75,
+            duration: 0.3,
+            delay: 0.5,
+          }}
+        >
+          <HeroSectionNew />
+          <AreasDeAtuacao />
+          <Diferenciais />
+          <Page />
+          <Depoimentos />
+          <NewBlogSection />
+          <FormSection />
+          <Footer />
+        </motion.div>
+      </div>
     </>
   )
 }

@@ -114,7 +114,7 @@ const Blog = ({ data }) => {
       <motion.div
         initial={{
           opacity: 0,
-          x: -200,
+          x: 0,
         }}
         animate={{
           opacity: 1,
@@ -122,7 +122,7 @@ const Blog = ({ data }) => {
         }}
         exit={{
           opacity: 0,
-          x: 200,
+          x: 100,
         }}
         transition={{
           type: "spring",

@@ -17,7 +17,7 @@ const areasdeatuacao = () => {
       <motion.div
         initial={{
           opacity: 0,
-          x: -200,
+          x: 0,
         }}
         animate={{
           opacity: 1,
@@ -25,7 +25,7 @@ const areasdeatuacao = () => {
         }}
         exit={{
           opacity: 0,
-          x: 200,
+          x: 100,
         }}
         transition={{
           type: "spring",

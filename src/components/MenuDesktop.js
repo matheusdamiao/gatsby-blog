@@ -5,6 +5,7 @@ import zapp from "./../images/zap-component.svg"
 import { Link } from "gatsby"
 import * as style from "./Menu.module.css"
 import { motion } from "framer-motion"
+import bars from "./../images/bars-solid.svg"
 
 const MenuDesktop = () => {
   const [clicked, setClicked] = useState(false)
@@ -73,35 +74,11 @@ const MenuDesktop = () => {
           </Link>
         </div>
         <div className="div-bars" onClick={toggleMenu}>
-          <StaticImage
-            src="./../images/bars-solid.svg"
-            alt=""
-            className="menuBars"
-          />
+          <img src={bars} alt="" className="menuBars" height={40} />
         </div>
       </div>
 
-      <motion.div
-        initial={{
-          opacity: 0,
-          x: -200,
-        }}
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        exit={{
-          opacity: 0,
-          x: 200,
-        }}
-        transition={{
-          type: "spring",
-          mass: 0.35,
-          stiffness: 75,
-          duration: 0.3,
-        }}
-        className={clicked ? "menuAtivo" : "menuDesativado"}
-      >
+      <div className={clicked ? "menuAtivo" : "menuDesativado"}>
         <ul className="ul-mobile">
           <li onClick={() => toggleMenu()}>
             <Link to="/areasdeatuacao">Áreas de atuação </Link>
@@ -119,7 +96,7 @@ const MenuDesktop = () => {
             <Link to="/#contato">Contato</Link>
           </li>
         </ul>
-      </motion.div>
+      </div>
       <a
         className={style.zapLink}
         href="https://api.whatsapp.com/send?phone=5521971877705"
