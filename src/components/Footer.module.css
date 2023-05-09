@@ -7,7 +7,7 @@
     align-items: flex-start;
     justify-content: space-evenly;
     margin-top: 150px;
-    background-color: #F6E0F6;
+    /* background-color: #F6E0F6; */
 }
 
 .divPrincipal > div { 
@@ -33,7 +33,7 @@ p {
     font-family: 'Urbanist';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 118.5%;
     text-align: justify;
     letter-spacing: 0.07em;
@@ -43,8 +43,8 @@ p {
 h3 {
     font-family: 'Urbanist';
     color: #2E2E2E;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 500;
     line-height: 101.5%;
     letter-spacing: 0.185em;
     margin: 0;
@@ -65,8 +65,8 @@ h3 {
 }
 
 .contato > span > img {
-    /* width: 100%;
-    height: 100%; */
+    /* width: 100%; */
+    height: 100%;
 }
 
 .social > h3 {
@@ -77,6 +77,16 @@ h3 {
 .divLogos {
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.divLogos > a {
+    display: flex;
+    align-items: center;
+    font-family: 'Urbanist';
+    gap: 10px;
+    font-weight: 400;
 }
 
 
@@ -134,7 +144,8 @@ color: #2E2E2E;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+
 }
 
 .copy > p {
@@ -160,6 +171,18 @@ color: #2E2E2E;
 
 
 @media screen and (max-width: 800px) {
+
+    .contato > span > img {
+        width: 25px;
+        
+    }
+
+    .contato > span > p  {
+        font-size: 14px;
+        font-weight: 500;
+        line-break: anywhere;
+    }
+
     .divPrincipal{
         flex-wrap: wrap;
     }
@@ -182,5 +205,13 @@ color: #2E2E2E;
 
     .divPrincipal > div > img {
         max-width: 300px;
+    }
+
+    .divLogos > a > img {
+        width: 25px;
+    }
+
+    .copy > code {
+        font-size: 10px;
     }
 }

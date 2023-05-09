@@ -592,6 +592,8 @@ a {
     @media screen and (max-width: 768px) {
        width: 100%;
        margin: 0;
+
+      
     }
 
 
@@ -609,6 +611,12 @@ a {
         font-size: 20px;
         line-height: 113.5%;
         letter-spacing: 0.095em;
+
+
+        @media screen and (max-width: 768px) {
+           padding-right: 20px;
+           
+         }
     }
 
 
@@ -1217,19 +1225,19 @@ a {
 
         @media screen and (max-width: 768px) {
             width: 90%;
+            padding-left: 20px;
         
+        
+            img {
+                right: 90%;              
+           }
+       
             img {
                 right: 90%;              
            }
         }
 
-        @media screen and (max-width: 600px) {
-            width: 90%;
         
-            img {
-                right: 85%;              
-           }
-        }
 
         button {
             border-radius: 9px;
@@ -1277,7 +1285,11 @@ a {
         transition: 2s;
         outline-color: rgb(174, 143, 175);
 
-      
+        @media screen and (max-width: 768px) {
+            padding-left: 20px;
+       
+        }
+
 
       
     }
@@ -1300,6 +1312,13 @@ a {
     padding-left: 50px;
     padding-top: 20px;
     
+
+    @media screen and (max-width: 768px) {
+    
+        padding-left: 20px;
+   
+    }
+
 
     .tags{
         display: flex;
@@ -1473,10 +1492,11 @@ a {
         line-height: 40px;
         font-size: 18px;
         font-weight: 400;
+        letter-spacing: 0;
 
         @media screen and (max-width: 768px) {
-            font-size: 14px;
-            letter-spacing: 0;
+            font-size: 16px;
+            // letter-spacing: 0;
             
         }
     }
@@ -1604,6 +1624,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        padding-right: 20px;
 
         .blog-author-name {
             font-family: 'Urbanist';

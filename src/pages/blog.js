@@ -154,7 +154,7 @@ const Blog = ({ data }) => {
 
         <div className="search-div">
           <div className="div-input">
-            <img src={SearchIcon} width={20} alt="" />
+            {/* <img src={SearchIcon} width={20} alt="" /> */}
             <input
               className="search-input"
               type="text"

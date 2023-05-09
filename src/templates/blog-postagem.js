@@ -40,7 +40,6 @@ const BlogPostagem = ({ data }) => {
           <h1>{post.frontmatter.title}</h1>
           <div className="blog-post-header-avatar">
             <small> {post.frontmatter.date}</small>
-            {/* <img src={post.frontmatter.avatar} /> */}
           </div>
           <img width={1000} src={post.frontmatter.imagem} alt="" />
         </header>

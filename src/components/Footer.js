@@ -41,7 +41,7 @@ const Footer = () => {
                 href="https://www.instagram.com/elas.descomplicam/"
                 target="_blank"
               >
-                <img src={logoInsta} width={40} alt="" />{" "}
+                <img src={logoInsta} width={40} alt="" /> Instagram
               </a>
             </div>
           </div>
