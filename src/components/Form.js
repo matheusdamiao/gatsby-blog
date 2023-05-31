@@ -52,7 +52,7 @@ const Form = () => {
   return (
     <div className="form">
       <div className={style.divTitulo}>
-        <h3> fale conosco</h3>
+        <h3> Fale Conosco</h3>
         <h1> Mande uma mensagem </h1>
         <p>
           Estamos aqui para lhe ajudar. Preencha o formulário abaixo e

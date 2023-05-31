@@ -1,6 +1,7 @@
 import React from "react"
 import * as style from "./HeroSectionNew.module.css"
-import advsjuntas from "./../images/advogadass.svg"
+// import advsjuntas from "./../images/advogadass.svg"
+import { StaticImage } from "gatsby-plugin-image"
 
 const HeroSectionNew = () => {
   return (
@@ -20,7 +21,17 @@ const HeroSectionNew = () => {
         </div>
 
         <div className={style.divFoto}>
-          <img src={advsjuntas} />
+          <StaticImage
+            src="./../images/advogadass.svg"
+            alt="Advogadas Vanessa e Thays no escritório"
+            loading="eager"
+            placeholder="blurred"
+            quality={100}
+            objectFit="cover"
+            objectPosition="center"
+            imgStyle={{ height: "100%", width: "100%" }}
+          />
+          {/* <img src={advsjuntas} alt="Advogadas Vanessa e Thays no escritório" /> */}
         </div>
       </div>
     </div>

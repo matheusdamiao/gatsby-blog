@@ -43,6 +43,11 @@ const areasdeatuacao = () => {
             célere e eficiente. Atuamos também com consultorias jurídicas para
             jovens advogados e para escritórios que necessitam de atuação em uma
             de nossas especialidades.
+            <br></br>
+            <br></br>Abaixo, exemplificamos algumas áreas de atuação na qual
+            nosso escritório presta serviços. Caso a área que você deseja
+            representação não esteja disposta abaixo, entre em contato conosco
+            para te ajudarmos!
           </h3>
         </div>
         <div className="wrapperContent">

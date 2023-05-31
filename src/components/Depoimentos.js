@@ -27,10 +27,16 @@ const Depoimentos = () => {
           gatsbyImageData
         }
       }
+
+      avatar4: file(relativePath: { eq: "vanusa.png" }) {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
     }
   `)
 
-  const { avatar1, avatar2, avatar3 } = data
+  const { avatar1, avatar2, avatar3, avatar4 } = data
 
   const [depoimentoState, setDepoimentoState] = useState([
     {
@@ -51,24 +57,12 @@ const Depoimentos = () => {
       texto:
         "Parabéns pela dedicação e profissionalismo, que vocês tem, características essas que são muito admiráveis! Vocês fazem um ótimo trabalho, em momentos de desespero vocês sabem me acalmar e explicar do jeito que consigo entender, foram dois processos e graças a Deus e a vocês que foi só sucesso, não tenho palavras para dizer o quanto sou grata por ter contratado vocês, desejo tudo de maravilhoso e muito sucesso para as minhas advogadas, que Deus continue abençoando sempre. Muito obrigada Vanessa e Thays.",
     },
-    // {
-    //   nome: "Henrique",
-    //   foto: getImage(avatar2),
-    //   texto:
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
-    // },
-    // {
-    //   nome: "Luana",
-    //   foto: getImage(avatar2),
-    //   texto:
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
-    // },
-    // {
-    //   nome: "Zaara",
-    //   foto: getImage(avatar2),
-    //   texto:
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam dolor ac nibh congue, sed ultrices tortor fermentum.",
-    // },
+    {
+      nome: "Vanusa",
+      foto: getImage(avatar4),
+      texto:
+        "Bom, falar das minhas advogadas é muito fácil. Elas em primeiro lugar são amigas e  profissionais em tudo. Graças à  Deus tenho elas em minha vida",
+    },
   ])
 
   return (
@@ -130,19 +124,19 @@ const Depoimentos = () => {
               />
             </SwiperSlide>
 
-            {/* <SwiperSlide
+            <SwiperSlide
               data-swiper-parallax-duration="1000"
               className={style.swiperDepoimento}
             >
               <Depoimento
                 nome={depoimentoState[3].nome}
-                avatar={depoimentoState[4].foto}
-                text={depoimentoState[4].texto}
-                key={depoimentoState[4].index}
+                avatar={depoimentoState[3].foto}
+                text={depoimentoState[3].texto}
+                key={depoimentoState[3].index}
               />
             </SwiperSlide>
 
-            <SwiperSlide
+            {/* <SwiperSlide
               data-swiper-parallax-duration="600"
               className={style.swiperDepoimento}
             >

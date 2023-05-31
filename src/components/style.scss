@@ -1861,11 +1861,11 @@ a {
 .header {
     display: flex;
     flex-direction: column;
-    // margin-top: 100px;
+    margin-top: 10dvh;
     align-items: flex-start;
     justify-content: center;
     background-color: #F0EAF0;
-    height: 400px;
+    height: 100%;
     width: 100%;
     padding-left: 40px;
 

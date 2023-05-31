@@ -8,6 +8,7 @@ import vanessa from "./../images/vanessa.svg"
 import thays from "./../images/thays.svg"
 import Seo from "../components/seo"
 import { motion } from "framer-motion"
+import { StaticImage } from "gatsby-plugin-image"
 
 const sobre = () => {
   return (
@@ -46,6 +47,16 @@ const sobre = () => {
           </div>
 
           <div className="about-hero-picture">
+            {/* <StaticImage
+              src="./../images/thays_e_vanessa.png"
+              alt="Advogadas Vanessa e Thays no escritório"
+              loading="eager"
+              placeholder="blurred"
+              quality={100}
+              objectFit="cover"
+              // objectPosition="center"
+              imgStyle={{ width: "100%", height: "100%" }}
+            /> */}
             <img src={fotobg} alt="" />
           </div>
         </div>
@@ -73,7 +84,7 @@ const sobre = () => {
         <section className="section-about">
           <div className="section-wrap">
             <div className="section-info">
-              <h2> Vanessa Cupullile</h2>
+              <h2> Vanessa Cupulille</h2>
               <small> OAB/RJ 228.992</small>
             </div>
 

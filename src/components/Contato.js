@@ -9,7 +9,7 @@ const Contato = () => {
     <div className={style.divGeral}>
       <div className={style.divPrincipal}>
         <div className={style.divTitulo}>
-          <h3> fale conosco</h3>
+          <h3> Fale Conosco</h3>
           <h1> Atendimento </h1>
         </div>
 
