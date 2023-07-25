@@ -3,7 +3,6 @@ import MenuDesktop from "../components/MenuDesktop"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import CardBlog from "../components/CardBlog"
-import SearchIcon from "./../images/search-icon.svg"
 import fotobg from "./../images/hero-blog-foto.png"
 import NewBlogSection from "../components/NewBlogSection"
 import Seo from "../components/seo"
@@ -166,7 +165,7 @@ const Blog = ({ data }) => {
 
           <div className="search-hashtags">
             <div className="tags">
-              <img src={TagIcon} width={30} />
+              <img src={TagIcon} width={30} alt="" />
               {/* <p> tags </p> */}
               <div className="arrayTags">{showTags}</div>
             </div>

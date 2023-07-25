@@ -19,9 +19,9 @@ const Depoimento = ({ nome, avatar, text, key }) => {
         <img src={Star} alt="" />
       </div>
       <div className={style.divQuote}>
-        <img className={style.quoteLeft} src={quotesLeft} />
+        <img className={style.quoteLeft} src={quotesLeft} alt="" />
         <p> {text} </p>
-        <img className={style.quoteRight} src={quotesRight} />
+        <img className={style.quoteRight} src={quotesRight} alt="" />
       </div>
     </div>
   )

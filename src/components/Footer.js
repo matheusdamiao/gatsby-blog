@@ -1,6 +1,5 @@
 import React from "react"
 import logoInsta from "./../images/instagram-square-brands4.svg"
-import logoLi from "./../images/linkedin-brands4.svg"
 import logo from "../images/logo-novo.svg"
 import { Link } from "gatsby"
 import * as style from "./Footer.module.css"

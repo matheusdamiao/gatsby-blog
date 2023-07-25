@@ -1489,7 +1489,7 @@ a {
     p {
         width: 100%;
         word-wrap: break-word;
-        line-height: 40px;
+        line-height: 35px;
         font-size: 18px;
         font-weight: 400;
         letter-spacing: 0;
@@ -1861,7 +1861,7 @@ a {
 .header {
     display: flex;
     flex-direction: column;
-    margin-top: 10dvh;
+    padding-top: 10dvh;
     align-items: flex-start;
     justify-content: center;
     background-color: #F0EAF0;
