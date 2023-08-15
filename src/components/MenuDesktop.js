@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import logo from "./../images/logo-novo.svg"
+import logo2 from "./../images/new-logo-serif.svg"
+import logoMobile from "./../images/new-logo-serif-mobile.svg"
+
 import zapp from "./../images/zap-component.svg"
 import { Link } from "gatsby"
 import * as style from "./Menu.module.css"
@@ -41,7 +44,7 @@ const MenuDesktop = () => {
       <div className={style.divMenu}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <Link className={style.divLogo} to="/" alt="homepage">
-            <img src={logo} alt="logo" width={325} />
+            <img src={logo2} alt="logo" height={70} />
           </Link>
         </div>
         <ul className={style.divLinks}>
@@ -70,7 +73,7 @@ const MenuDesktop = () => {
       <div className="div-menu-mobile">
         <div className="div-logo-mobile">
           <Link to="/">
-            <img src={logo} alt="" />
+            <img src={logoMobile} alt="" />
           </Link>
         </div>
         <div className="div-bars" onClick={toggleMenu}>

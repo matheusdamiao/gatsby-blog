@@ -29,6 +29,8 @@
     width: 100%;
     cursor: pointer;
     height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .divLogo > img {
