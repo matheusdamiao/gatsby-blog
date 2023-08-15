@@ -200,7 +200,7 @@ color: #2E2E2E;
     .divPrincipal > div { 
         width: 90%;
         display: flex;
-        /* justify-content: center; */
+        justify-content: center;
         
     }
 

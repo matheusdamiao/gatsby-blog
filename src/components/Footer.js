@@ -1,6 +1,8 @@
 import React from "react"
 import logoInsta from "./../images/instagram-square-brands4.svg"
-import logo from "../images/logo-novo.svg"
+// import logo from "../images/logo-novo.svg"
+import logoMobile from "./../images/new-logo-serif-mobile.svg"
+
 import { Link } from "gatsby"
 import * as style from "./Footer.module.css"
 import logoPhone from "../images/phone.svg"
@@ -12,7 +14,7 @@ const Footer = () => {
     <>
       <div className={style.divPrincipal}>
         <div>
-          <img src={logo} alt="logo" width={300} />
+          <img src={logoMobile} alt="logo" width={300} />
         </div>
         <div className={style.wrapperContent}>
           <div className={style.contato}>

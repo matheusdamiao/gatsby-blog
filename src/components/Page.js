@@ -2,6 +2,7 @@ import React from "react"
 import * as style from "./Page.module.css"
 import foto from "./../images/thays_e_vanessa.svg"
 import { StaticImage } from "gatsby-plugin-image"
+import foto2 from "./../images/about-lawyers.webp"
 
 const Page = () => {
   return (
@@ -30,16 +31,17 @@ const Page = () => {
         </div>
 
         <div className={style.foto}>
-          <StaticImage
-            src="./../images/thays_e_vanessa.png"
+          <img src={foto2} alt="Vanessa Cupulille e Thays Medeiros" />
+          {/* <StaticImage
+            src="./../images/about-lawyers.webp"
             alt="Advogadas Vanessa e Thays no escritório"
             loading="eager"
             placeholder="blurred"
             quality={100}
             objectFit="cover"
             objectPosition="center"
-            imgStyle={{ width: "100%", height: "100%" }}
-          />
+            imgStyle={{ width: "100%", maxHeight: "400px", height: "100%" }}
+          /> */}
           {/* <img src={foto} alt="" /> */}
         </div>
       </div>

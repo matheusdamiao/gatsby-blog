@@ -69,7 +69,7 @@
 
 .cardIcon{
     width: 100px;
-    height: 100px;
+    height: 120px;
 }
 
 .card > h3 {
@@ -129,10 +129,13 @@ color: #505050;
 
     .titulo {
         font-size: 25px;
-        text-align: left;
-        padding-left: 40px;
+        text-align: center;
+        padding: 20px;
     }
 
+    .cards {
+        gap: 60px;
+    }
   
 
 }
