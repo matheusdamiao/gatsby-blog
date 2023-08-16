@@ -1,6 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as style from "./Diferenciais.module.css"
 import human from "./../images/human.svg"
 import experience from "./../images/experience.svg"

@@ -1,9 +1,6 @@
 import React from "react"
 import * as style from "./HeroSectionNew.module.css"
-// import advsjuntas from "./../images/advogadass.svg"
 import advsjuntas from "./../images/as-duas-juntas-bg.webp"
-
-import { StaticImage } from "gatsby-plugin-image"
 
 const HeroSectionNew = () => {
   return (

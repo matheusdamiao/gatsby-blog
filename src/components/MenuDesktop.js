@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import logo from "./../images/logo-novo.svg"
 import logo2 from "./../images/new-logo-serif.svg"
 import logoMobile from "./../images/new-logo-serif-mobile.svg"
 

@@ -1,6 +1,5 @@
 import React from "react"
 import logoInsta from "./../images/instagram-square-brands4.svg"
-// import logo from "../images/logo-novo.svg"
 import logoMobile from "./../images/new-logo-serif-mobile.svg"
 
 import { Link } from "gatsby"
