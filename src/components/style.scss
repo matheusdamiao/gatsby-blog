@@ -664,8 +664,16 @@ a {
     height: 90%;
     flex-wrap: nowrap;
     width: 100%;
-    // margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     // padding: 20px;
+    background-color: rgb(240, 234, 240);
+
+
+    @media screen and (max-width: 1000px) {
+        padding: 0;
+    }
+
 
     .about-hero-content {
         padding-left: 70px;
@@ -679,9 +687,11 @@ a {
 
 
         @media screen and (max-width: 1000px) {
-           height: 100vh;
+           height: 100%;
            justify-content: center;
            padding-left: 20px;
+           padding-top: 30px;
+           padding-bottom: 30px;
         }
 
         small {
@@ -852,9 +862,11 @@ a {
     .section-picture {
         order: 3;
         display: flex;
-        
+        max-height: 650px;
 
-
+        img{
+            object-fit: cover;
+        }
         
         @media screen and (max-width: 768px) {
             padding: 0;
@@ -863,6 +875,7 @@ a {
 
             img {
                 width: 100%;
+                
             }
         }
         
@@ -875,6 +888,8 @@ a {
 .section-wrap {
     display: flex;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     max-height: 700px;
     flex-direction: column;
     flex-wrap: wrap;
@@ -914,10 +929,7 @@ a {
     }
 
     
-    @media screen and (max-width: 768px) {
-        justify-content: center;
-        margin-top: 0px;
-    }
+    
 
 
     p {
@@ -927,10 +939,19 @@ a {
         line-height: 150%;
         padding: 0;
         margin-top: 50px;
-        // padding-right: 20px;
         margin-bottom: 20px;
     }
 
+
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+        margin-top: 0px;
+
+        p {
+            margin-top: 20px;
+            
+        }
+    }
 }
 
 
@@ -945,9 +966,11 @@ a {
     align-items: flex-end;
     justify-content: center;
     max-height: 600px;
+    margin: 0 auto;
     margin-top: 180px;
     padding-left: 70px;
     margin-bottom: 180px;
+    
     
 
     @media screen and (max-width: 1100px) {
@@ -957,6 +980,8 @@ a {
         align-items: center;
         padding-left: 20px;
         padding-right: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
 
@@ -967,10 +992,12 @@ a {
 
     .body-text {
         display: flex;
+        max-width: 600px;
         
         p {
             text-align: left;
-            max-width: 500px;
+            width: 100%;
+            // max-width: 500px;
             line-height: 150%;
             margin-top: 75px;
             margin-bottom: 75px;
@@ -979,6 +1006,11 @@ a {
 
         @media screen and (max-width: 1100px) {
             order: 3;
+
+            p {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
          }
     }
 

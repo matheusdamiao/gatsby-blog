@@ -3,12 +3,12 @@ import React from "react"
 import MenuDesktop from "../components/MenuDesktop"
 import Footer from "../components/Footer"
 import fotobg from "./../images/thays_e_vanessa.svg"
+import foto2 from "./../images/about-lawyers.webp"
 import advogadas from "./../images/advogadass.svg"
-import vanessa from "./../images/vanessa.svg"
-import thays from "./../images/thays.svg"
+import vanessa from "./../images/vanessa.webp"
+import thays from "./../images/thays.webp"
 import Seo from "../components/seo"
 import { motion } from "framer-motion"
-import { StaticImage } from "gatsby-plugin-image"
 
 const sobre = () => {
   return (
@@ -46,19 +46,9 @@ const sobre = () => {
             </h3>
           </div>
 
-          <div className="about-hero-picture">
-            {/* <StaticImage
-              src="./../images/thays_e_vanessa.png"
-              alt="Advogadas Vanessa e Thays no escritório"
-              loading="eager"
-              placeholder="blurred"
-              quality={100}
-              objectFit="cover"
-              // objectPosition="center"
-              imgStyle={{ width: "100%", height: "100%" }}
-            /> */}
-            <img src={fotobg} alt="" />
-          </div>
+          {/* <div className="about-hero-picture"> */}
+          {/* <img src={fotobg} alt="" /> */}
+          {/* </div> */}
         </div>
 
         <section className="about-office">
@@ -77,7 +67,7 @@ const sobre = () => {
             </p>
           </div>
           <div className="div-imagem">
-            <img src={advogadas} alt="" />
+            <img src={foto2} alt="" />
           </div>
         </section>
 
