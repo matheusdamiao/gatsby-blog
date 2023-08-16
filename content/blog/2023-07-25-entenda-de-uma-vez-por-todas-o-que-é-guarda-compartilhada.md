@@ -10,7 +10,7 @@ hashtags:
   - divórcio
 imagem: /assets/guarda-compartilhada-direito-familia-e1588182425357.png
 author: Vanessa Cupulille
-avatar: /assets/avatar-vanessa.png
+avatar: /assets/vanessa.png
 ---
 Se você já ouviu algum pai falar que vai pedir a guarda compartilhada para ficar metade do tempo com os filhos ou para não pagar pensão alimentícia, ele está equivocado.
 
