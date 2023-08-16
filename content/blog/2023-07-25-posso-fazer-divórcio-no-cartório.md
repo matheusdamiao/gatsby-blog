@@ -8,7 +8,7 @@ hashtags:
   - advocacia
 imagem: /assets/inventario-e-divorcio-podem-ser-feitos-em-cartorio-011468272937.jpg
 author: Vanessa Cupulille
-avatar: /assets/avatar-vanessa.png
+avatar: /assets/vanessa.png
 ---
 
 
