@@ -8,7 +8,7 @@ hashtags:
   - despesas
 imagem: /assets/pensao-2-freepik-800x500.jpg
 author: Thays Medeiros
-avatar: /assets/avatar-thays.png
+avatar: /assets/thays.png
 ---
 Não! Isso é o maior mito da pensão alimentícia. A fixação da pensão alimentícia leva em consideração cada caso e a observância do trinômio:
 
