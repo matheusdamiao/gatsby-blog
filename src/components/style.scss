@@ -1112,12 +1112,14 @@ a {
     height: 100%;
     flex-wrap: nowrap;
     width: 100%;
+    background-color: rgb(240, 234, 240);
     // margin-top: 100px;
+    padding: 80px 0;
 
     @media screen and (max-width: 1000px) {
         
-        height: 100vh;
-        
+        height: 100%;
+        padding: 30px 0;
       }
 
 }
@@ -1133,9 +1135,10 @@ a {
     z-index: 92;
 
     @media screen and (max-width: 1000px) {
-      padding-left: 40px;  
-      height: 100vh;
+    //   padding-left: 40px;  
+    //   height: 100vh;
       justify-content: center;
+      padding: 0px 20px;
     }
 
     p{
@@ -1155,7 +1158,7 @@ a {
 
     h1 {
         font-family: 'Urbanist';
-        font-weight: 400;
+        font-weight: 500;
         font-size: 60px;
         line-height: 117%;
         letter-spacing: 3px;
@@ -1163,7 +1166,7 @@ a {
         margin: 15px 0px 0px;
 
         @media screen and (max-width: 1000px) {
-            font-size: 40px;
+            font-size: 50px;
             width: 90%;
           }
     }
@@ -1447,7 +1450,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px auto;
+    margin: 20px auto;
   
 }
 

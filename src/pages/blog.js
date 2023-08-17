@@ -139,9 +139,9 @@ const Blog = ({ data }) => {
             <h3> Leia os artigos em nosso blog e saiba mais</h3>
           </div>
 
-          <div className="blog-hero-picture">
+          {/* <div className="blog-hero-picture">
             <img src={fotobg} alt="" />
-          </div>
+          </div> */}
         </div>
 
         <NewBlogSection />
