@@ -8,7 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Script } from "gatsby"
 
 const Seo = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
@@ -71,7 +71,25 @@ const Seo = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-ZYJERTRJG8"
+      ></Script>
+
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-ZYJERTRJG8"
+      ></script>
+      <script>
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZYJERTRJG8');
+       `}
+      </script>
+    </Helmet>
   )
 }
 
