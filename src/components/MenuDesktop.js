@@ -8,6 +8,7 @@ import { Link } from "gatsby"
 import * as style from "./Menu.module.css"
 import { motion } from "framer-motion"
 import bars from "./../images/bars-solid.svg"
+import { loadGTM } from "./loadGTM"
 
 const MenuDesktop = () => {
   const [clicked, setClicked] = useState(false)
@@ -37,6 +38,10 @@ const MenuDesktop = () => {
   //     })
   //   }
   // }, [clicked])
+
+  const handleZapClick = () => {
+    loadGTM()
+  }
 
   return (
     <>
@@ -101,7 +106,8 @@ const MenuDesktop = () => {
       </div>
       <a
         className={style.zapLink}
-        href="https://api.whatsapp.com/send?phone=5521971877705"
+        onClick={handleZapClick}
+        // href="https://api.whatsapp.com/send?phone=5521971877705"
       >
         <img src={zapp} alt="zap" className={style.zapImg} />
       </a>
