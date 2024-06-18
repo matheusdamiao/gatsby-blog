@@ -17,6 +17,6 @@ export const loadGTM = () => {
       console.log("carregou!")
     }
 
-    window.gtmLoaded = true // Para evitar carregar o script mais de uma vez
+    // window.gtmLoaded = true // Para evitar carregar o script mais de uma vez
   }
 }

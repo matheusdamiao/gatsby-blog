@@ -18,6 +18,7 @@ const Form = () => {
   const handleSubmit = e => {
     e.preventDefault()
     setIsLoading(true)
+    loadGTM()
 
     fetch("/home", {
       method: "POST",
