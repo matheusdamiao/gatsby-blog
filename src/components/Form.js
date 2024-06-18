@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./style.scss"
 import * as style from "./Form.module.css"
 import Spining from "./Spining"
+import { loadGTM } from "./loadGTM"
 
 const Form = () => {
   const [inputs, setInputs] = useState({})
@@ -26,10 +27,12 @@ const Form = () => {
         ...inputs,
       }),
     })
-      .then(e =>
-        setTimeout(() => {
-          setIsLoading(false)
-        }, 2000)
+      .then(
+        e =>
+          setTimeout(() => {
+            setIsLoading(false)
+          }, 2000),
+        loadGTM()
       )
       .then(e => setIsSent(true))
       .catch(

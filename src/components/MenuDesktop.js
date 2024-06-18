@@ -8,6 +8,7 @@ import { Link } from "gatsby"
 import * as style from "./Menu.module.css"
 import { motion } from "framer-motion"
 import bars from "./../images/bars-solid.svg"
+import { loadGTM } from "./loadGTM"
 
 const MenuDesktop = () => {
   const [clicked, setClicked] = useState(false)
@@ -37,6 +38,24 @@ const MenuDesktop = () => {
   //     })
   //   }
   // }, [clicked])
+
+  const handleZapClick = e => {
+    // loadGTM()
+    // setTimeout(() => {
+    //   window.open(e.target.href, "_blank")
+    // }, 100) // Adjust the delay as needed
+    // e.preventDefault() // Prevent the default action to handle it manually
+
+    e.preventDefault() // Prevent the default action
+
+    loadGTM()
+
+    // Use a small delay to allow loadGTM to run before opening the link
+    setTimeout(() => {
+      e.currentTarget.href = "https://api.whatsapp.com/send?phone=5521971877705"
+      window.open(e.currentTarget.href, "_blank")
+    }, 100) // Adjust the delay as needed
+  }
 
   return (
     <>
@@ -101,6 +120,8 @@ const MenuDesktop = () => {
       </div>
       <a
         className={style.zapLink}
+        onClick={handleZapClick}
+        // target="_blank"
         href="https://api.whatsapp.com/send?phone=5521971877705"
       >
         <img src={zapp} alt="zap" className={style.zapImg} />
