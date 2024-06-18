@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "An institutional website and blog for a law office",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Matheus Damião",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
