@@ -47,13 +47,13 @@ const MenuDesktop = () => {
     // e.preventDefault() // Prevent the default action to handle it manually
 
     e.preventDefault() // Prevent the default action
+    const href = e.currentTarget.href
 
     loadGTM()
 
     // Use a small delay to allow loadGTM to run before opening the link
     setTimeout(() => {
-      e.currentTarget.href = "https://api.whatsapp.com/send?phone=5521971877705"
-      window.open(e.currentTarget.href, "_blank")
+      window.open(href, "_blank")
     }, 100) // Adjust the delay as needed
   }
 
