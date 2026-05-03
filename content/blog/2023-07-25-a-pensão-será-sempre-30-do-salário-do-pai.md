@@ -1,7 +1,7 @@
 ---
 title: A pensão será sempre 30% do salário do pai?
 date: 2023-07-25T19:59:44.752Z
-description: Conheça melhor sobre este mito da pensão alimentícia
+description: Conheça melhorr sobre este mito da pensão alimentícia
 hashtags:
   - pensão
   - salário
